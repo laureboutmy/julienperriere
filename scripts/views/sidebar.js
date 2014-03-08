@@ -1,11 +1,10 @@
 /*global define*/
 
 define([
-    'jquery',
     'backbone', 
     'text!templates/sidebar.html',
     'vendor/helpers'
-], function ($, Backbone, tplSidebar, helpers) {
+], function (Backbone, tplSidebar, helpers) {
     // 'use strict';
     var sidebarView = Backbone.View.extend({
       template: _.template(tplSidebar),

@@ -202,7 +202,7 @@ div#wrapper section#infos form {
   transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s; }
 div#wrapper section#infos.about article,
 div#wrapper section#infos.contact form { opacity: 1; height: auto; }
-div#wrapper section#infos.contact form { height: 100%; }
+div#wrapper section#infos.contact form { min-height: 100%;  }
 div#wrapper section#infos img { padding: 100px 0; margin: 0 auto; display: block; }
 div#wrapper section#infos h1 {
   font-family: Arapey, Georgia, serif;
@@ -250,7 +250,7 @@ div#wrapper section#infos form textarea {
   font-size: 1em;
   -webkit-font-smoothing: antialiased; }
 div#wrapper section#infos form input[type="text"] { margin-top: 40px; }
-div#wrapper section#infos form button[type="submit"] { margin-bottom: 40px; }
+div#wrapper section#infos form button[type="submit"] { margin-bottom: 100px; }
 div#wrapper section#infos form textarea { height: 260px; resize: none; }
 div#wrapper section#infos form input:focus,
 div#wrapper section#infos form textarea:focus,
@@ -260,7 +260,9 @@ div#wrapper section#infos form button:focus { outline: 0; }
 
 div#wrapper section#infos nav {
   margin-top: 100px;
+  overflow: hidden;
   width: 100%;
+  background: #000;
   border-top: 1px solid #141414; }
 div#wrapper section#infos form nav { position: absolute; left: 0; bottom: 0; }
 div#wrapper section#infos nav ul li {
