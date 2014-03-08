@@ -1,0 +1,68 @@
+/* @group Fonts */
+
+/* @font-face {
+	font-family: 'Arapey';
+	src: url(../fonts/Arapey-Regular.ttf);
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Arapey';
+	src: url(../fonts/Arapey-Italic.ttf);
+	font-style: italic;
+}
+ */
+
+/* Arapey */
+@import url(http://fonts.googleapis.com/css?family=Arapey:400italic,400);
+
+@font-face {
+	font-family: 'NeutraDisplay';
+	src: url(../fonts/NeutraDisplay-Titling.otf);
+}
+
+@font-face {
+	font-family: 'NeutraText';
+	src: url(../fonts/NeutraTextTF-Book.otf);
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: 'NeutraText';
+	src: url(../fonts/NeutraTextTF-Light.otf);
+	font-weight: 300;
+}
+
+@font-face {
+	font-family: 'NeutraText';
+	src: url(../fonts/NeutraText-Bold.otf);
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: 'Bodoni';
+	src: url(../fonts/BodoniStd-PosterItalic.otf);
+	font-style: italic;
+}
+
+/* Open Sans */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);
+/* @font-face {
+	font-family: 'OpenSans';
+	src: url(../fonts/OpenSans-Regular.ttf);
+	font-weight: normal
+}
+
+@font-face {
+	font-family: 'OpenSans';
+	src: url(../fonts/OpenSans-Light.ttf);
+	font-weight: 300;
+}
+
+@font-face {
+	font-family: 'OpenSans';
+	src: url(../fonts/OpenSans-Bold.ttf);
+	font-weight: 700;
+}
+ */
+/* @end of Fonts */
