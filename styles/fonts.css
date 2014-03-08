@@ -19,6 +19,17 @@
 @font-face {
 	font-family: 'NeutraDisplay';
 	src: url(../fonts/NeutraDisplay-Titling.otf);
+	font-weight: normal;
+}
+@font-face {
+	font-family: 'NeutraDisplay';
+	src: url(../fonts/NeutraDisplay-Thin.otf);
+	font-weight: 200;
+}
+@font-face {
+	font-family: 'NeutraDisplay';
+	src: url(../fonts/NeutraDisplay-Light.otf);
+	font-weight: 300;
 }
 
 @font-face {
@@ -26,12 +37,28 @@
 	src: url(../fonts/NeutraTextTF-Book.otf);
 	font-weight: normal;
 }
+@font-face {
+	font-family: 'NeutraText';
+	src: url(../fonts/NeutraText-BookItalic.otf);
+	font-weight: normal;
+	font-style: italic;
+}
+
 
 @font-face {
 	font-family: 'NeutraText';
 	src: url(../fonts/NeutraTextTF-Light.otf);
 	font-weight: 300;
 }
+
+@font-face {
+	font-family: 'NeutraText';
+	src: url(../fonts/NeutraText-LightSCItalic.otf);
+	font-weight: 300;
+	font-variant: small-caps;
+	font-style: italic;
+}
+
 
 @font-face {
 	font-family: 'NeutraText';
@@ -45,8 +72,11 @@
 	font-style: italic;
 }
 
+/* Source Sans Pro */
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600,300italic);
+
 /* Open Sans */
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);
+/*@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);*/
 /* @font-face {
 	font-family: 'OpenSans';
 	src: url(../fonts/OpenSans-Regular.ttf);
