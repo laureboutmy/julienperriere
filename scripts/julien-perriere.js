@@ -85,24 +85,58 @@ define(['backbone', 'jquery', 'views/sidebar'], function(Backbone, $, Sidebar){
 		    
 
 		    bind: function(){
-		    	$(window).on('resize', this.onResize);
+		    	window.addEventListener('resize', this.onResize);
+		    	// $(window).on('resize', this.onResize);
 		    	
-		    	$('section#main').on('click', '[data-project]', function(e){
-						e.preventDefault();
-						var project = $(this).data('project');
-						if(J.Status.infos){ $('div#wrapper').removeClass('open'); }
-						J.Views[J.Status.currentView].renderChangeFromBottom();
-						J.Router.render(project, 'wait');
-						J.Views['sidebar'].update(project);
-					});
+		    	var main = document.getElementById('main'),
+		    			sidebar = document.getElementById('sidebar'),
+		    			wrapper = document.getElementById('wrapper');
+
+		    	Array.prototype.forEach.call(sidebar.querySelectorAll('[data-project]'), function(el, i){
+		        el.addEventListener('click', function(e){
+		        	e.preventDefault(); 
+		        	if(J.Status.infos){ helpers.removeClass(wrapper, 'open'); }
+		        	var project = this.getAttribute('data-project');
+		        	J.Router.render(project, 'wait');
+							J.Views['sidebar'].update(project);
+		        })
+		      });
+
+		    	main.addEventListener('click', function(e){
+		    		e.preventDefault();
+		    		var el = e.target;
+		    		if(el !== this && el.tagName.toLowerCase() === 'a'){
+		    			var project = el.getAttribute('data-project');
+		    		} else if (el.tagName.toLowerCase() === 'h1'){
+		    			var project = el.parentNode.getAttribute('data-project');
+		    		} else if (el.tagName.toLowerCase() === 'span' || el.tagName.toLowerCase() === 'img'){
+		    			var project = el.parentNode.parentNode.getAttribute('data-project');
+		    		}
+
+		    		if(project){
+		    			if(J.Status.infos){ helpers.removeClass(wrapper, 'open'); }
+		    			J.Views[J.Status.currentView].renderChangeFromBottom();
+		    			J.Router.render(project, 'wait');
+		    			J.Views['sidebar'].update(project);
+		    		}
+		    	})
+
+		   //  	$('section#main').on('click', '[data-project]', function(e){
+					// 	e.preventDefault();
+					// 	var project = $(this).data('project');
+					// 	if(J.Status.infos){ $('div#wrapper').removeClass('open'); }
+					// 	J.Views[J.Status.currentView].renderChangeFromBottom();
+					// 	J.Router.render(project, 'wait');
+					// 	J.Views['sidebar'].update(project);
+					// });
 					
-					$('section#sidebar').on('click', '[data-project]', function(e){
-						e.preventDefault();
-						if(J.Status.infos){ $('div#wrapper').removeClass('open'); }
-						var project = $(this).data('project');
-						J.Router.render(project);
-						J.Views['sidebar'].update(project);
-					});
+					// $('section#sidebar').on('click', '[data-project]', function(e){
+					// 	e.preventDefault();
+					// 	if(J.Status.infos){ $('div#wrapper').removeClass('open'); }
+					// 	var project = $(this).data('project');
+					// 	J.Router.render(project);
+					// 	J.Views['sidebar'].update(project);
+					// });
 
 		    },
 

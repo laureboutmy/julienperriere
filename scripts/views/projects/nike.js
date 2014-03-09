@@ -11,12 +11,12 @@ define([
 
     var NikeView = ProjectView.extend({
       template: _.template(tplNike),
-      animations: {
-        "iso": {
+      animations: [
+        {
           selector: ".iso",
           class: "up"
         }
-      },
+      ],
       render: function(){
         var self = this;
         self.$el.html(this.template());

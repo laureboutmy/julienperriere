@@ -578,7 +578,7 @@ article.project header.introduction div.arrow { background: transparent url(../i
 article.wdmtg section.brief h2.default { color: #fff; }
 article.wdmtg section.brief h2.default span { color: #005aa3; }
 article.wdmtg section.brief p.introduction { 
-  background: url(../images/wdmtg/p-dotted-dark-blue-bg.png) repeat-x left 43px;
+  background: url(../images/wdmtg/p-dotted-dark-blue-bg.png) repeat-x left 40px;
   color: #005aa3; }
 article.wdmtg section.brief img.iso {
   position: relative;
@@ -607,7 +607,7 @@ article.wdmtg section.pro-signup h2.final-design span,
 article.wdmtg section.custom-feeds h2.final-design span { color: #1e1e1e; }
 article.wdmtg section.pro-signup p.introduction,
 article.wdmtg section.custom-feeds p.introduction { 
-  background: url(../images/wdmtg/p-dotted-light-blue-bg.png) repeat-x left 43px;
+  background: url(../images/wdmtg/p-dotted-light-blue-bg.png) repeat-x left 40px;
   color: #157fd6; }
 article.wdmtg section.pro-signup h3,
 article.wdmtg section.custom-feeds h3 { color: #3381c1; }

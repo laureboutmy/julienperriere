@@ -11,27 +11,26 @@ define([
 
     var DreamcatcherView = ProjectView.extend({
       template: _.template(tplDreamcatcher),
-      animations: {
-        "iso": {
+      animations: [
+        {
           selector: ".iso",
           position: 1300,
           animated: false,
           c: "animate"
         },
-        "milestones": {
+        {
           selector: ".milestones",
           position: 5340,
           animated: false,
           c: "animate"
         },
-
-        "charts": {
+        {
           selector: ".charts",
           position: 6040,
           animated: false,
           c: "animate"
         }
-      },
+      ],
       render: function(){
         var self = this;
         self.$el.html(this.template());

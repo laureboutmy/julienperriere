@@ -10,12 +10,12 @@ define([
     // 'use strict';
     var GameOfThronesView = ProjectView.extend({
       template: _.template(tplGameOfThrones),
-      animations: {
-        "iso": {
+      animations: [
+        {
           selector: ".iso",
           class: "up"
         }
-      },
+      ],
 
       render: function(){
         var self = this;

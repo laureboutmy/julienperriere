@@ -99,19 +99,23 @@ define([
 
       // Everytime you scroll, this function is called
       renderAnimations: function(coords, delta){
-        var self = this;
-        var animations = self.animations;
-        var ratio = J.Status.windowH * 2/3;
-        $.each(animations, function(index, animation){
+        var self = this,
+            animations = self.animations,
+            ratio = J.Status.windowH * 2/3,
+            main = document.getElementById('main');
+        // $.each(animations, function(index, animation){
+        animations.forEach(function(animation, i){
           if(delta < 0){
             if(animation.position - ratio < coords && !animation.animated){
               animation.animated = true;
-              $(animation.selector).addClass(animation.c);
+              helpers.addClass(main.querySelectorAll(animation.selector)[0], animation.c);
+              // $(animation.selector).addClass(animation.c);
             }
           } else if(delta > 0){
             if(animation.position > coords && animation.animated){
               animation.animated = false;
-              $(animation.selector).removeClass(animation.c);
+              helpers.removeClass(main.querySelectorAll(animation.selector)[0], animation.c);
+              // $(animation.selector).removeClass(animation.c);
             }
           }
         })

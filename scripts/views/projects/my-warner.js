@@ -12,12 +12,12 @@ define([
 
       template: _.template(tplMyWarner),
 
-      animations: {
-        "iso": {
+      animations: [
+        {
           selector: ".iso",
           class: "up"
         }
-      },
+      ],
 
       render: function(){
         var self = this;

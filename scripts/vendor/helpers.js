@@ -10,7 +10,7 @@ define(function() {
     },
 
     addClass: function(el, c){
-      if(!helpers.hasClass(el, c)){ 
+      if(typeof el != 'undefined' && !helpers.hasClass(el, c)){ 
         if(el.classList){ el.classList.add(c); }
         else { el.className += ' ' + c; }
       }
