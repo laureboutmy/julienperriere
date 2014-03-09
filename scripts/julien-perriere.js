@@ -9,7 +9,9 @@ define(['backbone', 'jquery', 'views/sidebar'], function(Backbone, $, Sidebar){
 			J.Router = new (Backbone.Router.extend({
 		    routes: {
 		      '': 'home',
+		      'my-warner': 'project',
 		      'wdmtg': 'project',
+		      'game-of-thrones': 'project',
 		      'kolok': 'project',
 		      'dreamcatcher': 'project',
 		      'nike': 'project'

@@ -140,18 +140,12 @@ section#loader.complete div.pattern {
   transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s; }
 
 section#loader.wdmtg { background: linear-gradient(to right, #3381c1 0%,#2d4fc2 100%); }
-
+section#loader.game-of-thrones { background: linear-gradient(to right, #c41010 -80px,#ff483b 100%); }
 section#loader.kolok { background: #2787cc; }
-section#loader.kolok div.pattern { 
-  background: #2787cc url(../images/kolok/kolok-bg.png) repeat 80px top; }
 
-section#loader.nike { background: #f9650f; }
-section#loader.nike div.pattern { 
-  background: #f9650f url(../images/nike/nike-bg.png) repeat 80px top; }  
+section#loader.nike { background: #f9650f; } 
 
 section#loader.dreamcatcher { background: #23222b; }
-section#loader.dreamcatcher div.pattern {
-  background: #23222b url(../images/dreamcatcher/dreamcatcher-bg.png) repeat 80px top; }
 
 section#loader h1 {
   position: absolute;
@@ -331,7 +325,6 @@ article.project header.introduction ul.meta  {
   position: relative; top: -40px; 
   opacity: 0;
   padding: 35px 0;
-  border-bottom: 1px solid rgba(67, 146, 218, 0.3);
   transition: 0.6s opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
               0.6s top cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s; }
 article.project header.introduction.animate ul.meta {
@@ -417,7 +410,7 @@ article.project section h3 span {
   font-size: 1.385em; }
 article.project section h3.mended span { letter-spacing: -0.01em; }
 
-article.project section h3 + p { line-height: 1.429em; }
+article.project section hr.dotted + p { line-height: 1.667em; }
 
 article.project section.brief p.half {
   font-family: 'Source Sans Pro', sans-serif;
@@ -435,8 +428,7 @@ article.project footer.thanks h2 {
   font-family: 'NeutraDisplay', sans-serif;
   font-size: 3.067em;
   font-weight: 300;
-  text-transform: uppercase;
-  margin-bottom: 30px; }
+  text-transform: uppercase; }
 article.project footer.thanks a {
   display: inline-block;
   border-radius: 5px;
@@ -449,6 +441,10 @@ article.project footer.thanks a:hover { border: 1px solid rgba(255, 255, 255, 1)
 article.project footer.thanks a span {
   font-style: normal;
   font-weight: 600; }
+
+
+article.project div.iphone.left { float: left; }
+article.project div.iphone.right { float: right; }
 /*****************/
 /* @group Slider */
 /*****************/
@@ -538,21 +534,20 @@ nav#next-project.dreamcatcher {
 nav#next-project.dreamcatcher a {
   background: #3381c1 url(../images/dreamcatcher/dreamcatcher-bg.png) repeat top left; }
 nav#next-project.dreamcatcher h1 span { color: #6b6978; }
+nav#next-project.game-of-thrones { background: linear-gradient(to right, #c41010 -80px,#ff483b 100%); }
 
 nav#next-project.nike {
   background: #f9650f; }
 nav#next-project.nike a {
   background: #f9650f url(../images/nike/nike-bg.png) repeat top left; }
 nav#next-project.nike h1 span { color: #6b6978; }
-
-
 /* @end of Next-project */
 
-/*******************/
-/* @group WDMTG    */
+/************************/
+/* @group WDMTG          */
 /* light blue [#3381c1]; */
-/* dark blue [#2d4fc2]; */
-/*******************/
+/* dark blue [#2d4fc2];  */
+/*************************/
 div#wrapper section#main article.wdmtg { 
   box-shadow: 0 1px 80px 40px rgba(0, 0, 0, 0.4); transition: top cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s; }
 article.wdmtg header.introduction {
@@ -567,6 +562,7 @@ article.wdmtg hr.dotted {
   background: transparent url(../images/wdmtg/hr-dotted-light-grey-bg.png) repeat-x; }
 article.wdmtg header.introduction h1 { padding: 360px 0 300px; }
 article.wdmtg header.introduction h2 { color: #4392da; padding: 0 0 50px; }
+article.wdmtg header.introduction ul.meta  { border-bottom: 1px solid rgba(67, 146, 218, 0.3); }
 article.wdmtg header.introduction ul.meta li h3 { color: #4392da; }
 article.wdmtg section.brief {
   min-height: 1520px;
@@ -574,7 +570,7 @@ article.wdmtg section.brief {
   background: #171717; color: #4d4d4d;
   box-shadow: 0 10px 20px 10px rgba(0, 0, 0, 0.6),
         inset 0 -5px 0px rgba(0, 0, 0, 0.3); }
-article.project header.introduction div.arrow { background: transparent url(../images/wdmtg/arrow.png) no-repeat; }
+article.wdmtg header.introduction div.arrow { background: transparent url(../images/wdmtg/arrow.png) no-repeat; }
 article.wdmtg section.brief h2.default { color: #fff; }
 article.wdmtg section.brief h2.default span { color: #005aa3; }
 article.wdmtg section.brief p.introduction { 
@@ -622,7 +618,7 @@ article.wdmtg section.custom-feeds section.top-up { padding: 220px 0 125px; }
 article.wdmtg section.pro-signup section.visual-clues img { float: right; }
 article.wdmtg footer.thanks { 
  background: linear-gradient(to right, #3381c1 -80px,#2d4fc2 100%); }
-article.wdmtg footer.thanks h2 { color: #fff; }
+article.wdmtg footer.thanks h2 { color: #fff; margin-bottom: 30px; }
 article.wdmtg footer.thanks a {
   border: 2px solid rgba(255, 255, 255, 0.3);
   color: #fff; }
@@ -636,7 +632,6 @@ article.wdmtg section.final-design section.slider nav ul li{
   background: rgba(240, 100, 72, 0.3); }
 article.wdmtg section.final-design.end section.slider { padding: 30px 0 0; }
 article.wdmtg section.final-design.end section.slider > ul { height: 750px; }
-
 
 article.wdmtg section.pro-signup section.process img { 
   position: absolute; left: 60px; 
@@ -658,14 +653,6 @@ article.wdmtg section.custom-feeds section.feeds img:nth-child(3){
 article.wdmtg section.custom-feeds section.feeds.animate img { opacity: 1; }
 article.wdmtg section.custom-feeds section.feeds.animate img:nth-child(2) { left: 183px; }
 article.wdmtg section.custom-feeds section.feeds.animate img:nth-child(3) { left: 365px; z-index: 3; }
-
-/*article.wdmtg section.custom-feeds section.feeds { min-height: 554px; }
-article.wdmtg section.custom-feeds section.feeds img {
-  position: absolute; left: 365px;
-  transition: left cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
-              opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s; }
-article.wdmtg section.custom-feeds section.feeds img:nth-child(1),
-article.wdmtg section.custom-feeds section.feeds img:nth-child(2) { opacity: 0; }*/
 article.wdmtg section.custom-feeds section.feeds.animate img:nth-child(1) { left: 0px; opacity: 1; }
 article.wdmtg section.custom-feeds section.feeds.animate img:nth-child(2) { left: 183px; opacity: 1; }
 article.wdmtg section.custom-feeds section.top-up { height: 612px; }
@@ -684,57 +671,111 @@ article.wdmtg section.custom-feeds section.final-design { padding: 250px 0 0; }
 article.wdmtg footer.thanks a {
   border: 1px solid #4392da;
   color: #4392da; }
-/*article.wdmtg section.final-design section.slider { padding: 20px 0; }
-article.wdmtg section.final-design.end section.slider { padding: 20px 0 0; }
-article.wdmtg section.final-design section.slider nav { text-align: center; margin-bottom: 80px; }
-article.wdmtg section.final-design section.slider nav ul li {
-  width: 70px; height: 49px;
-  display: inline-block;
-  margin: 0 5px;
-  
-  background: rgba(240, 100, 72, 0.3);
-  border-radius: 2px;
-  border: 3px solid #f06448;
-     -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  opacity: 0.3;
-  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
-}
-article.wdmtg section.final-design section.slider nav ul li:hover {
-  cursor: pointer; opacity: 1; }
-article.wdmtg section.final-design section.slider nav ul li.active { opacity: 1; }
-article.wdmtg section.final-design section.slider > ul { 
-  position: relative;
-  height: 671px; 
-  background: #3381c1 url(../images/wdmtg/wdmtg-bg.png) repeat; 
-  box-shadow: 0 10px 20px 10px rgba(0, 0, 0, 0.4),
-        inset 0 -5px 0px rgba(0, 0, 0, 0.3); }
-article.wdmtg section.final-design.end section.slider > ul { box-shadow: none; }
-article.wdmtg section.final-design section.slider > ul li { 
-  position: absolute;
-  left: 50%; top: 50%;
-  overflow: hidden;
-  height: 700px;
-  margin-top: -365px; margin-left: -500px;
-  padding-top: 29px;
-  border-radius: 5px;
-  background: transparent url(../images/wdmtg/browser-toolbar.png) no-repeat; 
-  box-shadow: 0 0 40px 2px rgba(0, 0, 0, 0.5);
-  opacity: 0; 
-  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s; }
-article.wdmtg section.final-design section.slider > ul li.active { opacity: 1; }
-article.wdmtg section.final-design section.slider > ul li img.full { width: 100%; height: auto; }
-article.wdmtg section.final-design section.slider > ul li img.zoom { 
-  position: absolute; opacity: 0;
-  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
-              top cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s; }
-article.wdmtg section.final-design section.slider > ul li.active img.zoom { opacity: 1; }
-article.wdmtg section.final-design section.slider > ul li img.zoom.left { top: 300px; left: 80px;}
-article.wdmtg section.final-design section.slider > ul li img.zoom.right { top: 300px; right: 80px;}
-article.wdmtg section.final-design section.slider > ul li.active img.zoom.left { top: 180px; left: 80px; }
-article.wdmtg section.final-design section.slider > ul li.active img.zoom.right { top: 180px; right: 80px; }*/
 /* @end of WDMTG */
+
+/**************************/
+/* @group Game of Thrones */
+/* light red [#ff483b];   */
+/* dark red [#c41010];    */
+/**************************/
+div#wrapper section#main article.game-of-thrones { 
+  box-shadow: 0 1px 80px 40px rgba(0, 0, 0, 0.4); transition: top cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s; }
+article.game-of-thrones header.introduction {
+  position: relative; z-index: 400;
+  min-height: 1200px;
+  color: #fff; 
+  background: linear-gradient(to right, #c41010 -80px,#ff483b 100%);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6),
+        inset 0 -5px 0px rgba(0, 0, 0, 0.3); }
+article.game-of-thrones hr.dotted { 
+  width: 100%; height: 1px;
+  background: transparent url(../images/game-of-thrones/p-dotted-dark-grey-bg.png) repeat-x; }
+article.game-of-thrones header.introduction h1 { padding: 360px 0 360px; }
+article.game-of-thrones header.introduction h2 { color: #ff574a; padding: 0 0 50px; }
+article.game-of-thrones header.introduction ul.meta  { border-bottom: 1px solid rgba(255, 87, 74, 0.33); }
+article.game-of-thrones header.introduction ul.meta li h3 { color: #ff574a; }
+article.game-of-thrones header.introduction div.arrow { background: transparent url(../images/game-of-thrones/arrow.png) no-repeat; }
+article.game-of-thrones section.brief {
+  min-height: 1520px;
+  position: relative; z-index: 300;
+  background: #f5f5f5; color: #9a9dad;
+  box-shadow: 0 10px 20px 10px rgba(0, 0, 0, 0.6),
+        inset 0 -5px 0px rgba(0, 0, 0, 0.3); }
+article.game-of-thrones section.brief h2.default { color: #30323b; }
+article.game-of-thrones section.brief h2.default span { color: #ff331c; }
+article.game-of-thrones section.brief p.introduction { 
+  background: url(../images/game-of-thrones/p-dotted-light-grey-bg.png) repeat-x left 40px;
+  color: #9a9dad; }
+article.game-of-thrones section.brief img.iso {
+  position: relative;
+  top: 80px; 
+  margin: 120px auto;
+  display: block;
+  opacity: 0;
+  transition: top ease-out 0.3s, 
+              opacity ease-out 0.2s; }
+article.game-of-thrones section.brief img.iso.animate { top: 0; opacity: 1; }
+article.game-of-thrones section.countdown {
+  background: #0e0f12; color: #40444f;
+  padding: 160px 0; }
+article.game-of-thrones section.player,
+article.game-of-thrones section.mobile {
+  background: #0e0f12; color: #40444f;
+  padding: 0 0 160px;
+  overflow: hidden; }
+article.game-of-thrones section.mobile { padding: 0; }
+article.game-of-thrones section.countdown p.introduction,
+article.game-of-thrones section.player p.introduction,
+article.game-of-thrones section.mobile p.introduction { 
+  background: url(../images/game-of-thrones/p-dotted-dark-grey-bg.png) repeat-x left 40px;
+  color: #41444f; }
+article.game-of-thrones section.countdown h2.default,
+article.game-of-thrones section.player h2.default,
+article.game-of-thrones section.mobile h2.default { color: #fff; }
+article.game-of-thrones section.countdown h2.default span,
+article.game-of-thrones section.player h2.default span,
+article.game-of-thrones section.mobile h2.default span { color: #d61702; }
+article.game-of-thrones section.player h3,
+article.game-of-thrones section.countdown h3,
+article.game-of-thrones section.mobile h3 { color: #d61702; }
+article.game-of-thrones section.player h3 > span,
+article.game-of-thrones section.countdown h3 > span,
+article.game-of-thrones section.mobile h3 > span { color: #fff; }
+article.game-of-thrones section.countdown section.badges,
+article.game-of-thrones section.countdown section.hours,
+article.game-of-thrones section.player section.content,
+article.game-of-thrones section.player section.cards,
+article.game-of-thrones section.player section.browser { padding: 125px 0; }
+
+article.game-of-thrones section.player section.content div > img { position: absolute; width: 440px; left: 50%; margin-left: -223px; top: 0; }
+article.game-of-thrones section.player section.content h3 { margin-top: 45px; }
+article.game-of-thrones section.player section.content p { margin-bottom: 35px; }
+article.game-of-thrones section.countdown h2.final-design,
+article.game-of-thrones section.player h2.final-design { color: #d61702; }
+article.game-of-thrones section.countdown h2.final-design span,
+article.game-of-thrones section.player h2.final-design span { color: #fff; }
+article.game-of-thrones section.final-design { padding: 80px 0 0; }
+article.game-of-thrones section.final-design section.slider > ul {
+  background: linear-gradient(to right, #c41010 -80px,#ff483b 100%); }
+article.game-of-thrones section.final-design section.slider nav ul li {
+  border-color: #41444f;
+  background: rgba(65, 68, 79, 0.3); }
+
+article.game-of-thrones section.mobile h3 { margin: 60px 0 25px; }
+article.game-of-thrones section.mobile div.iphone {
+  width: 633px; height: 1360px;
+  padding: 196px 53px;
+  background: transparent url(../images/game-of-thrones/iphone.png) no-repeat top left;
+        -moz-box-sizing: border-box;
+     -webkit-box-sizing: border-box;
+             box-sizing: border-box; }
+article.game-of-thrones section.mobile img.mobile-shadow {
+  margin: 10px 0 0; }
+article.game-of-thrones section.mobile section.remote { padding: 160px 0 80px; }
+article.game-of-thrones section.mobile section.feed { padding: 80px 0; }
+article.game-of-thrones footer.thanks { box-shadow: inset 0 -5px 0px rgba(255, 255, 255, 0.09); padding: 130px 0 230px; background: #0e0f12; }
+article.game-of-thrones footer.thanks h2 { color: #41444f; }
+/* @end Game of Thrones */
 
 /*******************/
 /* @group Kolok    */
@@ -810,12 +851,11 @@ article.kolok footer.thanks {
 article.kolok section.final-design div.iphone {
   width: 633px; height: 1360px;
   padding: 196px 53px;
-  background: transparent url(../images/kolok/iphone.png) no-repeat top left;
+  background: transparent url(../images/game-of-thrones/iphone.png) no-repeat top left;
         -moz-box-sizing: border-box;
      -webkit-box-sizing: border-box;
              box-sizing: border-box; }
-div.iphone.left { float: left; }
-div.iphone.right { float: right; }
+
 article.kolok section.final-design p { margin-bottom: 10px; }
 article.kolok section.final-design img.mobile-shadow {
   padding: 20px 0 30px;
