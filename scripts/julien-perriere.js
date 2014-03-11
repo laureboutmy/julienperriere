@@ -123,6 +123,29 @@ define(['backbone', 'jquery', 'views/sidebar'], function(Backbone, $, Sidebar){
 		    		}
 		    	})
 
+		    	document.querySelectorAll('button[type="submit"]')[0].addEventListener('click', function(e){
+		    		e.preventDefault();
+		    		var form = this.parentNode,
+		    				name = form.querySelector('input[name="name"]'),
+		    				email = form.querySelector('input[name="email"]'),
+		    				message = form.querySelector('textarea'),
+		    				error = null;
+
+		    		if(email.value == '' && name.value == '' && message.value == ''){ error = 'Please, fill out all the fields! '; }
+		    		if(!/\S+@\S+\.\S+/.test(email.value)){ error += 'The email you entered is not valid.'; }
+		    		if(error){ form.querySelector('.error').innerHTML = error; }
+		    		else {
+		    			var data = {
+		    				name: name.value,
+		    				email: email.value,
+		    				message: message.value }
+		    			var request = new XMLHttpRequest();
+									request.open('POST', 'form.php', true);
+									request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+									request.send(data);
+		    		}
+		    	})
+
 		   //  	$('section#main').on('click', '[data-project]', function(e){
 					// 	e.preventDefault();
 					// 	var project = $(this).data('project');

@@ -78,13 +78,13 @@ define([
             // $main = $('section#main');
 
         J.Status.canScroll = false;
-        helpers.addClass(main.querySelectorAll('nav#next-project')[0], 'active');
-        main.querySelectorAll('article.project')[0].offsetTop = window.innerHeight;
+        helpers.addClass(main.querySelector('nav#next-project'), 'active');
+        main.querySelector('article.project').style.top = -(window.innerHeight - 350) + 'px';
         // $main.find('nav#next-project').addClass('active');
         // $main.find('article.project').offset({ top: -($(window).height() - 350) });
       },
 
-      destroy: function(){ $(window).off('scroll DOMMouseScroll MozMousePixelScroll'); },
+      destroy: function(){ window.removeEventListener('scroll'); },
 
 
       initAnimations: function(){

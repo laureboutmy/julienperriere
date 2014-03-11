@@ -129,22 +129,13 @@ section#loader {
 section#loader.hidden {
   z-index: -100;
   opacity: 0; }
-
-section#loader div.pattern { 
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  opacity: 0; }
-section#loader.complete div.pattern {
-  opacity: 1;
-  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s; }
-
+  
+section#loader.my-warner { background: linear-gradient(to right, #c41010 0%,#ff3b3b 100%); }
 section#loader.wdmtg { background: linear-gradient(to right, #3381c1 0%,#2d4fc2 100%); }
-section#loader.game-of-thrones { background: linear-gradient(to right, #c41010 -80px,#ff483b 100%); }
+section#loader.game-of-thrones { background: linear-gradient(to right, #c41010 0%,#ff483b 100%); }
+
 section#loader.kolok { background: #2787cc; }
-
 section#loader.nike { background: #f9650f; } 
-
 section#loader.dreamcatcher { background: #23222b; }
 
 section#loader h1 {
@@ -336,7 +327,9 @@ article.project header.introduction ul.meta li {
   font-family: 'NeutraDisplay', sans-serif;
   font-size: 0.933em;
   letter-spacing: 0.04em;
+  font-weight: 600;
   font-style: normal;
+  text-transform: uppercase;
   color: #fff; }
 article.project header.introduction ul.meta li h3 { display: inline-block; }
 article.project header.introduction h1 img {
@@ -358,7 +351,7 @@ article.project header.introduction div.arrow {
   width: 13px; height: 90px; 
   margin: 0 auto;
   background: transparent url(../images/arrow.png) no-repeat; }
-article.project section {
+article.project > section {
   padding: 160px 0;
      -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -368,6 +361,7 @@ article.project section h2.default {
   position: relative; z-index: 10;
   font-family: 'NeutraDisplay', sans-serif;
   font-size: 3.600em;
+  font-weight: 700;
   text-align: center;
   margin: 50px 0 100px; }
 article.project section h2.default > span {
@@ -407,6 +401,7 @@ article.project section h3 span {
   margin-top: 8px;
   font-family: 'NeutraDisplay', sans-serif;
   font-style: normal;
+  font-weight: 700;
   font-size: 1.385em; }
 article.project section h3.mended span { letter-spacing: -0.01em; }
 
@@ -467,9 +462,7 @@ article.project section.slider nav ul li:hover {
 article.project section.slider nav ul li.active { opacity: 1; }
 article.project section.slider > ul { 
   position: relative;
-  height: 671px; 
-  box-shadow: 0 10px 20px 10px rgba(0, 0, 0, 0.4); }
-article.project section.slider > ul { box-shadow: none; }
+  height: 671px; }
 article.project section.slider > ul li { 
   position: absolute;
   margin: -29px auto;
@@ -528,6 +521,7 @@ nav#next-project h1 span {
   font-size: 1em;
   letter-spacing: 0.26em;
   display: block;
+  font-weight: 700;
   margin: 20px 0; }
 nav#next-project.dreamcatcher {
   background: #3381c1; }
@@ -535,6 +529,7 @@ nav#next-project.dreamcatcher a {
   background: #3381c1 url(../images/dreamcatcher/dreamcatcher-bg.png) repeat top left; }
 nav#next-project.dreamcatcher h1 span { color: #6b6978; }
 nav#next-project.game-of-thrones { background: linear-gradient(to right, #c41010 -80px,#ff483b 100%); }
+nav#next-project.wdmtg { background: linear-gradient(to right, #3381c1 0%,#2d4fc2 100%); }
 
 nav#next-project.nike {
   background: #f9650f; }
@@ -543,6 +538,154 @@ nav#next-project.nike a {
 nav#next-project.nike h1 span { color: #6b6978; }
 /* @end of Next-project */
 
+/************************/
+/* @group My Warner     */
+/* light red [#ff483b]; */
+/* dark red [#c41010];  */
+/************************/
+div#wrapper section#main article.my-warner { 
+  box-shadow: 0 1px 80px 40px rgba(0, 0, 0, 0.4); transition: top cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s; }
+article.my-warner header.introduction {
+  position: relative; z-index: 400;
+  min-height: 1200px;
+  color: #fff; 
+  background: linear-gradient(to right, #c41010 -80px,#ff3b3b 100%);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6),
+        inset 0 -5px 0px rgba(0, 0, 0, 0.3); }
+article.my-warner hr.dotted { 
+  width: 100%; height: 1px;
+  background: transparent url(../images/my-warner/p-dotted-dark-grey-bg.png) repeat-x; }
+article.my-warner header.introduction h1 { padding: 360px 0 350px; }
+article.my-warner header.introduction h2 { color: #ff6161; padding: 0 0 50px; }
+article.my-warner header.introduction ul.meta  { border-bottom: 1px solid rgba(255, 97, 97, 0.34); }
+article.my-warner header.introduction ul.meta li h3 { color: #ff6161; }
+article.my-warner header.introduction div.arrow { background: transparent url(../images/my-warner/arrow.png) no-repeat; }
+article.my-warner section.brief {
+  min-height: 1520px;
+  background: #eef2f6; color: #868c9e;
+  box-shadow: 0 10px 20px 10px rgba(0, 0, 0, 0.6),
+        inset 0 -5px 0px rgba(0, 0, 0, 0.2); }
+article.my-warner section.brief img.iso {
+  position: relative;
+  top: 80px; 
+  margin: 120px auto;
+  display: block;
+  opacity: 0;
+  transition: top ease-out 0.3s, 
+              opacity ease-out 0.2s; }
+
+article.my-warner section.movies {
+  background: #13161c; color: #303640;
+  padding: 160px 0 0; }
+article.my-warner section.bonuses {
+  background: #eef2f6;
+  padding: 220px 0 0;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6),
+        inset 0 -5px 0px rgba(0, 0, 0, 0.3); }
+article.my-warner section.profile {
+  background: #13161c;
+  padding: 160px 0 140px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6),
+        inset 0 -5px 0px rgba(255, 255, 255, 0.12); }
+article.my-warner section.icon {
+  background: #eef2f6;
+  padding: 160px 0 0;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6),
+        inset 0 -5px 0px rgba(0, 0, 0, 0.3); }
+article.my-warner section.ipad {
+  background: #13161c;
+  padding: 160px 0 0; }
+
+article.my-warner section.movies p.introduction,
+article.my-warner section.profile p.introduction,
+article.my-warner section.ipad p.introduction { 
+  background: url(../images/my-warner/p-dotted-dark-grey-bg.png) repeat-x left 40px;
+  color: #41444f; }
+article.my-warner section.brief p.introduction,
+article.my-warner section.bonuses p.introduction,
+article.my-warner section.icon p.introduction { 
+  background: url(../images/my-warner/p-dotted-light-grey-bg.png) repeat-x left 40px;
+  color: #868c9e; }
+
+article.my-warner section.movies h2.default,
+article.my-warner section.profile h2.default,
+article.my-warner section.ipad h2.default { color: #b32426; }
+article.my-warner section.brief h2.default,
+article.my-warner section.bonuses h2.default,
+article.my-warner section.icon h2.default { color: #db353a; }
+article.my-warner section.movies h2.default span,
+article.my-warner section.profile h2.default span,
+article.my-warner section.ipad h2.default span { color: #fff; }
+article.my-warner section.brief h2.default span,
+article.my-warner section.bonuses h2.default span,
+article.my-warner section.icon h2.default span { color: #5d647a; }
+article.my-warner section.movies h3 { color: #d61702; }
+article.my-warner section.movies h3 > span { color: #fff; }
+
+article.my-warner section.movies section.best-tweets,
+article.my-warner section.movies section.quizzes,
+article.my-warner section.movies section.facts,
+article.my-warner section.movies section.statistics { padding: 125px 0; }
+article.my-warner section.movies section.quizzes img,
+article.my-warner section.movies section.statistics img { float: right; }
+
+article.my-warner section.movies h2.final-design { color: #b22426; margin-bottom: 150px; }
+article.my-warner section.movies h2.final-design span { color: #fff; }
+
+article.my-warner section.movies section.final-design > div {
+  height: 1070px;
+  position: relative;
+  background: linear-gradient(to right, #c41010 0%,#ff3b3b 100%);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6); } 
+article.my-warner section.movies section.final-design > div ul { 
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  margin: -73px auto; }
+article.my-warner section.profile ul { margin: 160px auto 0; }
+article.my-warner section.movies section.final-design > div ul li { margin-bottom: 25px; }
+article.my-warner section.profile ul li { margin-bottom: 60px; }
+article.my-warner section.movies section.final-design .third--one,
+article.my-warner section.profile .third--one { padding-right: 10px; width: auto; }
+article.my-warner section.movies section.final-design .third--two,
+article.my-warner section.profile .third--two { padding: 0 10px; width: auto; }
+article.my-warner section.movies section.final-design .third--three,
+article.my-warner section.profile .third--three { padding-left: 10px; width: auto; }
+
+article.my-warner section.bonuses img { margin-bottom: 31px; }
+article.my-warner section.bonuses section,
+article.my-warner section.icon section,
+article.my-warner section.ipad section { margin: 160px 0 0; }
+
+article.my-warner section.ipad div.ipad {
+  background: url(../images/my-warner/ipad.png) no-repeat;
+  width: 1000px; height: 660px; padding: 26px 0 0 95px;
+      -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+           box-sizing: border-box; }
+article.my-warner section.ipad div.ipad + img {
+  margin: 0 auto;
+  display: block; }
+article.my-warner footer.thanks { box-shadow: inset 0 -5px 0px rgba(255, 255, 255, 0.12); padding: 225px 0 260px; background: #13161c; }
+article.my-warner footer.thanks h2 { color: #b32426; margin-bottom: 35px; }
+article.my-warner footer.thanks a.app-store, 
+article.my-warner footer.thanks a.google-play {
+  display: inline-block;
+  margin: 0 10px;
+  height: 55px;
+  border: none;
+  padding: 0; }
+article.my-warner footer.thanks a.app-store {
+  background: url(../images/my-warner/app-store.png) no-repeat; width: 188px; }
+article.my-warner footer.thanks a.google-play {
+  background: url(../images/my-warner/google-play.png) no-repeat; width: 198px;}
+article.my-warner footer.thanks p {
+  color: #313640;
+  margin-top: 75px;
+  font-size: 1em;
+  line-height: 1.533em; }
 /************************/
 /* @group WDMTG          */
 /* light blue [#3381c1]; */

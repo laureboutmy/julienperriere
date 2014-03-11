@@ -48,6 +48,8 @@ define([
             helpers.removeClass(wrapper, 'open'); 
           }
         })
+
+        
         // $('section#sidebar').on('mouseover', function(){
         //   $('div#wrapper').addClass('unwound'); 
         // });

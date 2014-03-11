@@ -18,8 +18,14 @@
 
 @font-face {
 	font-family: 'NeutraDisplay';
+	src: url(../fonts/NeutraDisplay-Bold.otf);
+	font-weight: 600;
+}
+
+@font-face {
+	font-family: 'NeutraDisplay';
 	src: url(../fonts/NeutraDisplay-Titling.otf);
-	font-weight: normal;
+	font-weight: 700;
 }
 @font-face {
 	font-family: 'NeutraDisplay';
