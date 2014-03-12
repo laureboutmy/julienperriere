@@ -1,12 +1,11 @@
 /*global define*/
 
 define([
-    'jquery',
     'backbone', 
     'views/project',
     'text!templates/dreamcatcher.html',
     'vendor/slider'
-], function ($, Backbone, ProjectView, tplDreamcatcher) {
+], function (Backbone, ProjectView, tplDreamcatcher, slideIt) {
     // 'use strict';
 
     var DreamcatcherView = ProjectView.extend({
@@ -36,7 +35,7 @@ define([
         self.$el.html(this.template());
         self.load();
 
-        $('html').scrollTop(0);
+        // $('html').scrollTop(0);
         J.Views['sidebar'].update(J.Status.currentView);
         self.bind();
         return this;
@@ -60,19 +59,15 @@ define([
 
       bind: function(){
         var self = this,
-            currentScroll = 0,
-            previousScroll,
+            currentScroll = previousScroll = 0,
             delta;
-        $('.slider').slideIt();
-        var slides = document.getElementsByClassName('rehg');
-        // slideIt(slides);
-        $(window).on('scroll DOMMouseScroll MozMousePixelScroll', function(e){
-          if(!J.Status.canScroll){ e.preventDefault(); }
+        slideIt(document.querySelectorAll('.slider'));
+        window.addEventListener('scroll', function(){
           previousScroll = currentScroll;
           currentScroll = window.pageYOffset;
           delta = previousScroll - currentScroll;
           self.renderAnimations(currentScroll, delta);
-        });
+        })
       }
     })
     return DreamcatcherView;

@@ -133,10 +133,10 @@ section#loader.hidden {
 section#loader.my-warner { background: linear-gradient(to right, #c41010 0%,#ff3b3b 100%); }
 section#loader.wdmtg { background: linear-gradient(to right, #3381c1 0%,#2d4fc2 100%); }
 section#loader.game-of-thrones { background: linear-gradient(to right, #c41010 0%,#ff483b 100%); }
+section#loader.kolok { background: linear-gradient(to right, #1078cc -80px, #50a7e5 100%); }
 
-section#loader.kolok { background: #2787cc; }
 section#loader.nike { background: #f9650f; } 
-section#loader.dreamcatcher { background: #23222b; }
+section#loader.dreamcatcher { background: linear-gradient(to right, rgba(26,25,36,.89) 0%,rgba(49,41,56,.89) 100%), url(../images/dreamcatcher/noise.png);}
 
 section#loader h1 {
   position: absolute;
@@ -380,7 +380,7 @@ article.project section h2.final-design {
   font-weight: 300;
   text-align: center;
   text-transform: uppercase; }
-article.project section h2.final-design span { color: #1e1e1e; font-weight: normal; }
+article.project section h2.final-design span { color: #1e1e1e; font-weight: 700; }
 article.project section p.introduction {
   font-family: 'NeutraText', sans-serif;
   font-size: 2.200em;
@@ -524,13 +524,13 @@ nav#next-project h1 span {
   font-weight: 700;
   margin: 20px 0; }
 nav#next-project.dreamcatcher {
-  background: #3381c1; }
+    background: linear-gradient(to right, rgba(26,25,36,.89) 0%,rgba(49,41,56,.89) 100%), url(../images/dreamcatcher/noise.png); }
 nav#next-project.dreamcatcher a {
   background: #3381c1 url(../images/dreamcatcher/dreamcatcher-bg.png) repeat top left; }
 nav#next-project.dreamcatcher h1 span { color: #6b6978; }
 nav#next-project.game-of-thrones { background: linear-gradient(to right, #c41010 -80px,#ff483b 100%); }
 nav#next-project.wdmtg { background: linear-gradient(to right, #3381c1 0%,#2d4fc2 100%); }
-
+nav#next-project.kolok { background: linear-gradient(to right, #1078cc -80px, #50a7e5 100%); }
 nav#next-project.nike {
   background: #f9650f; }
 nav#next-project.nike a {
@@ -625,10 +625,10 @@ article.my-warner section.icon h2.default span { color: #5d647a; }
 article.my-warner section.movies h3 { color: #d61702; }
 article.my-warner section.movies h3 > span { color: #fff; }
 
-article.my-warner section.movies section.best-tweets,
-article.my-warner section.movies section.quizzes,
-article.my-warner section.movies section.facts,
-article.my-warner section.movies section.statistics { padding: 125px 0; }
+article.my-warner section.movies section.best-tweets { padding: 170px 0 60px; }
+article.my-warner section.movies section.quizzes { padding: 120px 0; }
+article.my-warner section.movies section.facts { padding: 120px 0 80px; }
+article.my-warner section.movies section.statistics { padding: 120px 0 260px; }
 article.my-warner section.movies section.quizzes img,
 article.my-warner section.movies section.statistics img { float: right; }
 
@@ -928,7 +928,7 @@ article.kolok header.introduction {
   position: relative; z-index: 400;
   min-height: 1200px;
   color: #fff;
-  background: #2787cc url(../images/kolok/kolok-bg.png) repeat; 
+  background: linear-gradient(to right, #1078cc -80px, #50a7e5 100%);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6),
         inset 0 -5px 0px rgba(0, 0, 0, 0.3); }
 article.kolok hr.dotted { 
@@ -1005,6 +1005,119 @@ article.kolok section.final-design img.mobile-shadow {
   background: transparent url(../images/mobile-shadow.png) no-repeat center 588px; }
 article.kolok footer.thanks h2 { color: #2787cc; }
 /* @end of Kolok */
+
+
+/***********************/
+/* @group Dreamcatcher */
+/* blue [#f9650f];     */
+/***********************/
+article.dreamcatcher header.introduction {
+  position: relative; z-index: 600;
+  min-height: 1200px;
+  color: #fff;
+  background: linear-gradient(to right, rgba(26,25,36,.89) 0%,rgba(49,41,56,.89) 100%), url(../images/dreamcatcher/noise.png);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5),
+        inset 0 -5px 0px rgba(0, 0, 0, 0.2); }
+
+article.dreamcatcher header.introduction h1 { padding: 360px 0 370px; }
+article.dreamcatcher header.introduction h2 { color: #433b52; padding: 0 0 50px; }
+article.dreamcatcher header.introduction ul.meta { border-bottom: 1px solid rgba(67, 59, 82, 0.3); }
+article.dreamcatcher header.introduction ul.meta li h3 { color: #433b52; }
+article.dreamcatcher header.introduction div.arrow { background: transparent url(../images/dreamcatcher/arrow.png) no-repeat; }
+
+article.dreamcatcher section.brief {
+  min-height: 1480px;
+  position: relative; z-index: 500;
+  background: #f3f2f7; color: #938fab;
+  box-shadow: 0 10px 20px 10px rgba(0, 0, 0, 0.6),
+        inset 0 -5px 0px rgba(0, 0, 0, 0.16); }
+article.dreamcatcher section.brief img.iso {
+  position: relative;
+  top: 80px; 
+  margin: 60px auto;
+  display: block;
+  opacity: 0;
+  transition: top cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s, 
+              opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s; }
+article.dreamcatcher section.brief img.iso.animate { top: 0; opacity: 1; }
+article.dreamcatcher section.brief img.iso.animate { top: 0; }
+
+
+article.dreamcatcher section.brief h2.default,
+article.dreamcatcher section.mobile-ready h2.default { color: #332f4f; }
+article.dreamcatcher section.desktop h2.default { color: #fff; }
+article.dreamcatcher section.brief h2.default span,
+article.dreamcatcher section.mobile-ready h2.default span { color: #a267e5; }
+article.dreamcatcher section.desktop h2.default span { color: #5b318c; }
+article.dreamcatcher section.desktop h3 { color: #5c328d; }
+article.dreamcatcher section.desktop h3 > span { color: #fff; }
+article.dreamcatcher section.brief p.introduction,
+article.dreamcatcher section.mobile-ready p.introduction { 
+  background: url(../images/dreamcatcher/p-dotted-light-grey-bg.png) repeat-x left 40px;
+  color: #9390ab; }
+article.dreamcatcher section.desktop p.introduction { 
+  background: url(../images/dreamcatcher/p-dotted-dark-grey-bg.png) repeat-x left 40px;
+  color: #474557; }
+
+article.dreamcatcher section.desktop section.audio-post { padding: 160px 0 80px; }
+article.dreamcatcher section.desktop section.milestones { padding: 160px 0 80px; }
+article.dreamcatcher section.desktop section.charts { padding: 160px 0 140px; }
+article.dreamcatcher section.desktop section.audio-post img { float: right; }
+article.dreamcatcher section.desktop section.milestones img { margin-bottom: 5px; }
+article.dreamcatcher section.desktop {
+  background: #1a1924; color: #474557;
+  position: relative; z-index: 400;
+  padding: 160px 0 0; }
+
+article.dreamcatcher section.desktop section.milestones { min-height: 410px; }
+article.dreamcatcher section.desktop section.milestones img { 
+  /*opacity: 0; top: 0; float: right; position: absolute; */
+  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s,
+              top cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s; }
+article.dreamcatcher section.desktop section.milestones.animate img:nth-child(1) { opacity: 1; z-index: 3; }
+article.dreamcatcher section.desktop section.milestones.animate img:nth-child(2) { top: 140px; opacity: 1; z-index: 2; }
+article.dreamcatcher section.desktop section.milestones.animate img:nth-child(3) { top: 280px; opacity: 1; z-index: 1; }
+
+article.dreamcatcher section.desktop section.charts img {/* opacity: 0;*/ }
+article.dreamcatcher section.desktop section.charts.animate img { opacity: 1; }
+article.dreamcatcher section.desktop section.charts img:nth-child(1) { 
+  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s; }
+article.dreamcatcher section.desktop section.charts img:nth-child(2) { 
+  transition: 0.2s opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s; }
+article.dreamcatcher section.desktop section.charts img:nth-child(3) { 
+  transition: 0.4s opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s; }
+article.dreamcatcher section.desktop section.charts img:nth-child(4) { 
+  transition: 0.6s opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s; }
+
+article.dreamcatcher section.mobile-ready {
+  position: relative; z-index: 300;
+  background: #f3f2f7; color: #938fab;
+  padding: 160px 0 0; }
+article.dreamcatcher section.desktop h2.final-design { color: #5b318c; }
+article.dreamcatcher section.desktop h2.final-design span { color: #fff; }
+article.dreamcatcher section.final-design.end section.slider { padding: 30px 0 0; }
+article.dreamcatcher section.desktop section.final-design { padding: 80px 0 0; }
+article.dreamcatcher section.desktop section.final-design section.slider > ul {
+  background: linear-gradient(to right, #211f2b -80px, #312938 100%); }
+article.dreamcatcher section.desktop section.final-design section.slider nav ul li {
+  border-color: #474557;
+  background: rgba(71, 69, 87, 0.3); }
+
+article.dreamcatcher section.mobile-ready ul { margin: 160px auto 0; }
+article.dreamcatcher section.mobile-ready ul li { margin-bottom: 80px; }
+article.dreamcatcher section.mobile-ready .third--one { padding-right: 10px; width: auto; }
+article.dreamcatcher section.mobile-ready .third--two { padding: 0 10px; width: auto; }
+article.dreamcatcher section.mobile-ready .third--three { padding-left: 10px; width: auto; }
+
+article.dreamcatcher footer.thanks {
+  position: relative; z-index: 100;
+  background: #f3f2f7; 
+  padding: 120px 0 230px;
+  box-shadow: 0 10px 20px 10px rgba(0, 0, 0, 0.4),
+        inset 0 -5px 0px rgba(0, 0, 0, 0.2); }
+article.dreamcatcher footer.thanks h2 { color: #a268e6; }
+/* @end of Dreamcatcher */
+
 
 /*******************/
 /* @group Nike     */
@@ -1091,131 +1204,6 @@ article.nike footer.thanks h2 { color: #fff; }
 /* @end of Nike */
 
 
-/***********************/
-/* @group Dreamcatcher */
-/* blue [#f9650f];     */
-/***********************/
-article.dreamcatcher header.introduction {
-  position: relative; z-index: 600;
-  min-height: 1200px;
-  color: #fff;
-  background: #23222b url(../images/dreamcatcher/dreamcatcher-bg.png) repeat; 
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5),
-        inset 0 -5px 0px rgba(0, 0, 0, 0.2); }
-article.dreamcatcher hr.dotted { 
-  width: 100%; height: 1px; }
-article.dreamcatcher hr.dotted.grey { 
-  background: transparent url(../images/dreamcatcher/hr-dotted-grey-bg.png) repeat-x; }
-article.dreamcatcher hr.dotted.pink { 
-  background: transparent url(../images/dreamcatcher/hr-dotted-pink-bg.png) repeat-x; }
-article.dreamcatcher header.introduction h1 { padding: 350px 0 120px; }
-article.dreamcatcher header.introduction h2 { padding: 0 0 50px; }
-article.dreamcatcher header.introduction ul.meta li { color: #6b6978; }
-article.dreamcatcher section.brief {
-  min-height: 1160px;
-  position: relative; z-index: 500;
-  background: #f3f2f7; color: #6b6978;
-  box-shadow: 0 10px 20px 10px rgba(124, 34, 62, 1),
-        inset 0 -5px 0px rgba(0, 0, 0, 0.2); }
-article.dreamcatcher section.brief h2.default { color: #33323d; }
-article.dreamcatcher section.brief h2.default span { color: #ba476b; }
-article.dreamcatcher section.brief h2.default > span { border-color: #ba476b; }
-article.dreamcatcher section.brief p.introduction { color: #6b6978; }
-article.dreamcatcher section.brief img.iso {
-  position: relative;
-  top: 80px; 
-  margin: 60px auto;
-  display: block;
-  opacity: 0;
-  transition: top cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s, 
-              opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s; }
-article.dreamcatcher section.brief img.iso.animate { top: 0; opacity: 1; }
-article.dreamcatcher section.brief img.iso.animate { top: 0; }
-article.dreamcatcher section.design-guidelines {
-  position: relative; z-index: 400;
-  background: #ba476b; color: rgba(255, 255, 255, 0.5);
-  box-shadow: 0 10px 20px 10px rgba(0, 0, 0, 0.4),
-        inset 0 -5px 0px rgba(0, 0, 0, 0.25); }
-article.dreamcatcher section.design-guidelines h2.default,
-article.dreamcatcher section.desktop h2.default { color: #fff; }
-article.dreamcatcher section.design-guidelines h2.default span,
-article.dreamcatcher section.desktop h2.default span { color: #831b3c; }
-article.dreamcatcher section.design-guidelines p.introduction { color: #831b3c; }
-article.dreamcatcher section.design-guidelines h3 > span,
-article.dreamcatcher section.desktop h3 > span { color: #fff; }
-article.dreamcatcher section.design-guidelines section.in-the-night,
-article.dreamcatcher section.design-guidelines section.typefaces,
-article.dreamcatcher section.design-guidelines section.color-palettes,
-article.dreamcatcher section.desktop section.audio-post,
-article.dreamcatcher section.desktop section.your-choice,
-article.dreamcatcher section.desktop section.milestones,
-article.dreamcatcher section.desktop section.charts { padding: 80px 0; }
-article.dreamcatcher section.design-guidelines section.in-the-night img, 
-article.dreamcatcher section.design-guidelines section.color-palettes img,
-article.dreamcatcher section.desktop section.audio-post img { float: right; }
-
-article.dreamcatcher section.desktop {
-  position: relative; z-index: 300;
-  background: #23222b; color: #6b6978;
-  padding: 40px 0 0;
-  /*box-shadow: 0 10px 20px 10px rgba(0, 0, 0, 0.4),
-        inset 0 -5px 0px rgba(0, 0, 0, 0.25);*/ }
-article.dreamcatcher section.desktop h3 { color: #ba476b; }
-article.dreamcatcher section.desktop section.charts h3 { margin-top: 20px; }
-article.dreamcatcher section.desktop section.milestones img,
-article.dreamcatcher section.desktop section.charts img { margin-bottom: 10px; }
-
-article.dreamcatcher section.desktop section.milestones { min-height: 580px; }
-article.dreamcatcher section.desktop section.milestones img { 
-  opacity: 0; top: 0; float: right; position: absolute; 
-  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s,
-              top cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s; }
-article.dreamcatcher section.desktop section.milestones.animate img:nth-child(1) { opacity: 1; z-index: 3; }
-article.dreamcatcher section.desktop section.milestones.animate img:nth-child(2) { top: 140px; opacity: 1; z-index: 2; }
-article.dreamcatcher section.desktop section.milestones.animate img:nth-child(3) { top: 280px; opacity: 1; z-index: 1; }
-
-article.dreamcatcher section.desktop section.charts img { opacity: 0; }
-article.dreamcatcher section.desktop section.charts.animate img { opacity: 1; }
-article.dreamcatcher section.desktop section.charts img:nth-child(1) { 
-  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s; }
-article.dreamcatcher section.desktop section.charts img:nth-child(2) { 
-  transition: 0.2s opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s; }
-article.dreamcatcher section.desktop section.charts img:nth-child(3) { 
-  transition: 0.4s opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s; }
-article.dreamcatcher section.desktop section.charts img:nth-child(4) { 
-  transition: 0.6s opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s; }
-
-
-article.dreamcatcher section.desktop section.final-design { padding: 40px 0 0; }
-article.dreamcatcher section.desktop section.final-design section.slider > ul {
-  background: #ba476b url(../images/dreamcatcher/dreamcatcher-pink-bg.png) repeat;
-  box-shadow: 0 10px 20px 10px rgba(0, 0, 0, 0.4),
-        inset 0 -5px 0px rgba(0, 0, 0, 0.3); }
-article.dreamcatcher section.desktop section.final-design section.slider nav ul li{
-  border-color: #6b6978;
-  background: rgba(107, 105, 120, 0.3); }
-article.dreamcatcher section.desktop section.final-design h2.final-design { color: #f3f2f7; }
-article.dreamcatcher section.mobile-ready {
-  position: relative; z-index: 200;
-  padding: 70px 0 0;
-  background: #f3f2f7; color: rgba(255, 255, 255, 0.5); }
-article.dreamcatcher section.mobile-ready h2.default { color: #33323d; }
-article.dreamcatcher section.mobile-ready h2.default span { color: #ba476b; }
-article.dreamcatcher section.mobile-ready p.introduction { color: #6b6978; }
-article.dreamcatcher section.mobile-ready div.row:first-child { margin-top: 90px; }
-article.dreamcatcher section.mobile-ready div.row { margin-top: 80px; }
-article.dreamcatcher section.mobile-ready div.third--one img { float: left; }
-article.dreamcatcher section.mobile-ready div.third--two { text-align: center; }
-article.dreamcatcher section.mobile-ready div.third--three img { float: right; }
-article.dreamcatcher section.mobile-ready div.row img {
-  padding: 0px 0 30px;
-  background: transparent url(../images/mobile-shadow.png) no-repeat center 568px; }
-article.dreamcatcher footer.thanks {
-  position: relative; z-index: 100;
-  background: #f3f2f7; color: #6d6b7a;
-  box-shadow: 0 10px 20px 10px rgba(0, 0, 0, 0.4),
-        inset 0 -5px 0px rgba(0, 0, 0, 0.25); }
-/* @end of Dreamcatcher */
 /* @end of Projects */
 /* @end of Main */
 /* @end of Master */
