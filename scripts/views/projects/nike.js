@@ -1,12 +1,11 @@
 /*global define*/
 
 define([
-    'jquery',
     'backbone', 
     'views/project',
     'text!templates/nike.html',
     'vendor/slider'
-], function ($, Backbone, ProjectView, tplNike) {
+], function (Backbone, ProjectView, tplNike, slideIt) {
     // 'use strict';
 
     var NikeView = ProjectView.extend({
@@ -29,7 +28,16 @@ define([
       },
 
       bind: function(){
-        $('.slider').slideIt();
+        var self = this,
+            currentScroll = previousScroll = 0,
+            delta;
+        slideIt(document.querySelectorAll('.slider'));
+        window.addEventListener('scroll', function(){
+          previousScroll = currentScroll;
+          currentScroll = window.pageYOffset;
+          delta = previousScroll - currentScroll;
+          self.renderAnimations(currentScroll, delta);
+        })
       }
        
     });

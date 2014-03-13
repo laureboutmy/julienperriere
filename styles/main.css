@@ -133,9 +133,8 @@ section#loader.hidden {
 section#loader.my-warner { background: linear-gradient(to right, #c41010 0%,#ff3b3b 100%); }
 section#loader.wdmtg { background: linear-gradient(to right, #3381c1 0%,#2d4fc2 100%); }
 section#loader.game-of-thrones { background: linear-gradient(to right, #c41010 0%,#ff483b 100%); }
-section#loader.kolok { background: linear-gradient(to right, #1078cc -80px, #50a7e5 100%); }
-
-section#loader.nike { background: #f9650f; } 
+section#loader.kolok { background: linear-gradient(to right, #1078cc -0%, #50a7e5 100%); }
+section#loader.nike { background: linear-gradient(to right, #ff7024 0%, #ff401f 100%); } 
 section#loader.dreamcatcher { background: linear-gradient(to right, rgba(26,25,36,.89) 0%,rgba(49,41,56,.89) 100%), url(../images/dreamcatcher/noise.png);}
 
 section#loader h1 {
@@ -525,14 +524,11 @@ nav#next-project h1 span {
   margin: 20px 0; }
 nav#next-project.dreamcatcher {
     background: linear-gradient(to right, rgba(26,25,36,.89) 0%,rgba(49,41,56,.89) 100%), url(../images/dreamcatcher/noise.png); }
-nav#next-project.dreamcatcher a {
-  background: #3381c1 url(../images/dreamcatcher/dreamcatcher-bg.png) repeat top left; }
 nav#next-project.dreamcatcher h1 span { color: #6b6978; }
 nav#next-project.game-of-thrones { background: linear-gradient(to right, #c41010 -80px,#ff483b 100%); }
-nav#next-project.wdmtg { background: linear-gradient(to right, #3381c1 0%,#2d4fc2 100%); }
+nav#next-project.wdmtg { background: linear-gradient(to right, #3381c1 -80px,#2d4fc2 100%); }
 nav#next-project.kolok { background: linear-gradient(to right, #1078cc -80px, #50a7e5 100%); }
-nav#next-project.nike {
-  background: #f9650f; }
+nav#next-project.nike { background: linear-gradient(to right, #ff7024 -80px, #ff401f 100%); }
 nav#next-project.nike a {
   background: #f9650f url(../images/nike/nike-bg.png) repeat top left; }
 nav#next-project.nike h1 span { color: #6b6978; }
@@ -912,8 +908,7 @@ article.game-of-thrones section.mobile div.iphone {
         -moz-box-sizing: border-box;
      -webkit-box-sizing: border-box;
              box-sizing: border-box; }
-article.game-of-thrones section.mobile img.mobile-shadow {
-  margin: 10px 0 0; }
+article.game-of-thrones section.mobile img.mobile-shadow { margin: 10px 0 0; }
 article.game-of-thrones section.mobile section.remote { padding: 160px 0 80px; }
 article.game-of-thrones section.mobile section.feed { padding: 80px 0; }
 article.game-of-thrones footer.thanks { box-shadow: inset 0 -5px 0px rgba(255, 255, 255, 0.09); padding: 130px 0 230px; background: #0e0f12; }
@@ -925,72 +920,93 @@ article.game-of-thrones footer.thanks h2 { color: #41444f; }
 /* blue [#2787cc]; */
 /*******************/
 article.kolok header.introduction {
-  position: relative; z-index: 400;
+  position: relative; z-index: 500;
   min-height: 1200px;
   color: #fff;
   background: linear-gradient(to right, #1078cc -80px, #50a7e5 100%);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6),
         inset 0 -5px 0px rgba(0, 0, 0, 0.3); }
-article.kolok hr.dotted { 
-  width: 100%; height: 1px; }
-article.kolok hr.dotted.dark { 
-  background: transparent url(../images/kolok/hr-dotted-dark-bg.png) repeat-x; }
-article.kolok hr.dotted.light { 
-  background: transparent url(../images/kolok/hr-dotted-light-bg.png) repeat-x; }
-article.kolok header.introduction h1 { padding: 310px 0 80px; }
-article.kolok header.introduction h2 { padding: 0 0 50px; }
-article.kolok header.introduction ul.meta li { color: #97c5e5; }
+article.kolok header.introduction h1 { padding: 320px 0 300px; }
+article.kolok header.introduction h2 { color: #75c4e5; padding: 0 0 50px; }
+article.kolok header.introduction ul.meta { border-bottom: 1px solid rgba(117, 196, 229, 0.3); }
+article.kolok header.introduction ul.meta li h3 { color: #75c4e5; }
+article.kolok header.introduction div.arrow { background: transparent url(../images/kolok/arrow.png) no-repeat; }
+
 article.kolok section.brief {
-  min-height: 1160px;
-  position: relative; z-index: 300;
-  background: #181b1f; color: #44494c;
+  position: relative; z-index: 400;
+  min-height: 1520px;
+  padding: 160px 0;
+  background: #171c21; color: #3d4754;
   box-shadow: 0 10px 20px 10px rgba(0, 0, 0, 0.6),
-        inset 0 -5px 0px rgba(0, 0, 0, 0.3); }
+        inset 0 -5px 0px rgba(255, 255, 255, 0.09); }
+article.kolok section.design-guidelines {
+  position: relative; z-index: 300;
+  padding: 160px 0;
+  background: #f0f8ff; color: #929da8;
+  box-shadow: 0 10px 20px 10px rgba(0, 0, 0, 0.4),
+        inset 0 -5px 0px rgba(0, 0, 0, 0.25); }
+article.kolok section.datavisualizations {
+  position: relative; z-index: 200;
+  min-height: 1520px;
+  padding: 160px 0;
+  background: #171c21; color: #3d4754;
+  box-shadow: 0 10px 20px 10px rgba(0, 0, 0, 0.6),
+        inset 0 -5px 0px rgba(255, 255, 255, 0.09); }
+article.kolok section.final-design {
+  position: relative; z-index: 100;
+  padding: 160px 0 0;
+  background: #f0f8ff; color: #929da8; }
 article.kolok section.brief h2.default,
 article.kolok section.datavisualizations h2.default { color: #fff; }
+article.kolok section.design-guidelines h2.default,
+article.kolok section.final-design h2.default { color: #171c21; }
 article.kolok section.brief h2.default span,
-article.kolok section.datavisualizations h2.default span { color: #2787cc; }
-article.kolok section.brief h2.default > span { border-color: #2787cc; }
+article.kolok section.datavisualizations h2.default span { color: #0086e5; }
+article.kolok section.design-guidelines h2.default span,
+article.kolok section.final-design h2.default span { color: #0086e5; }
 article.kolok section.brief p.introduction,
-article.kolok section.datavisualizations p.introduction { color: #373f45; }
+article.kolok section.datavisualizations p.introduction { 
+  background: url(../images/kolok/p-dotted-dark-grey-bg.png) repeat-x left 40px;
+  color: #3d4754; }
+article.kolok section.design-guidelines p.introduction { 
+  background: url(../images/kolok/p-dotted-light-grey-bg.png) repeat-x left 40px;
+  color: #929da8; }
+article.kolok section.datavisualizations hr.dotted { 
+  width: 100%; height: 1px;
+  background: transparent url(../images/my-warner/p-dotted-dark-grey-bg.png) repeat-x; }
+article.kolok section.design-guidelines hr.dotted { 
+  width: 100%; height: 1px;
+  background: transparent url(../images/my-warner/p-dotted-light-grey-bg.png) repeat-x; }
 article.kolok section.brief img.iso {
   position: relative;
   top: 50px; 
   margin: 60px auto;
   display: block; }
-article.kolok section.design-guidelines {
-  position: relative; z-index: 200;
-  background: #f0f8ff; color: #96a3ab;
-  box-shadow: 0 10px 20px 10px rgba(0, 0, 0, 0.4),
-        inset 0 -5px 0px rgba(0, 0, 0, 0.25); }
-article.kolok section.design-guidelines h2.default,
-article.kolok section.final-design h2.default { color: #21272b; }
-article.kolok section.design-guidelines h2.default span,
-article.kolok section.final-design h2.default span { color: #2787cc; }
-article.kolok section.design-guidelines p.introduction { color: #96a3ab; }
+
+
 article.kolok section.design-guidelines h3,
-article.kolok section.final-design h3 { color: #2787cc; }
+article.kolok section.final-design h3 { color: #0086e5; }
+article.kolok section.datavisualizations h3 { color: #2787cc; }     
 article.kolok section.design-guidelines h3 > span,
-article.kolok section.final-design h3 > span { color: #21272b; }
+article.kolok section.final-design h3 > span { color: #171c21; }
+article.kolok section.datavisualizations h3 > span { color: #fff; }
+
+
 article.kolok section.design-guidelines section.the-k-icon,
-article.kolok section.design-guidelines section.color-palette,
-article.kolok section.design-guidelines section.typography,
-article.kolok section.datavisualizations section.share-expenses,
-article.kolok section.datavisualizations section.who-owes-who,
-article.kolok section.datavisualizations section.bank-account,
-article.kolok section.datavisualizations section.total-expenses { padding: 80px 0; }
+article.kolok section.design-guidelines section.color-palette { padding: 160px 0 100px; }
+article.kolok section.design-guidelines section.typography { padding: 160px 0 60px; }
+article.kolok section.datavisualizations section.share-expenses, 
+article.kolok section.datavisualizations section.who-owes-who { padding: 160px 0 90px; }
+article.kolok section.datavisualizations section.bank-account { padding: 160px 0 80px; }
+article.kolok section.datavisualizations section.total-expenses { padding: 160px 0 60px; }
 article.kolok section.datavisualizations section.total-expenses img,
 article.kolok section.datavisualizations section.who-owes-who img { float: right; }
-article.kolok section.datavisualizations {
-  position: relative; z-index: 100;
-  background: #181b1f; color: #373f45;
-  box-shadow: 0 10px 20px 10px rgba(0, 0, 0, 0.4),
-        inset 0 -5px 0px rgba(0, 0, 0, 0.25); }
-article.kolok section.datavisualizations h3 { color: #2787cc; }     
-article.kolok section.datavisualizations h3 > span { color: #fff; }
-article.kolok section.final-design,
-article.kolok footer.thanks {
-  background: #f0f8ff; color: #96a3ab; }
+
+article.kolok section.final-design section.home-screen,
+article.kolok section.final-design section.expenses-details,
+article.kolok section.final-design section.services-location,
+article.kolok section.final-design section.welcome-process { padding: 120px 0; }
+
 article.kolok section.final-design div.iphone {
   width: 633px; height: 1360px;
   padding: 196px 53px;
@@ -998,12 +1014,22 @@ article.kolok section.final-design div.iphone {
         -moz-box-sizing: border-box;
      -webkit-box-sizing: border-box;
              box-sizing: border-box; }
+article.kolok section.final-design img.mobile-shadow { margin: 10px 0 0; }
+article.kolok section.final-design h3 { margin: 60px 0 25px; }
+article.kolok section.mobile div.iphone {
+  width: 633px; height: 1360px;
+  padding: 196px 53px;
+  background: transparent url(../images/game-of-thrones/iphone.png) no-repeat top left;
+        -moz-box-sizing: border-box;
+     -webkit-box-sizing: border-box;
+             box-sizing: border-box; }
 
-article.kolok section.final-design p { margin-bottom: 10px; }
-article.kolok section.final-design img.mobile-shadow {
-  padding: 20px 0 30px;
-  background: transparent url(../images/mobile-shadow.png) no-repeat center 588px; }
-article.kolok footer.thanks h2 { color: #2787cc; }
+article.kolok footer.thanks {
+  background: #f0f8ff;
+  padding: 110px 0 240px;
+  box-shadow: 0 10px 20px 10px rgba(0, 0, 0, 0.6),
+        inset 0 -5px 0px rgba(0, 0, 0, 0.15);  }
+article.kolok footer.thanks h2 { color: #0086e5; }
 /* @end of Kolok */
 
 
@@ -1015,7 +1041,7 @@ article.dreamcatcher header.introduction {
   position: relative; z-index: 600;
   min-height: 1200px;
   color: #fff;
-  background: linear-gradient(to right, rgba(26,25,36,.89) 0%,rgba(49,41,56,.89) 100%), url(../images/dreamcatcher/noise.png);
+  background: linear-gradient(to right, rgba(26,25,36,.89) -80px,rgba(49,41,56,.89) 100%), url(../images/dreamcatcher/noise.png);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5),
         inset 0 -5px 0px rgba(0, 0, 0, 0.2); }
 
@@ -1052,12 +1078,16 @@ article.dreamcatcher section.desktop h2.default span { color: #5b318c; }
 article.dreamcatcher section.desktop h3 { color: #5c328d; }
 article.dreamcatcher section.desktop h3 > span { color: #fff; }
 article.dreamcatcher section.brief p.introduction,
-article.dreamcatcher section.mobile-ready p.introduction { 
-  background: url(../images/dreamcatcher/p-dotted-light-grey-bg.png) repeat-x left 40px;
-  color: #9390ab; }
+
 article.dreamcatcher section.desktop p.introduction { 
   background: url(../images/dreamcatcher/p-dotted-dark-grey-bg.png) repeat-x left 40px;
   color: #474557; }
+article.dreamcatcher section.mobile-ready hr.dotted { 
+  width: 100%; height: 1px;
+  background: transparent url(../images/dreamcatcher/p-dotted-light-grey-bg.png) repeat-x; }
+article.dreamcatcher section.desktop hr.dotted { 
+  width: 100%; height: 1px;
+  background: transparent url(../images/dreamcatcher/p-dotted-dark-grey-bg.png) repeat-x; }
 
 article.dreamcatcher section.desktop section.audio-post { padding: 160px 0 80px; }
 article.dreamcatcher section.desktop section.milestones { padding: 160px 0 80px; }
@@ -1123,84 +1153,74 @@ article.dreamcatcher footer.thanks h2 { color: #a268e6; }
 /* @group Nike     */
 /* blue [#f9650f]; */
 /*******************/
-div#wrapper section#main article.nike {
-  margin-bottom: 0; }
+div#wrapper section#main article.nike { margin-bottom: 0; }
 article.nike header.introduction {
   position: relative; z-index: 400;
   min-height: 1200px;
   color: #fff;
-  background: #f9650f url(../images/nike/nike-bg.png) repeat; 
+  background: linear-gradient(to right, #ff7024 -80px, #ff401f 100%); 
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5),
         inset 0 -5px 0px rgba(0, 0, 0, 0.2); }
 article.nike hr.dotted { 
-  width: 100%; height: 1px; }
-article.nike hr.dotted.dark { 
-  background: transparent url(../images/nike/hr-dotted-dark-bg.png) repeat-x; }
-article.nike hr.dotted.light { 
-  background: transparent url(../images/nike/hr-dotted-light-bg.png) repeat-x; }
-article.nike hr.dotted.purple { 
-  background: transparent url(../images/nike/hr-dotted-purple-bg.png) repeat-x; }
-article.nike header.introduction h1 { padding: 350px 0 35px; }
-article.nike header.introduction h2 { padding: 0 0 50px; }
-article.nike header.introduction ul.meta li { color: #fdc08a; }
+  height: 1px; width: 100%;
+  background: url(../images/nike/p-dotted-dark-grey-bg.png); }
+article.nike header.introduction h1 { padding: 360px 0 260px; }
+article.nike header.introduction h2 { color: #ff9142; padding: 0 0 50px; }
+article.nike header.introduction ul.meta { border-bottom: 1px solid rgba(255, 138, 53, 0.4);}
+article.nike header.introduction ul.meta li h3 { color: #fdc08a; }
+article.nike header.introduction div.arrow { background: transparent url(../images/nike/arrow.png) no-repeat; }
 article.nike section.brief {
   min-height: 1160px;
   position: relative; z-index: 300;
-  background: #f5f5f5; color: #8c8c8c;
+  padding: 160px 0;
+  background: #f5f5f5; color: #7f7f7f;
   box-shadow: 0 10px 20px 10px rgba(0, 0, 0, 0.6),
         inset 0 -5px 0px rgba(0, 0, 0, 0.2); }
-article.nike section.brief h2.default { color: #1a1a1a; }
-article.nike section.brief h2.default span { color: #f7570c; }
-article.nike section.brief h2.default > span { border-color: #f7570c; }
-article.nike section.brief p.introduction { color: #a6a6a6; }
+article.nike section.brief h2.default { color: #ff5500; }
+article.nike section.final-design h2.default { color: #cc3a00; }
+article.nike section.final-design h2.default span { color: #fff; }
+article.nike section.brief h2.default span { color: #4c4c4c; }
+article.nike section.final-design h3 { color: #cc3a00; }
+article.nike section.final-design h3 > span { color: #fff; }
+article.nike section.brief p.introduction { 
+  background: url(../images/nike/p-dotted-light-grey-bg.png) repeat left 40px; 
+  color: #7f7f7f; }
+article.nike section.final-design p.introduction { 
+  background: url(../images/nike/p-dotted-dark-grey-bg.png) repeat left 40px; 
+  color: #3b3b3b; }
 article.nike section.brief img.iso {
   position: relative;
   top: 50px; 
   margin: 60px auto;
   display: block; }
 
-article.nike section.design-guidelines {
-  position: relative; z-index: 200;
-  background: #5f3d9e; color: #9a89be;
-  box-shadow: 0 10px 20px 10px rgba(0, 0, 0, 0.4),
-        inset 0 -5px 0px rgba(0, 0, 0, 0.25); }
-article.nike section.design-guidelines h2.default,
-article.nike section.final-design h2.default { color: #fff; }
-article.nike section.design-guidelines h2.default span { color: #3e1e7a; }
-article.nike section.design-guidelines p.introduction { color: #3e1e7a; }
-article.nike section.design-guidelines h3 { color: #3e1e7a; }
-article.nike section.design-guidelines h3 > span,
-article.nike section.final-design h3 > span { color: #fff; }
-article.nike section.design-guidelines section.typography,
-article.nike section.design-guidelines section.color-palette { padding: 80px 0; }
-
 article.nike section.final-design {
   position: relative; z-index: 200;
-  background: #0f0f0f; color: #4c4c4c;
-  box-shadow: inset 0 -5px 0px rgba(0, 0, 0, 0.25); }
-article.nike section.final-design h2.default span { color: #f7570c; }
-article.nike section.final-design p.introduction { color: #4d4d4d; }
-article.nike section.final-design h3 { color: #f7570c; }
-article.nike section.final-design section.chapters,
-article.nike section.final-design section.all-about-you,
-article.nike section.final-design section.sports-data, 
-article.nike section.final-design section.best-shoes,
-article.nike section.final-design section.your-diary { padding: 80px 0; }
+  padding: 160px 0 0;
+  background: #0f0f0f; color: #3a3a3a; }
+
+article.nike section.final-design section.chapters { padding: 160px 0 80px; }
+article.nike section.final-design section.all-about-you { padding: 160px 0 20px; }
+article.nike section.final-design section.sports-data { padding: 160px 0 80px; }
+article.nike section.final-design section.best-shoes { padding: 160px 0 60px; }
+article.nike section.final-design section.your-diary { padding: 160px 0 190px; }
 article.nike section.final-design section.chapters img,
 article.nike section.final-design section.sports-data img,
 article.nike section.final-design section.your-diary img { float: right; }
 
-article.nike section.final-design h2.final-design { color: #fff; }
+article.nike section.final-design h2.final-design { color: #cc3a00; }
+article.nike section.final-design h2.final-design span { color: #fff; }
 article.nike section.final-design section.slider > ul {
-  background: #f9650f url(../images/nike/nike-bg.png) repeat; }
+  background: linear-gradient(to right, #ff7024 -80px, #ff401f 100%); }
 article.nike section.final-design section.slider nav ul li{
-  border-color: #fa5400;
-  background: rgba(250, 84, 0, 0.3); }
+  border-color: #cc3a00;
+  background: rgba(204, 58, 0, 0.3); }
 article.nike section.final-design.end section.slider { padding: 20px 0 0; }
 article.nike section.final-design.end section.slider > ul { box-shadow: none; }
 article.nike footer.thanks { 
-  background: #3381c1 url(../images/nike/nike-bg.png) repeat left -250px; }
-article.nike footer.thanks h2 { color: #fff; }
+  padding: 250px 0;
+  background: linear-gradient(to right, #ff7024 -80px, #ff401f 100%);  }
+article.nike footer.thanks h2 { color: #fe8a34; }
 /* @end of Nike */
 
 
