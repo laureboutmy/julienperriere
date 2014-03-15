@@ -32,17 +32,19 @@ define([
 
         sidebar.addEventListener('mouseover', function(){ helpers.addClass(wrapper, 'unwound'); });
         sidebar.addEventListener('mouseout', function(){ helpers.removeClass(wrapper, 'unwound'); });
+        main.addEventListener('click', function(){ helpers.removeClass(wrapper, 'open'); });
 
         for(i in infos){
           if(i < infos.length) {
-            infos[i].addEventListener('click', function(){
+            infos[i].addEventListener('click', function(e){
+              e.stopPropagation();
               _this.getInfos(this.getAttribute('class')); 
               helpers.addClass(wrapper, 'open'); 
             });
           }
         }
 
-        main.addEventListener('click', function(){ helpers.removeClass(wrapper, 'open'); });
+        sidebar.addEventListener('click', function(){ helpers.removeClass(wrapper, 'open'); });
         document.addEventListener('keydown', function(e){
           if(e.keyCode == 27){
             helpers.removeClass(wrapper, 'open'); 

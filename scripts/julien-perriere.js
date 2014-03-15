@@ -1,4 +1,4 @@
-define(['backbone', 'jquery', 'views/sidebar'], function(Backbone, $, Sidebar){
+define(['backbone', 'jquery', 'views/sidebar', 'vendor/helpers'], function(Backbone, $, Sidebar, helpers){
 	J = {
 		Views: {},
 		Models: {},
@@ -25,7 +25,7 @@ define(['backbone', 'jquery', 'views/sidebar'], function(Backbone, $, Sidebar){
 					for(var i = Backbone.history.handlers.length - 1; i >= 0; i--){
 						if(Backbone.history.handlers[i].route.test(Backbone.history.fragment)){ notFound = false; }
 					}
-					if(notFound){ self.navigate('', {trigger: false}); }		
+					if(notFound){ self.navigate('', {trigger: true, replace: true}); }		
 
 		    	J.Views['sidebar'] = new Sidebar();
 		    	J.Views.sidebar.render();
@@ -40,8 +40,14 @@ define(['backbone', 'jquery', 'views/sidebar'], function(Backbone, $, Sidebar){
 		    	self.render();
 		    },
 
+		    home: function(){
+		    	var self = this;
+		    	self.render();
+		    },
+
 		 		// Start rendering a new case study
 		    render: function(view, wait){
+
 		    	var self = this;
 		    	if(typeof wait != 'undefined'){ 
 		    		setTimeout(function(){
@@ -49,7 +55,7 @@ define(['backbone', 'jquery', 'views/sidebar'], function(Backbone, $, Sidebar){
 				    	J.Status.currentView = view || Backbone.history.fragment;
 				    	if(J.Status.previousView != ''){ 
 				    		J.Views[J.Status.previousView].destroy(); 
-				    		J.Views[J.Status.previousView].launchLoader();
+				    		// J.Views[J.Status.previousView].launchLoader();
 				    	}
 			    		self.createView(J.Status.currentView);
 		    		}, 500)
@@ -80,7 +86,7 @@ define(['backbone', 'jquery', 'views/sidebar'], function(Backbone, $, Sidebar){
 							require(['views/home'], function(View){
 				     		J.Views['home'] = new View();
 				     	});
-		    		} else {}
+		    		} else { J.Views['home'].load(); J.Views['home'].render(); }
 		    	}
 		    	self.navigate(view, {trigger: false, replace: false})
 		    },
@@ -97,12 +103,20 @@ define(['backbone', 'jquery', 'views/sidebar'], function(Backbone, $, Sidebar){
 		    	Array.prototype.forEach.call(sidebar.querySelectorAll('[data-project]'), function(el, i){
 		        el.addEventListener('click', function(e){
 		        	e.preventDefault(); 
-		        	if(J.Status.infos){ helpers.removeClass(wrapper, 'open'); }
+		        	if(helpers.hasClass(wrapper, 'open')){ helpers.removeClass(wrapper, 'open'); }
+		        	helpers.removeClass(wrapper, 'unwound');
 		        	var project = this.getAttribute('data-project');
-		        	J.Router.render(project, 'wait');
-							J.Views['sidebar'].update(project);
+		        	document.documentElement.pageYOffset = 0;
+		        	helpers.addClass(loader, project);
+			        setTimeout(function(){ 
+			          helpers.removeClass(loader, 'hidden');
+			          J.Router.render(project, 'wait');
+								J.Views['sidebar'].update(project); }, 300);
+		        	
 		        })
 		      });
+
+
 
 		    	main.addEventListener('click', function(e){
 		    		e.preventDefault();
@@ -117,7 +131,7 @@ define(['backbone', 'jquery', 'views/sidebar'], function(Backbone, $, Sidebar){
 
 		    		if(project){
 		    			if(J.Status.infos){ helpers.removeClass(wrapper, 'open'); }
-		    			J.Views[J.Status.currentView].renderChangeFromBottom();
+		    			J.Views[J.Status.currentView].renderChangeFromBottom(project);
 		    			J.Router.render(project, 'wait');
 		    			J.Views['sidebar'].update(project);
 		    		}
@@ -129,12 +143,13 @@ define(['backbone', 'jquery', 'views/sidebar'], function(Backbone, $, Sidebar){
 		    				name = form.querySelector('input[name="name"]'),
 		    				email = form.querySelector('input[name="email"]'),
 		    				message = form.querySelector('textarea'),
-		    				error = null;
+		    				error = false;
 
-		    		if(email.value == '' && name.value == '' && message.value == ''){ error = 'Please, fill out all the fields! '; }
-		    		if(!/\S+@\S+\.\S+/.test(email.value)){ error += 'The email you entered is not valid.'; }
-		    		if(error){ form.querySelector('.error').innerHTML = error; }
-		    		else {
+		    		if(email.value == '' || name.value == '' || message.value == '' || /\S+@\S+\.\S+/.test(email.value)){ error = true; }
+		    		if(error){ 
+		    			form.querySelector('span.message').innerHTML = "Whoops! That's a no-go.";
+		    			helpers.addClass(form.querySelector('span.message'), 'visible');
+		    		} else {
 		    			var data = {
 		    				name: name.value,
 		    				email: email.value,

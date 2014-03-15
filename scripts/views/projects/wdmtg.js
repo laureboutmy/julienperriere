@@ -49,7 +49,7 @@ define([
         self.$el.html(this.template());
         self.load();
         // $('html').scrollTop(0);
-        document.body.scrollTop = document.documentElement.scrollTop = 0;
+        // document.body.scrollTop = document.documentElement.scrollTop = 0;
         J.Views['sidebar'].update(J.Status.currentView);
         self.bind();
         return this;

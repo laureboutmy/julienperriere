@@ -55,13 +55,16 @@ div#wrapper section#sidebar header {
 div#wrapper section#sidebar header div { width: 80px; text-align: center; float: left; }
 div#wrapper section#sidebar header h1 {
   font-family: 'NeutraText', sans-serif;
-  text-transform: uppercase;
-  font-size: 1.067em;
-  letter-spacing: 0.02em;
-  margin-top: 10px;
-  font-weight: 700; }
+  font-variant: small-caps;
+  font-size: 1.533em;
+  margin-top: 7px;
+  color: #fff;
+  font-weight: normal;
+
+  -webkit-font-smoothing: subpixel-antialiased; }
 div#wrapper section#sidebar header h2 {
-  font-family: Arapey, Georgia, serif;
+  font-family: 'NeutraText', sans-serif;
+  margin-top: 5px;
   font-size: 1.200em;
   font-style: italic;
   color: #666666; }
@@ -75,8 +78,7 @@ div#wrapper section#sidebar nav#nav ul li a {
   font-weight: 700;
   font-family: 'NeutraText', sans-serif; }
 div#wrapper section#sidebar nav#nav ul li a:hover { color: #fff; }
-div#wrapper section#sidebar nav#nav ul li.current a {
-  color: #fff; }
+div#wrapper section#sidebar nav#nav ul li.current a { color: #fff; }
 div#wrapper section#sidebar nav#nav ul li a span { width: 80px; display: inline-block; text-align: center; }
 div#wrapper section#sidebar nav#nav ul li a span i { 
   width: 7px; height: 7px;
@@ -93,24 +95,24 @@ div#wrapper section#sidebar nav#nav-infos ul li {
   line-height: 1.8em;
   cursor: pointer;
   padding: 20px 0; display: block;
-  color: #fff;
+  color: #333;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 0.933em;
   border-top: 1px solid #141414;
   height: 20px;
-  font-family: 'NeutraText', sans-serif; }
-div#wrapper section#sidebar nav#nav-infos ul li span { width: 80px; float: left; text-align: center; }
-div#wrapper section#sidebar nav#nav-infos ul li span i.infos { max-height: 18px; }
-div#wrapper section#sidebar nav#nav-infos ul li span i { 
-  font-size: 1.714em;
-  font-family: Bodoni, Georgia, serif;
-  font-style: italic;
-  text-transform: none;
-  font-weight: normal;
-  opacity: 0.2; text-indent: 0;
-  transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1); }
-div#wrapper section#sidebar nav#nav-infos ul li:hover span i { opacity: 1; }
+  font-family: 'NeutraText', sans-serif;
+  transition: color 0.3s cubic-bezier(0.215, 0.61, 0.355, 1); }
+div#wrapper section#sidebar nav#nav-infos ul li:hover { color: #fff; }
+div#wrapper section#sidebar nav#nav-infos ul li span { width: 80px; float: left; text-align: center; opacity: 0.2; transition: opacity 0.3s cubic-bezier(0.215, 0.61, 0.355, 1); }
+div#wrapper section#sidebar nav#nav-infos ul li span i.infos {
+  background: url(../images/i-infos@2x.png) no-repeat; background-size: 100%;
+  width: 8px; height: 18px; }
+div#wrapper section#sidebar nav#nav-infos ul li span i.contact {
+  background: url(../images/i-contact@2x.png) no-repeat; background-size: 100%;
+  width: 24px; height: 6px; }
+
+div#wrapper section#sidebar nav#nav-infos ul li:hover span { opacity: 1; }
 /* @end of Sidebar */
 
 
@@ -129,7 +131,8 @@ section#loader {
 section#loader.hidden {
   z-index: -100;
   opacity: 0; }
-  
+
+section#loader.home { background: linear-gradient(to right, #f60e55 0%,#f475b1 100%); }
 section#loader.my-warner { background: linear-gradient(to right, #c41010 0%,#ff3b3b 100%); }
 section#loader.wdmtg { background: linear-gradient(to right, #3381c1 0%,#2d4fc2 100%); }
 section#loader.game-of-thrones { background: linear-gradient(to right, #c41010 0%,#ff483b 100%); }
@@ -189,24 +192,28 @@ div#wrapper section#infos.contact form { opacity: 1; height: auto; }
 div#wrapper section#infos.contact form { min-height: 100%;  }
 div#wrapper section#infos img { padding: 100px 0; margin: 0 auto; display: block; }
 div#wrapper section#infos h1 {
-  font-family: Arapey, Georgia, serif;
+  font-family: 'NeutraText', sans-serif;
   color: #fff;
   font-size: 2.000em;
   font-style: italic;
   margin: 0 60px 20px;
   line-height: 0.933em; }
-div#wrapper section#infos form h1 { margin-top: 40px; }
+div#wrapper section#infos form h1 { margin-top: 40px; margin-bottom: 15px; }
 div#wrapper section#infos p {
-  font-family: Arapey, Georgia, serif;
-  font-size: 1.200em;
-  line-height: 1.556em;
+  font-family: 'Source Sans Pro', Verdana, sans-serif;
+  font-size: 1.067em;
+  line-height: 1.750em;
   text-align: justify;
+  font-weight: 300;
   margin: 0 60px; }
-div#wrapper section#infos p.contact { font-style: italic; margin: 50px 60px 15px; text-align: left;}
+div#wrapper section#infos article hr.dotted {
+  height: 1px; margin: 50px 60px;
+  background: url(../images/hr-dotted-grey-bg.png); }
+div#wrapper section#infos p.contact { font-style: italic; margin: 50px 60px 20px; text-align: left;}
 div#wrapper section#infos p.contact + a,
 div#wrapper section#infos form button[type="submit"] { 
   padding: 8px 20px 5px 20px;
-  margin: 0 60px;
+  margin: 0 60px 50px;
   border-radius: 4px;
   border: 2px solid rgba(255, 255, 255, 0.25); 
   color: rgba(255, 255, 255, 0.25); 
@@ -215,12 +222,14 @@ div#wrapper section#infos form button[type="submit"] {
   font-family: 'NeutraText', sans-serif;
   font-weight: 700; 
   font-size: 0.867em;
+  overflow: hidden;
   transition: border-color cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
               color cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
   -webkit-font-smoothing: antialiased;  }
 div#wrapper section#infos p.contact + a:hover,
 div#wrapper section#infos form button[type="submit"]:hover { cursor: pointer; border-color: rgba(255, 255, 255, 1); color: rgba(255, 255, 255, 1); }
-
+div#wrapper section#infos span.message { font-size: 0.867em; font-weight: 600; color: #fff; font-style: italic; opacity: 0; transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;; }
+div#wrapper section#infos span.message.visible { opacity: 1; }
 div#wrapper section#infos form input[type="text"],
 div#wrapper section#infos form input[type="email"],
 div#wrapper section#infos form textarea { 
@@ -234,7 +243,7 @@ div#wrapper section#infos form textarea {
   font-size: 0.933em;
   -webkit-font-smoothing: antialiased; }
 div#wrapper section#infos form input[type="text"] { margin-top: 40px; }
-div#wrapper section#infos form button[type="submit"] { margin-bottom: 100px; }
+div#wrapper section#infos form button[type="submit"] { margin-bottom: 100px; margin-right: 20px }
 div#wrapper section#infos form textarea { height: 260px; resize: none; }
 div#wrapper section#infos form input:focus,
 div#wrapper section#infos form textarea:focus,
@@ -274,7 +283,8 @@ div#wrapper section#main {
   position: relative;
   top: 0; left: 80px;
   transition: left cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
-  background: #000; }
+  background: #000;
+   }
 div#wrapper.unwound section#main { left: 310px; }
 div#wrapper.open section#main { left: 570px; }
 
@@ -297,6 +307,18 @@ div#wrapper.open section#main { left: 570px; }
 .grid .unit.half { width: 500px; }
 /* @end of Grid */
 
+/***************/
+/* @group Home */
+/***************/
+div#wrapper section#main article.home {
+  position: relative; z-index: 10;
+  background: linear-gradient(to right, #f60e55 -80px,#f475b1 100%);
+  top: 0;
+  margin-bottom: 440px;
+  padding: 500px 0;
+  transition: top cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
+}
+/* @end of Home */
 /*******************/
 /* @group Projects */
 /*******************/
@@ -305,6 +327,8 @@ div#wrapper section#main article.project {
   top: 0;
   margin-bottom: 440px;
   /*background: rgba(255, 5, 78, 1); */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6),
+        inset 0 -5px 0px rgba(0, 0, 0, 0.3);
   transition: top cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s; }
 article.project header.introduction {
   text-align: center;
@@ -404,7 +428,7 @@ article.project section h3 span {
   font-size: 1.385em; }
 article.project section h3.mended span { letter-spacing: -0.01em; }
 
-article.project section hr.dotted + p { line-height: 1.667em; }
+article.project section hr.dotted + p { line-height: 1.667em; font-weight: 300; }
 
 article.project section.brief p.half {
   font-family: 'Source Sans Pro', sans-serif;

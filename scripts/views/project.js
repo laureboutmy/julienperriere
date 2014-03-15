@@ -19,11 +19,12 @@ define([
           setTimeout(self.hideLoader, 1000);
           setTimeout(self.initAnimations, 1000);
         });
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
 
       },
 
       launchLoader: function(){
-        helpers.addClass(document.getElementById('loader'), 'hidden');
+        helpers.removeClass(document.getElementById('loader'), 'hidden');
         // $('section#loader').removeClass('hidden');
       },
 
@@ -64,6 +65,7 @@ define([
         setTimeout(function(){ helpers.removeClass(loader, 'visible') }, 200);
         setTimeout(function(){ helpers.addClass(loader, 'hidden') }, 300);
         setTimeout("loader.querySelectorAll('h1 div.progress')[0].style.height = 0;", 500);
+        setTimeout(function(){ helpers.removeClass(loader, J.Status.currentView) }, 500);
         // $('div#wrapper').removeClass('hidden');
         // setTimeout("$('section#loader').addClass('complete')", 100);
         // setTimeout("$('section#loader').removeClass('visible')", 200);
@@ -72,19 +74,22 @@ define([
       },
 
       // When you click on the bottom of a case study, this function will be called
-      renderChangeFromBottom: function(){
+      renderChangeFromBottom: function(project){
         var self = this,
             main = document.getElementById('main');
             // $main = $('section#main');
 
-        J.Status.canScroll = false;
         helpers.addClass(main.querySelector('nav#next-project'), 'active');
         main.querySelector('article.project').style.top = -(window.innerHeight - 350) + 'px';
+        helpers.addClass(loader, project);
+        setTimeout(function(){ 
+          helpers.removeClass(loader, 'hidden'); }, 300);
+
         // $main.find('nav#next-project').addClass('active');
         // $main.find('article.project').offset({ top: -($(window).height() - 350) });
       },
 
-      destroy: function(){ window.removeEventListener('scroll'); },
+      destroy: function(){ window.removeEventListener('scroll', function(){}); },
 
 
       initAnimations: function(){
