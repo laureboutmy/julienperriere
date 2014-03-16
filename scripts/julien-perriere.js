@@ -55,7 +55,6 @@ define(['backbone', 'jquery', 'views/sidebar', 'vendor/helpers'], function(Backb
 				    	J.Status.currentView = view || Backbone.history.fragment;
 				    	if(J.Status.previousView != ''){ 
 				    		J.Views[J.Status.previousView].destroy(); 
-				    		// J.Views[J.Status.previousView].launchLoader();
 				    	}
 			    		self.createView(J.Status.currentView);
 		    		}, 500)
@@ -94,7 +93,6 @@ define(['backbone', 'jquery', 'views/sidebar', 'vendor/helpers'], function(Backb
 
 		    bind: function(){
 		    	window.addEventListener('resize', this.onResize);
-		    	// $(window).on('resize', this.onResize);
 		    	
 		    	var main = document.getElementById('main'),
 		    			sidebar = document.getElementById('sidebar'),
@@ -160,23 +158,6 @@ define(['backbone', 'jquery', 'views/sidebar', 'vendor/helpers'], function(Backb
 									request.send(data);
 		    		}
 		    	})
-
-		   //  	$('section#main').on('click', '[data-project]', function(e){
-					// 	e.preventDefault();
-					// 	var project = $(this).data('project');
-					// 	if(J.Status.infos){ $('div#wrapper').removeClass('open'); }
-					// 	J.Views[J.Status.currentView].renderChangeFromBottom();
-					// 	J.Router.render(project, 'wait');
-					// 	J.Views['sidebar'].update(project);
-					// });
-					
-					// $('section#sidebar').on('click', '[data-project]', function(e){
-					// 	e.preventDefault();
-					// 	if(J.Status.infos){ $('div#wrapper').removeClass('open'); }
-					// 	var project = $(this).data('project');
-					// 	J.Router.render(project);
-					// 	J.Views['sidebar'].update(project);
-					// });
 
 		    },
 

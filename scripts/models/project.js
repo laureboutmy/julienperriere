@@ -3,7 +3,7 @@
 define([
     'julien-perriere'
 ], function (J) {
-    // 'use strict';
+    'use strict';
 
     var ProjectModel = Backbone.Model.extend({
     	initialize: function(){

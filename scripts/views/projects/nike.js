@@ -20,8 +20,6 @@ define([
         var self = this;
         self.$el.html(this.template());
         self.load();
-        // $('html').scrollTop(0);
-        // document.documentElement.pageYOffset = 0;
         J.Views['sidebar'].update(J.Status.currentView);
         self.bind();
         return this;

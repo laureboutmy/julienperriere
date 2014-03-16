@@ -7,7 +7,7 @@ define([
     'text!templates/game-of-thrones.html',
     'vendor/slider'
 ], function (Backbone, imagesLoaded, ProjectView, tplGameOfThrones, slideIt) {
-    // 'use strict';
+    'use strict';
     var GameOfThronesView = ProjectView.extend({
       template: _.template(tplGameOfThrones),
       animations: [

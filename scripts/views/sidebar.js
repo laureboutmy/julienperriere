@@ -5,14 +5,13 @@ define([
     'text!templates/sidebar.html',
     'vendor/helpers'
 ], function (Backbone, tplSidebar, helpers) {
-    // 'use strict';
+    'use strict';
     var sidebarView = Backbone.View.extend({
       template: _.template(tplSidebar),
       
       el: '#sidebar',
 
       initialize: function(){
-      	// console.log('sidebar View', this);
         helpers.init();
       },
 
@@ -50,34 +49,17 @@ define([
             helpers.removeClass(wrapper, 'open'); 
           }
         })
-
-        
-        // $('section#sidebar').on('mouseover', function(){
-        //   $('div#wrapper').addClass('unwound'); 
-        // });
-        // $('section#sidebar').on('mouseout', function(){
-        //   $('div#wrapper').removeClass('unwound'); });
-        // $('nav#infos li').on('click', function(){
-        //   // J.Status.infos = true;
-        //   $('div#wrapper').addClass('open'); });
-        // $('section#main').on('click', function(){
-        //   // J.Status.infos = false;
-        //   $('div#wrapper').removeClass('open'); });
       },
 
       update: function(project){
         helpers.removeClass(document.querySelectorAll('section#sidebar li.current')[0])
         helpers.addClass(document.querySelectorAll('section#sidebar [data-project=' + project + ']')[0].parentNode, 'current');
-        // $('section#sidebar li.current').removeClass();
-        // $('section#sidebar [data-project=' + project + ']').parent().addClass('current');
       },
 
       getInfos: function(c){
         var infos = document.getElementById('infos');
         helpers.removeClass(infos);
         helpers.addClass(infos, c);
-        // $('section#infos').removeClass();
-        // $('section#infos').addClass(c); 
       }
     });
 

@@ -28,6 +28,19 @@ define([
         self.bind();
 
         return this;
+      },
+
+      bind: function(){
+        var self = this,
+            currentScroll = previousScroll = 0,
+            delta;
+        window.addEventListener('scroll', function(){
+          previousScroll = currentScroll;
+          currentScroll = window.pageYOffset;
+          delta = previousScroll - currentScroll;
+          self.renderAnimations(currentScroll, delta);
+        })
+    
       }       
     })
     return KolokView;

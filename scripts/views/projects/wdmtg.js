@@ -48,8 +48,6 @@ define([
         var self = this;
         self.$el.html(this.template());
         self.load();
-        // $('html').scrollTop(0);
-        // document.body.scrollTop = document.documentElement.scrollTop = 0;
         J.Views['sidebar'].update(J.Status.currentView);
         self.bind();
         return this;
@@ -60,19 +58,12 @@ define([
             currentScroll = previousScroll = 0,
             delta;
         slideIt(document.querySelectorAll('.slider'));
-        // $('.slider').slideIt();
         window.addEventListener('scroll', function(){
           previousScroll = currentScroll;
           currentScroll = window.pageYOffset;
           delta = previousScroll - currentScroll;
           self.renderAnimations(currentScroll, delta);
-        })
-        // $(window).on('scroll DOMMouseScroll MozMousePixelScroll', function(e){
-        //   previousScroll = currentScroll;
-        //   currentScroll = window.pageYOffset;
-        //   delta = previousScroll - currentScroll;
-        //   self.renderAnimations(currentScroll, delta);        
-        // });       
+        })    
       }
        
     })

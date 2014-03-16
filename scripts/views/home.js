@@ -6,7 +6,7 @@ define([
     'text!templates/home.html',
     'vendor/helpers'
 ], function (Backbone, imagesLoaded, tplHome, helpers) {
-    // 'use strict';
+    'use strict';
     var homeView = Backbone.View.extend({
       el: '#main',
       template: _.template(tplHome),
