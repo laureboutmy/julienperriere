@@ -27,12 +27,13 @@ define([
         var sidebar = document.getElementById('sidebar'),
             wrapper = document.getElementById('wrapper'),
             main    = document.getElementById('main'),
-            infos   = document.querySelectorAll('nav#nav-infos li');
+            infos   = document.querySelectorAll('nav#nav-infos li'), i;
 
         sidebar.addEventListener('mouseover', function(){ helpers.addClass(wrapper, 'unwound'); });
         sidebar.addEventListener('mouseout', function(){ helpers.removeClass(wrapper, 'unwound'); });
         main.addEventListener('click', function(){ helpers.removeClass(wrapper, 'open'); });
 
+        // Click on sidebar links
         for(i in infos){
           if(i < infos.length) {
             infos[i].addEventListener('click', function(e){

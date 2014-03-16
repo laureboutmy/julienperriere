@@ -34,8 +34,9 @@ define([
             loader = document.getElementById('loader'),
             images = main.getElementsByTagName('img');
 
-        helpers.removeClass(loader);
+        // helpers.removeClass(loader);
         helpers.addClass(loader, J.Status.currentView); 
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
         setTimeout(function(){ helpers.addClass(wrapper, 'hidden') }, 100);
         setTimeout(function(){ helpers.addClass(loader, 'visible') }, 200);
         setTimeout(function(){ 
@@ -43,7 +44,7 @@ define([
               loaded = 0,
               progress = document.querySelectorAll('section#loader div.progress')[0];
           loading.on('always', function(){
-            setTimeout("J.Views[J.Status.currentView].trigger('loaded')", 300);
+            setTimeout(function(){ J.Views[J.Status.currentView].trigger('loaded') }, 300);
           });
           loading.on('progress', function() {
             loaded++;

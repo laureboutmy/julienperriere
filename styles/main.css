@@ -132,11 +132,11 @@ section#loader.hidden {
   z-index: -100;
   opacity: 0; }
 
-section#loader.home { background: linear-gradient(to right, #f60e55 0%,#f475b1 100%); }
+section#loader.home { background: linear-gradient(to bottom, #ced3db 0%,#fff 100%); }
 section#loader.my-warner { background: linear-gradient(to right, #c41010 0%,#ff3b3b 100%); }
 section#loader.wdmtg { background: linear-gradient(to right, #3381c1 0%,#2d4fc2 100%); }
 section#loader.game-of-thrones { background: linear-gradient(to right, #c41010 0%,#ff483b 100%); }
-section#loader.kolok { background: linear-gradient(to right, #1078cc -0%, #50a7e5 100%); }
+section#loader.kolok { background: linear-gradient(to right, #1078cc 0%, #50a7e5 100%); }
 section#loader.nike { background: linear-gradient(to right, #ff7024 0%, #ff401f 100%); } 
 section#loader.dreamcatcher { background: linear-gradient(to right, rgba(26,25,36,.89) 0%,rgba(49,41,56,.89) 100%), url(../images/dreamcatcher/noise.png);}
 
@@ -312,12 +312,58 @@ div#wrapper.open section#main { left: 570px; }
 /***************/
 div#wrapper section#main article.home {
   position: relative; z-index: 10;
-  background: linear-gradient(to right, #f60e55 -80px,#f475b1 100%);
+  background: #fff linear-gradient(to bottom, #ced3db -80px, #fff 700px);
   top: 0;
-  margin-bottom: 440px;
-  padding: 500px 0;
+  padding: 700px 0 0;
+  overflow: hidden; 
   transition: top cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
 }
+
+article.home nav ul li {
+  width: 486px; height: 320px;
+  float: left;
+  background: #f8f8fa;
+  border-radius: 4px;
+  margin: 4px 0;
+  position: relative;}
+article.home nav ul li:nth-child(odd) { margin-right: 8px; }
+article.home nav ul li div { 
+  width: 100%; height: 100%;
+  border-radius: 4px;
+  opacity: 0;
+  position: absolute; top: 0; left: 0;
+  transition: opacity .8s cubic-bezier(0.000, 0.630, 0.000, 0.995); }
+article.home nav ul li:hover div { 
+  opacity: 1;
+  transition: opacity .4s cubic-bezier(0.000, 0.475, 0.000, 0.995); }
+article.home nav ul li a {
+  display: block;
+  width: 100%; height: 100%;
+  position: relative; }
+article.home nav ul li a span {
+  display: block;
+  position: absolute;
+  margin: auto;
+  left: 0; top: 0; bottom: 0; right: 0;
+  height: 140px;
+  background-position: center 0; background-repeat: no-repeat;
+  transition: background cubic-bezier(0.545, -0.005, 1.000, 0.260) 0s; }
+article.home nav ul li:hover a span {
+  background-position: center -140px;
+  transition: background cubic-bezier(0.000, 0.980, 0.000, 0.990) 0.5s; }
+article.home nav ul li.my-warner a span { background-image: url(../images/my-warner/my-warner-sprite.png); }
+article.home nav ul li.my-warner div { background: linear-gradient(to right, #c41010 0%,#ff3b3b 100%); }
+article.home nav ul li.wdmtg a span { background-image: url(../images/wdmtg/wdmtg-sprite.png); }
+article.home nav ul li.wdmtg div { background: linear-gradient(to right, #3381c1 0%,#2d4fc2 100%); }
+article.home nav ul li.game-of-thrones a span { background-image: url(../images/game-of-thrones/game-of-thrones-sprite.png); }
+article.home nav ul li.game-of-thrones div { background: linear-gradient(to right, #c41010 0%,#ff483b 100%); }
+article.home nav ul li.kolok a span { background-image: url(../images/kolok/kolok-sprite.png); }
+article.home nav ul li.kolok div { background: linear-gradient(to right, #1078cc 0%, #50a7e5 100%); }
+article.home nav ul li.dreamcatcher a span { background-image: url(../images/dreamcatcher/dreamcatcher-sprite.png); }
+article.home nav ul li.dreamcatcher div { background: linear-gradient(to right, rgba(26,25,36,.89) 0%,rgba(49,41,56,.89) 100%); }
+article.home nav ul li.nike a span { background-image: url(../images/nike/nike-sprite.png); }
+article.home nav ul li.nike div { background: linear-gradient(to right, #ff7024 0%, #ff401f 100%);  }
+
 /* @end of Home */
 /*******************/
 /* @group Projects */
@@ -553,8 +599,6 @@ nav#next-project.game-of-thrones { background: linear-gradient(to right, #c41010
 nav#next-project.wdmtg { background: linear-gradient(to right, #3381c1 -80px,#2d4fc2 100%); }
 nav#next-project.kolok { background: linear-gradient(to right, #1078cc -80px, #50a7e5 100%); }
 nav#next-project.nike { background: linear-gradient(to right, #ff7024 -80px, #ff401f 100%); }
-nav#next-project.nike a {
-  background: #f9650f url(../images/nike/nike-bg.png) repeat top left; }
 nav#next-project.nike h1 span { color: #6b6978; }
 /* @end of Next-project */
 

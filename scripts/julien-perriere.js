@@ -51,6 +51,7 @@ define(['backbone', 'jquery', 'views/sidebar', 'vendor/helpers'], function(Backb
 		    	var self = this;
 		    	if(typeof wait != 'undefined'){ 
 		    		setTimeout(function(){
+          		
 		    			J.Status.previousView = J.Status.currentView || '';
 				    	J.Status.currentView = view || Backbone.history.fragment;
 				    	if(J.Status.previousView != ''){ 
@@ -98,6 +99,7 @@ define(['backbone', 'jquery', 'views/sidebar', 'vendor/helpers'], function(Backb
 		    			sidebar = document.getElementById('sidebar'),
 		    			wrapper = document.getElementById('wrapper');
 
+		    	// Click on sidebar links
 		    	Array.prototype.forEach.call(sidebar.querySelectorAll('[data-project]'), function(el, i){
 		        el.addEventListener('click', function(e){
 		        	e.preventDefault(); 
@@ -108,8 +110,7 @@ define(['backbone', 'jquery', 'views/sidebar', 'vendor/helpers'], function(Backb
 		        	helpers.addClass(loader, project);
 			        setTimeout(function(){ 
 			          helpers.removeClass(loader, 'hidden');
-			          J.Router.render(project, 'wait');
-								J.Views['sidebar'].update(project); }, 300);
+			          J.Router.render(project, 'wait'); }, 300);
 		        	
 		        })
 		      });
