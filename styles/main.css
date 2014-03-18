@@ -411,9 +411,6 @@ div#wrapper section#main article.project {
   position: relative; z-index: 10;
   top: 0;
   margin-bottom: 440px;
-  /*background: rgba(255, 5, 78, 1); */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6),
-        inset 0 -5px 0px rgba(0, 0, 0, 0.3);
   transition: top cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s; }
 article.project header.introduction {
   text-align: center;
@@ -524,9 +521,7 @@ article.project section.brief p.half.left { padding-right: 20px; }
 article.project section.brief p.half.right { padding-left: 20px; }
 article.project footer.thanks { 
   padding: 170px 0 230px;
-  text-align: center;
-  box-shadow: 0 10px 20px 10px rgba(0, 0, 0, 0.4),
-        inset 0 -5px 0px rgba(0, 0, 0, 0.3); }
+  text-align: center;  }
 article.project footer.thanks h2 {
   font-family: 'NeutraDisplay', sans-serif;
   font-size: 3.067em;
@@ -646,15 +641,12 @@ nav#next-project.nike h1 span { color: #6b6978; }
 /* light red [#ff483b]; */
 /* dark red [#c41010];  */
 /************************/
-div#wrapper section#main article.my-warner { 
-  box-shadow: 0 1px 80px 40px rgba(0, 0, 0, 0.4); transition: top cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s; }
+div#wrapper section#main article.my-warner { }
 article.my-warner header.introduction {
   position: relative; z-index: 400;
   min-height: 1200px;
   color: #fff; 
-  background: linear-gradient(to right, #e32822 -80px,#ff5040 100%);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6),
-        inset 0 -5px 0px rgba(0, 0, 0, 0.3); }
+  background: linear-gradient(to right, #e32822 -80px,#ff5040 100%); }
 article.my-warner hr.dotted { 
   width: 100%; height: 1px;
   background: transparent url(../images/my-warner/p-dotted-dark-grey-bg.png) repeat-x; }
@@ -665,9 +657,7 @@ article.my-warner header.introduction ul.meta li h3 { color: #ff7862; }
 article.my-warner header.introduction div.arrow { background: transparent url(../images/my-warner/arrow.png) no-repeat; }
 article.my-warner section.brief {
   min-height: 1520px;
-  background: #eef2f6; color: #868c9e;
-  box-shadow: 0 10px 20px 10px rgba(0, 0, 0, 0.6),
-        inset 0 -5px 0px rgba(0, 0, 0, 0.2); }
+  background: #eef2f6; color: #868c9e; }
 article.my-warner section.brief img.iso {
   position: relative;
   top: 80px; 
@@ -683,21 +673,15 @@ article.my-warner section.movies {
 article.my-warner section.bonuses {
   background: #eef2f6;
   padding: 220px 0 0;
-  overflow: hidden;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6),
-        inset 0 -5px 0px rgba(0, 0, 0, 0.3); }
+  overflow: hidden; }
 article.my-warner section.profile {
   background: #161b24;
   padding: 160px 0 140px;
-  overflow: hidden;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6),
-        inset 0 -5px 0px rgba(255, 255, 255, 0.12); }
+  overflow: hidden; }
 article.my-warner section.icon {
   background: #eef2f6;
   padding: 160px 0 0;
-  overflow: hidden;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6),
-        inset 0 -5px 0px rgba(0, 0, 0, 0.3); }
+  overflow: hidden; }
 article.my-warner section.ipad {
   background: #161b24;
   padding: 160px 0 0; }
@@ -741,8 +725,7 @@ article.my-warner section.movies h2.final-design span { color: #fff; }
 article.my-warner section.movies section.final-design > div {
   height: 1070px;
   position: relative;
-  background: linear-gradient(to right, #e32822 -80px,#ff5040 100%)
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6); } 
+  background: linear-gradient(to right, #e32822 -80px,#ff5040 100%); } 
 article.my-warner section.movies section.final-design > div ul { 
   position: absolute;
   top: 0; left: 0; bottom: 0; right: 0;
@@ -771,7 +754,7 @@ article.my-warner section.ipad div.ipad {
 article.my-warner section.ipad div.ipad + img {
   margin: 0 auto;
   display: block; }
-article.my-warner footer.thanks { box-shadow: inset 0 -5px 0px rgba(255, 255, 255, 0.12); padding: 225px 0 260px; background: #13161c; }
+article.my-warner footer.thanks { padding: 225px 0 260px; background: #13161c; }
 article.my-warner footer.thanks h2 { color: #b32426; margin-bottom: 35px; }
 article.my-warner footer.thanks a.app-store, 
 article.my-warner footer.thanks a.google-play {
@@ -794,15 +777,12 @@ article.my-warner footer.thanks p {
 /* light blue [#3381c1]; */
 /* dark blue [#2d4fc2];  */
 /*************************/
-div#wrapper section#main article.wdmtg { 
-  box-shadow: 0 1px 80px 40px rgba(0, 0, 0, 0.4); transition: top cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s; }
+div#wrapper section#main article.wdmtg { }
 article.wdmtg header.introduction {
   position: relative; z-index: 400;
   min-height: 1200px;
   color: #fff; 
-  background: linear-gradient(to right, #3381c1 -80px,#2d4fc2 100%);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6),
-        inset 0 -5px 0px rgba(0, 0, 0, 0.3); }
+  background: linear-gradient(to right, #3381c1 -80px,#2d4fc2 100%); }
 article.wdmtg hr.dotted { 
   width: 100%; height: 1px;
   background: transparent url(../images/wdmtg/hr-dotted-light-grey-bg.png) repeat-x; }
@@ -813,9 +793,7 @@ article.wdmtg header.introduction ul.meta li h3 { color: #4392da; }
 article.wdmtg section.brief {
   min-height: 1520px;
   position: relative; z-index: 300;
-  background: #171717; color: #4d4d4d;
-  box-shadow: 0 10px 20px 10px rgba(0, 0, 0, 0.6),
-        inset 0 -5px 0px rgba(0, 0, 0, 0.3); }
+  background: #171717; color: #4d4d4d; }
 article.wdmtg header.introduction div.arrow { background: transparent url(../images/wdmtg/arrow.png) no-repeat; }
 article.wdmtg section.brief h2.default { color: #fff; }
 article.wdmtg section.brief h2.default span { color: #005aa3; }
@@ -924,15 +902,12 @@ article.wdmtg footer.thanks a {
 /* light red [#ff483b];   */
 /* dark red [#c41010];    */
 /**************************/
-div#wrapper section#main article.game-of-thrones { 
-  box-shadow: 0 1px 80px 40px rgba(0, 0, 0, 0.4); transition: top cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s; }
+div#wrapper section#main article.game-of-thrones { }
 article.game-of-thrones header.introduction {
   position: relative; z-index: 400;
   min-height: 1200px;
   color: #fff; 
-  background: linear-gradient(to right, #e32822 -80px,#ff5040 100%);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6),
-        inset 0 -5px 0px rgba(0, 0, 0, 0.3); }
+  background: linear-gradient(to right, #e32822 -80px,#ff5040 100%); }
 article.game-of-thrones hr.dotted { 
   width: 100%; height: 1px;
   background: transparent url(../images/game-of-thrones/p-dotted-dark-grey-bg.png) repeat-x; }
@@ -944,9 +919,7 @@ article.game-of-thrones header.introduction div.arrow { background: transparent 
 article.game-of-thrones section.brief {
   min-height: 1520px;
   position: relative; z-index: 300;
-  background: #f5f5f5; color: #9a9dad;
-  box-shadow: 0 10px 20px 10px rgba(0, 0, 0, 0.6),
-        inset 0 -5px 0px rgba(0, 0, 0, 0.3); }
+  background: #f5f5f5; color: #9a9dad; }
 article.game-of-thrones section.brief h2.default { color: #30323b; }
 article.game-of-thrones section.brief h2.default span { color: #ff331c; }
 article.game-of-thrones section.brief p.introduction { 
@@ -1018,7 +991,7 @@ article.game-of-thrones section.mobile div.iphone {
 article.game-of-thrones section.mobile img.mobile-shadow { margin: 10px 0 0; }
 article.game-of-thrones section.mobile section.remote { padding: 160px 0 80px; }
 article.game-of-thrones section.mobile section.feed { padding: 80px 0; }
-article.game-of-thrones footer.thanks { box-shadow: inset 0 -5px 0px rgba(255, 255, 255, 0.09); padding: 130px 0 230px; background: #0e0f12; }
+article.game-of-thrones footer.thanks { padding: 130px 0 230px; background: #0e0f12; }
 article.game-of-thrones footer.thanks h2 { color: #41444f; }
 /* @end Game of Thrones */
 
@@ -1030,9 +1003,7 @@ article.kolok header.introduction {
   position: relative; z-index: 500;
   min-height: 1200px;
   color: #fff;
-  background: linear-gradient(to right, #1078cc -80px, #50a7e5 100%);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6),
-        inset 0 -5px 0px rgba(0, 0, 0, 0.3); }
+  background: linear-gradient(to right, #1078cc -80px, #50a7e5 100%); }
 article.kolok header.introduction h1 { padding: 320px 0 300px; }
 article.kolok header.introduction h2 { color: #75c4e5; padding: 0 0 50px; }
 article.kolok header.introduction ul.meta { border-bottom: 1px solid rgba(117, 196, 229, 0.3); }
@@ -1040,27 +1011,17 @@ article.kolok header.introduction ul.meta li h3 { color: #75c4e5; }
 article.kolok header.introduction div.arrow { background: transparent url(../images/kolok/arrow.png) no-repeat; }
 
 article.kolok section.brief {
-  position: relative; z-index: 400;
   min-height: 1520px;
   padding: 160px 0;
-  background: #171c21; color: #3d4754;
-  box-shadow: 0 10px 20px 10px rgba(0, 0, 0, 0.6),
-        inset 0 -5px 0px rgba(255, 255, 255, 0.09); }
+  background: #171c21; color: #3d4754; }
 article.kolok section.design-guidelines {
-  position: relative; z-index: 300;
   padding: 160px 0;
-  background: #f0f8ff; color: #929da8;
-  box-shadow: 0 10px 20px 10px rgba(0, 0, 0, 0.4),
-        inset 0 -5px 0px rgba(0, 0, 0, 0.25); }
+  background: #f0f8ff; color: #929da8; }
 article.kolok section.datavisualizations {
-  position: relative; z-index: 200;
   min-height: 1520px;
   padding: 160px 0;
-  background: #171c21; color: #3d4754;
-  box-shadow: 0 10px 20px 10px rgba(0, 0, 0, 0.6),
-        inset 0 -5px 0px rgba(255, 255, 255, 0.09); }
+  background: #171c21; color: #3d4754; }
 article.kolok section.final-design {
-  position: relative; z-index: 100;
   padding: 160px 0 0;
   background: #f0f8ff; color: #929da8; }
 article.kolok section.brief h2.default,
@@ -1133,9 +1094,7 @@ article.kolok section.mobile div.iphone {
 
 article.kolok footer.thanks {
   background: #f0f8ff;
-  padding: 110px 0 240px;
-  box-shadow: 0 10px 20px 10px rgba(0, 0, 0, 0.6),
-        inset 0 -5px 0px rgba(0, 0, 0, 0.15);  }
+  padding: 110px 0 240px; }
 article.kolok footer.thanks h2 { color: #0086e5; }
 /* @end of Kolok */
 
@@ -1148,9 +1107,7 @@ article.dreamcatcher header.introduction {
   position: relative; z-index: 600;
   min-height: 1200px;
   color: #fff;
-  background: linear-gradient(to right, rgba(26,25,36,.89) -80px,rgba(49,41,56,.89) 100%), url(../images/dreamcatcher/noise.png);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5),
-        inset 0 -5px 0px rgba(0, 0, 0, 0.2); }
+  background: linear-gradient(to right, rgba(26,25,36,.89) -80px,rgba(49,41,56,.89) 100%), url(../images/dreamcatcher/noise.png); }
 
 article.dreamcatcher header.introduction h1 { padding: 360px 0 370px; }
 article.dreamcatcher header.introduction h2 { color: #433b52; padding: 0 0 50px; }
@@ -1160,10 +1117,7 @@ article.dreamcatcher header.introduction div.arrow { background: transparent url
 
 article.dreamcatcher section.brief {
   min-height: 1480px;
-  position: relative; z-index: 500;
-  background: #f3f2f7; color: #938fab;
-  box-shadow: 0 10px 20px 10px rgba(0, 0, 0, 0.6),
-        inset 0 -5px 0px rgba(0, 0, 0, 0.16); }
+  background: #f3f2f7; color: #938fab; }
 article.dreamcatcher section.brief img.iso {
   position: relative;
   top: 80px; 
@@ -1246,12 +1200,9 @@ article.dreamcatcher section.mobile-ready .third--one { padding-right: 10px; wid
 article.dreamcatcher section.mobile-ready .third--two { padding: 0 10px; width: auto; }
 article.dreamcatcher section.mobile-ready .third--three { padding-left: 10px; width: auto; }
 
-article.dreamcatcher footer.thanks {
-  position: relative; z-index: 100;
+article.dreamcatcher footer.thanks { 
   background: #f3f2f7; 
-  padding: 120px 0 230px;
-  box-shadow: 0 10px 20px 10px rgba(0, 0, 0, 0.4),
-        inset 0 -5px 0px rgba(0, 0, 0, 0.2); }
+  padding: 120px 0 230px; }
 article.dreamcatcher footer.thanks h2 { color: #a268e6; }
 /* @end of Dreamcatcher */
 
@@ -1261,13 +1212,10 @@ article.dreamcatcher footer.thanks h2 { color: #a268e6; }
 /* blue [#f9650f]; */
 /*******************/
 div#wrapper section#main article.nike { margin-bottom: 0; }
-article.nike header.introduction {
-  position: relative; z-index: 400;
+article.nike header.introduction { 
   min-height: 1200px;
   color: #fff;
-  background: linear-gradient(to right, #ff621a -80px, #ff381a 100%); 
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5),
-        inset 0 -5px 0px rgba(0, 0, 0, 0.2); }
+  background: linear-gradient(to right, #ff621a -80px, #ff381a 100%);  }
 article.nike hr.dotted { 
   height: 1px; width: 100%;
   background: url(../images/nike/p-dotted-dark-grey-bg.png); }
@@ -1278,11 +1226,8 @@ article.nike header.introduction ul.meta li h3 { color: #fdc08a; }
 article.nike header.introduction div.arrow { background: transparent url(../images/nike/arrow.png) no-repeat; }
 article.nike section.brief {
   min-height: 1160px;
-  position: relative; z-index: 300;
   padding: 160px 0;
-  background: #f5f5f5; color: #7f7f7f;
-  box-shadow: 0 10px 20px 10px rgba(0, 0, 0, 0.6),
-        inset 0 -5px 0px rgba(0, 0, 0, 0.2); }
+  background: #f5f5f5; color: #7f7f7f; }
 article.nike section.brief h2.default { color: #ff5500; }
 article.nike section.final-design h2.default { color: #cc3a00; }
 article.nike section.final-design h2.default span { color: #fff; }
