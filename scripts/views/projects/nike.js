@@ -27,6 +27,7 @@ define([
 
       bind: function(){
         var self = this,
+            previousScroll, 
             currentScroll = previousScroll = 0,
             delta;
         slideIt(document.querySelectorAll('.slider'));

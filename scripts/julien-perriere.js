@@ -115,6 +115,8 @@ define(['backbone', 'jquery', 'views/sidebar', 'vendor/helpers'], function(Backb
 		        })
 		      });
 
+		     
+
 
 
 		    	main.addEventListener('click', function(e){
@@ -135,6 +137,7 @@ define(['backbone', 'jquery', 'views/sidebar', 'vendor/helpers'], function(Backb
 		    			J.Views['sidebar'].update(project);
 		    		}
 		    	})
+		    	
 
 		    	document.querySelectorAll('button[type="submit"]')[0].addEventListener('click', function(e){
 		    		e.preventDefault();

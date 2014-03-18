@@ -71,7 +71,23 @@ define([
         setTimeout("loader.querySelectorAll('h1 div.progress')[0].style.height = 0;", 500);
       },
 
-      bind: function(){}
+      bind: function(){
+        Array.prototype.forEach.call(main.querySelectorAll('[data-home]'), function(el, i){
+          el.addEventListener('click', function(e){
+            console.log('hey');
+            e.preventDefault(); 
+            if(helpers.hasClass(wrapper, 'open')){ helpers.removeClass(wrapper, 'open'); }
+            helpers.removeClass(wrapper, 'unwound');
+            var project = this.getAttribute('data-home');
+            document.documentElement.pageYOffset = 0;
+            helpers.addClass(loader, project);
+            setTimeout(function(){ 
+              helpers.removeClass(loader, 'hidden');
+              J.Router.render(project, 'wait'); }, 300);
+            
+          })
+        });
+      }
 
 
     });

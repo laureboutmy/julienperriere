@@ -32,6 +32,7 @@ define([
 
       bind: function(){
         var self = this,
+            previousScroll, 
             currentScroll = previousScroll = 0,
             delta;
         window.addEventListener('scroll', function(){

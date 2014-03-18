@@ -133,11 +133,11 @@ section#loader.hidden {
   opacity: 0; }
 
 section#loader.home { background: linear-gradient(to bottom, #ced3db 0%,#fff 100%); }
-section#loader.my-warner { background: linear-gradient(to right, #c41010 0%,#ff3b3b 100%); }
+section#loader.my-warner { background: linear-gradient(to right, #e32822 0%,#ff5040 100%); }
 section#loader.wdmtg { background: linear-gradient(to right, #3381c1 0%,#2d4fc2 100%); }
-section#loader.game-of-thrones { background: linear-gradient(to right, #c41010 0%,#ff483b 100%); }
+section#loader.game-of-thrones { background: linear-gradient(to right, #e32822 0%,#ff5040 100%); }
 section#loader.kolok { background: linear-gradient(to right, #1078cc 0%, #50a7e5 100%); }
-section#loader.nike { background: linear-gradient(to right, #ff7024 0%, #ff401f 100%); } 
+section#loader.nike { background: linear-gradient(to right, #ff621a 0%, #ff381a 100%);  } 
 section#loader.dreamcatcher { background: linear-gradient(to right, rgba(26,25,36,.89) 0%,rgba(49,41,56,.89) 100%), url(../images/dreamcatcher/noise.png);}
 
 section#loader h1 {
@@ -311,25 +311,64 @@ div#wrapper.open section#main { left: 570px; }
 /* @group Home */
 /***************/
 div#wrapper section#main article.home {
-  position: relative; z-index: 10;
+  overflow: hidden;
   background: #fff linear-gradient(to bottom, #ced3db -80px, #fff 700px);
-  top: 0;
-  padding: 700px 0 0;
-  overflow: hidden; 
-  transition: top cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s;
-}
-
+  transition: top cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s; }
+article.home h1 {
+  margin: 250px auto 60px;
+  text-align: center;
+  font-family: 'NeutraDisplay', sans-serif;
+  font-weight: 300;
+  font-size: 8.200em;
+  letter-spacing: -0.02em;
+  color: #8b94a6;
+  line-height: 0.758em;
+  text-transform: uppercase; }
+article.home h1 span { 
+  color: #f2361d;
+  font-weight: 700; }
+article.home h1 div {
+  margin-bottom: 25px;
+  font-size: 3.659em;
+  font-weight: 700;
+  color: #fff;
+  line-height: 0.773em;
+  background: url(../images/home/240-shadow-bg.png) no-repeat 0 273px; }
+article.home h2 {
+  font-family: 'NeutraDisplay', sans-serif;
+  font-weight: 600;
+  margin: 30px 0;
+  text-align: center;
+  color: #8b94a6;
+  font-size: 0.933em;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;}
+article.home p.introduction {
+  font-family: 'NeutraText', sans-serif;
+  font-size: 2.200em;
+  line-height: 1.333em;
+  font-style: italic;
+  font-weight: 300;
+  font-variant: small-caps;
+  text-align: center;
+  -webkit-font-smoothing: subpixel-antialiased; 
+  color: #8b94a6;
+  background: url(../images/home/p-dotted-grey-bg.png) repeat-x left 40px;}
+article.home p.developer {
+  font-size: 1.333em;
+  color: #8b94a6;
+  text-align: center;
+  margin: 130px 0 115px; }
+article.home p.developer a { color: #f2361d; font-weight: 600; }
+article.home p.developer a:hover { color: #f6465e; }
+article.home nav { margin: 170px 0 0; }
 article.home nav ul li {
-  width: 486px; height: 320px;
-  float: left;
+  width: 100%; height: 320px;
   background: #f8f8fa;
-  border-radius: 4px;
   margin: 4px 0;
-  position: relative;}
-article.home nav ul li:nth-child(odd) { margin-right: 8px; }
+  position: relative; }
 article.home nav ul li div { 
   width: 100%; height: 100%;
-  border-radius: 4px;
   opacity: 0;
   position: absolute; top: 0; left: 0;
   transition: opacity .8s cubic-bezier(0.000, 0.630, 0.000, 0.995); }
@@ -352,17 +391,17 @@ article.home nav ul li:hover a span {
   background-position: center -140px;
   transition: background cubic-bezier(0.000, 0.980, 0.000, 0.990) 0.5s; }
 article.home nav ul li.my-warner a span { background-image: url(../images/my-warner/my-warner-sprite.png); }
-article.home nav ul li.my-warner div { background: linear-gradient(to right, #c41010 0%,#ff3b3b 100%); }
+article.home nav ul li.my-warner div { background: linear-gradient(to right, #e32822 0%,#ff5040 100%); }
 article.home nav ul li.wdmtg a span { background-image: url(../images/wdmtg/wdmtg-sprite.png); }
 article.home nav ul li.wdmtg div { background: linear-gradient(to right, #3381c1 0%,#2d4fc2 100%); }
 article.home nav ul li.game-of-thrones a span { background-image: url(../images/game-of-thrones/game-of-thrones-sprite.png); }
-article.home nav ul li.game-of-thrones div { background: linear-gradient(to right, #c41010 0%,#ff483b 100%); }
+article.home nav ul li.game-of-thrones div { background: linear-gradient(to right, #e32822 0%,#ff5040 100%); }
 article.home nav ul li.kolok a span { background-image: url(../images/kolok/kolok-sprite.png); }
 article.home nav ul li.kolok div { background: linear-gradient(to right, #1078cc 0%, #50a7e5 100%); }
 article.home nav ul li.dreamcatcher a span { background-image: url(../images/dreamcatcher/dreamcatcher-sprite.png); }
 article.home nav ul li.dreamcatcher div { background: linear-gradient(to right, rgba(26,25,36,.89) 0%,rgba(49,41,56,.89) 100%); }
 article.home nav ul li.nike a span { background-image: url(../images/nike/nike-sprite.png); }
-article.home nav ul li.nike div { background: linear-gradient(to right, #ff7024 0%, #ff401f 100%);  }
+article.home nav ul li.nike div { background: linear-gradient(to right, #ff621a 0%, #ff381a 100%); }
 
 /* @end of Home */
 /*******************/
@@ -595,10 +634,10 @@ nav#next-project h1 span {
 nav#next-project.dreamcatcher {
     background: linear-gradient(to right, rgba(26,25,36,.89) 0%,rgba(49,41,56,.89) 100%), url(../images/dreamcatcher/noise.png); }
 nav#next-project.dreamcatcher h1 span { color: #6b6978; }
-nav#next-project.game-of-thrones { background: linear-gradient(to right, #c41010 -80px,#ff483b 100%); }
+nav#next-project.game-of-thrones { background: linear-gradient(to right, #e32822 -80px,#ff5040 100%); }
 nav#next-project.wdmtg { background: linear-gradient(to right, #3381c1 -80px,#2d4fc2 100%); }
 nav#next-project.kolok { background: linear-gradient(to right, #1078cc -80px, #50a7e5 100%); }
-nav#next-project.nike { background: linear-gradient(to right, #ff7024 -80px, #ff401f 100%); }
+nav#next-project.nike { background: linear-gradient(to right, #ff621a -80px, #ff381a 100%); }
 nav#next-project.nike h1 span { color: #6b6978; }
 /* @end of Next-project */
 
@@ -613,16 +652,16 @@ article.my-warner header.introduction {
   position: relative; z-index: 400;
   min-height: 1200px;
   color: #fff; 
-  background: linear-gradient(to right, #c41010 -80px,#ff3b3b 100%);
+  background: linear-gradient(to right, #e32822 -80px,#ff5040 100%);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6),
         inset 0 -5px 0px rgba(0, 0, 0, 0.3); }
 article.my-warner hr.dotted { 
   width: 100%; height: 1px;
   background: transparent url(../images/my-warner/p-dotted-dark-grey-bg.png) repeat-x; }
 article.my-warner header.introduction h1 { padding: 360px 0 350px; }
-article.my-warner header.introduction h2 { color: #ff6161; padding: 0 0 50px; }
-article.my-warner header.introduction ul.meta  { border-bottom: 1px solid rgba(255, 97, 97, 0.34); }
-article.my-warner header.introduction ul.meta li h3 { color: #ff6161; }
+article.my-warner header.introduction h2 { color: #ff7862; padding: 0 0 50px; }
+article.my-warner header.introduction ul.meta  { border-bottom: 1px solid rgba(255, 120, 98, 0.44); }
+article.my-warner header.introduction ul.meta li h3 { color: #ff7862; }
 article.my-warner header.introduction div.arrow { background: transparent url(../images/my-warner/arrow.png) no-repeat; }
 article.my-warner section.brief {
   min-height: 1520px;
@@ -639,7 +678,7 @@ article.my-warner section.brief img.iso {
               opacity ease-out 0.2s; }
 
 article.my-warner section.movies {
-  background: #13161c; color: #303640;
+  background: #161b24; color: #303640;
   padding: 160px 0 0; }
 article.my-warner section.bonuses {
   background: #eef2f6;
@@ -648,7 +687,7 @@ article.my-warner section.bonuses {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6),
         inset 0 -5px 0px rgba(0, 0, 0, 0.3); }
 article.my-warner section.profile {
-  background: #13161c;
+  background: #161b24;
   padding: 160px 0 140px;
   overflow: hidden;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6),
@@ -660,14 +699,14 @@ article.my-warner section.icon {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6),
         inset 0 -5px 0px rgba(0, 0, 0, 0.3); }
 article.my-warner section.ipad {
-  background: #13161c;
+  background: #161b24;
   padding: 160px 0 0; }
 
 article.my-warner section.movies p.introduction,
 article.my-warner section.profile p.introduction,
 article.my-warner section.ipad p.introduction { 
   background: url(../images/my-warner/p-dotted-dark-grey-bg.png) repeat-x left 40px;
-  color: #41444f; }
+  color: #39404c; }
 article.my-warner section.brief p.introduction,
 article.my-warner section.bonuses p.introduction,
 article.my-warner section.icon p.introduction { 
@@ -676,17 +715,17 @@ article.my-warner section.icon p.introduction {
 
 article.my-warner section.movies h2.default,
 article.my-warner section.profile h2.default,
-article.my-warner section.ipad h2.default { color: #b32426; }
+article.my-warner section.ipad h2.default { color: #bf2c19; }
 article.my-warner section.brief h2.default,
 article.my-warner section.bonuses h2.default,
-article.my-warner section.icon h2.default { color: #db353a; }
+article.my-warner section.icon h2.default { color: #e53525; }
 article.my-warner section.movies h2.default span,
 article.my-warner section.profile h2.default span,
 article.my-warner section.ipad h2.default span { color: #fff; }
 article.my-warner section.brief h2.default span,
 article.my-warner section.bonuses h2.default span,
 article.my-warner section.icon h2.default span { color: #5d647a; }
-article.my-warner section.movies h3 { color: #d61702; }
+article.my-warner section.movies h3 { color: #bf2c19; }
 article.my-warner section.movies h3 > span { color: #fff; }
 
 article.my-warner section.movies section.best-tweets { padding: 170px 0 60px; }
@@ -696,13 +735,13 @@ article.my-warner section.movies section.statistics { padding: 120px 0 260px; }
 article.my-warner section.movies section.quizzes img,
 article.my-warner section.movies section.statistics img { float: right; }
 
-article.my-warner section.movies h2.final-design { color: #b22426; margin-bottom: 150px; }
+article.my-warner section.movies h2.final-design { color: #bf2c19; margin-bottom: 150px; }
 article.my-warner section.movies h2.final-design span { color: #fff; }
 
 article.my-warner section.movies section.final-design > div {
   height: 1070px;
   position: relative;
-  background: linear-gradient(to right, #c41010 0%,#ff3b3b 100%);
+  background: linear-gradient(to right, #e32822 -80px,#ff5040 100%)
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6); } 
 article.my-warner section.movies section.final-design > div ul { 
   position: absolute;
@@ -891,16 +930,16 @@ article.game-of-thrones header.introduction {
   position: relative; z-index: 400;
   min-height: 1200px;
   color: #fff; 
-  background: linear-gradient(to right, #c41010 -80px,#ff483b 100%);
+  background: linear-gradient(to right, #e32822 -80px,#ff5040 100%);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6),
         inset 0 -5px 0px rgba(0, 0, 0, 0.3); }
 article.game-of-thrones hr.dotted { 
   width: 100%; height: 1px;
   background: transparent url(../images/game-of-thrones/p-dotted-dark-grey-bg.png) repeat-x; }
 article.game-of-thrones header.introduction h1 { padding: 360px 0 360px; }
-article.game-of-thrones header.introduction h2 { color: #ff574a; padding: 0 0 50px; }
-article.game-of-thrones header.introduction ul.meta  { border-bottom: 1px solid rgba(255, 87, 74, 0.33); }
-article.game-of-thrones header.introduction ul.meta li h3 { color: #ff574a; }
+article.game-of-thrones header.introduction h2 { color: #ff7862; padding: 0 0 50px; }
+article.game-of-thrones header.introduction ul.meta  { border-bottom: 1px solid rgba(255, 120, 98, 0.44); }
+article.game-of-thrones header.introduction ul.meta li h3 { color: #ff7862; }
 article.game-of-thrones header.introduction div.arrow { background: transparent url(../images/game-of-thrones/arrow.png) no-repeat; }
 article.game-of-thrones section.brief {
   min-height: 1520px;
@@ -963,7 +1002,7 @@ article.game-of-thrones section.countdown h2.final-design span,
 article.game-of-thrones section.player h2.final-design span { color: #fff; }
 article.game-of-thrones section.final-design { padding: 80px 0 0; }
 article.game-of-thrones section.final-design section.slider > ul {
-  background: linear-gradient(to right, #c41010 -80px,#ff483b 100%); }
+  background: linear-gradient(to right, #e32822 -80px,#ff5040 100%); }
 article.game-of-thrones section.final-design section.slider nav ul li {
   border-color: #41444f;
   background: rgba(65, 68, 79, 0.3); }
@@ -1226,7 +1265,7 @@ article.nike header.introduction {
   position: relative; z-index: 400;
   min-height: 1200px;
   color: #fff;
-  background: linear-gradient(to right, #ff7024 -80px, #ff401f 100%); 
+  background: linear-gradient(to right, #ff621a -80px, #ff381a 100%); 
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5),
         inset 0 -5px 0px rgba(0, 0, 0, 0.2); }
 article.nike hr.dotted { 
