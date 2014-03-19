@@ -1,5 +1,5 @@
 /*global require*/
-// 'use strict';
+'use strict';
 
 require.config({
   shim: {
@@ -9,7 +9,7 @@ require.config({
     backbone: {
         deps: [
             'underscore',
-            'jquery'
+            'backbonenative'
         ],
         exports: 'Backbone'
     }, 
@@ -22,8 +22,8 @@ require.config({
     }
   },
   paths: {
-    jquery: '../components/jquery/jquery',
     backbone: '../components/backbone/backbone',
+    backbonenative: '../components/backbone.native/backbone.native',
     underscore: '../components/underscore/underscore',
     eventEmitter: '../components/eventEmitter/EventEmitter',
     eventie: '../components/eventie/eventie',
@@ -34,6 +34,6 @@ require.config({
 });
 
 
-define(['julien-perriere', 'jquery'], function(J, $){
+define(['julien-perriere'], function(J){
   J.start();
 })

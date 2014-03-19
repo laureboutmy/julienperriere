@@ -16,7 +16,7 @@ define([
       },
 
       render: function(){
-        this.$el.html(this.template());
+        this.el.innerHTML = this.template();
         this.bind();
         return this;
       },

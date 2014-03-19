@@ -16,6 +16,7 @@ body {
 a, a:link, a:visited, a:active { transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s; text-decoration: none; }
 hr { border: 0; margin: 20px auto; }
 .no-txt, i { text-align: left; text-indent: -9999px; overflow: hidden; }
+.centered { margin: 0 auto; overflow: hidden; }
 i { display: inline-block; }
 em { font-style: italic; }
 .clear { clear: both; }

@@ -1,12 +1,11 @@
 /*global define*/
 
 define([
-    'jquery',
     'backbone', 
     'views/project',
     'text!templates/wdmtg.html',
     'vendor/slider'
-], function ($, Backbone, ProjectView, tplWdmtg, slideIt) {
+], function (Backbone, ProjectView, tplWdmtg, slideIt) {
     // 'use strict';
 
     var WdmtgView = ProjectView.extend({
@@ -46,7 +45,7 @@ define([
 
       render: function(){
         var self = this;
-        self.$el.html(this.template());
+        this.el.innerHTML = this.template();
         self.load();
         J.Views['sidebar'].update(J.Status.currentView);
         self.bind();

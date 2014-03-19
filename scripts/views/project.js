@@ -1,12 +1,10 @@
 /*global define*/
 
 define([
-    'jquery',
     'backbone', 
     'imagesloaded',
-    'models/project',
     'vendor/helpers'
-], function ($, Backbone, imagesLoaded, Project, helpers) {
+], function (Backbone, imagesLoaded, helpers) {
     // 'use strict';
     var projectView = Backbone.View.extend({
       el: '#main',

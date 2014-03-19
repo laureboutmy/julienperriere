@@ -32,7 +32,9 @@ define([
       ],
       render: function(){
         var self = this;
-        self.$el.html(this.template());
+
+        // self.$el.html(this.template());
+        this.el.innerHTML = this.template();
         self.load();
         J.Views['sidebar'].update(J.Status.currentView);
         self.bind();

@@ -1,12 +1,11 @@
 /*global define*/
 
 define([
-    'jquery',
     'backbone', 
     'imagesloaded',
     'views/project',
     'text!templates/kolok.html'
-], function ($, Backbone, imagesLoaded, ProjectView, tplKolok) {
+], function (Backbone, imagesLoaded, ProjectView, tplKolok) {
     // 'use strict';
     var KolokView = ProjectView.extend({
 
@@ -21,9 +20,9 @@ define([
 
       render: function(){
         var self = this;
-        self.$el.html(this.template());
+        this.el.innerHTML = this.template();
         self.load();
-        $('html').scrollTop(0);
+        // $('html').scrollTop(0);
         J.Views['sidebar'].update(J.Status.currentView);
         self.bind();
 
