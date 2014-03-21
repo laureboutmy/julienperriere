@@ -12,7 +12,9 @@ body {
   font-size: 0.938em;
   background: #000;
   color: #808080;
-  -webkit-font-smoothing: antialiased; }
+  -webkit-font-smoothing: antialiased;
+  -webkit-user-select: none; }
+a, p, h1, h2, h3 { -webkit-user-select: normal; }
 a, a:link, a:visited, a:active { transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s; text-decoration: none; }
 hr { border: 0; margin: 20px auto; }
 .no-txt, i { text-align: left; text-indent: -9999px; overflow: hidden; }
@@ -73,13 +75,16 @@ div#wrapper section#sidebar header h2 {
 div#wrapper section#sidebar nav#nav { position: absolute; width: 310px; height: 265px; margin: auto; top: 0; bottom: 0; left: 0; right: 0; }
 div#wrapper section#sidebar nav#nav ul li a { 
   padding: 15px 0; display: block;
-  color: #333333;
   font-size: 0.933em;
   text-transform: uppercase;
   font-weight: 700;
-  font-family: 'NeutraText', sans-serif; }
+  font-family: 'NeutraText', sans-serif;
+  color: transparent;
+  transition: color cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s; }
+div#wrapper.unwound section#sidebar nav#nav ul li a { color: #333333; }
 div#wrapper section#sidebar nav#nav ul li a:hover { color: #fff; }
-div#wrapper section#sidebar nav#nav ul li.current a { color: #fff; }
+div#wrapper section#sidebar nav#nav ul li.current a { color: transparent; }
+div#wrapper.unwound section#sidebar nav#nav ul li.current a { color: #fff; }
 div#wrapper section#sidebar nav#nav ul li a span { width: 80px; display: inline-block; text-align: center; }
 div#wrapper section#sidebar nav#nav ul li a span i { 
   width: 7px; height: 7px;
@@ -313,7 +318,7 @@ div#wrapper.open section#main { left: 570px; }
 /***************/
 div#wrapper section#main article.home {
   overflow: hidden;
-  background: #fff linear-gradient(to bottom, #ced3db -80px, #fff 700px);
+  background: #fff linear-gradient(to bottom, #ced3db 0, #fff 1000px);
   transition: top cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s; }
 article.home h1 {
   margin: 250px auto 60px;
@@ -438,10 +443,14 @@ article.project header.introduction ul.meta li {
   text-transform: uppercase;
   color: #fff; }
 article.project header.introduction ul.meta li h3 { display: inline-block; }
+article.project header.introduction h1 { position: relative; }
 article.project header.introduction h1 img {
+  position: absolute;
+  top: 20px; left: 0; right: 0; margin: 0 auto;
   opacity: 0;
-  transition: 0.3s opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s; }
-article.project header.introduction.animate h1 img { opacity: 1; }
+  transition: 0.3s opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s,
+              0.3s top cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s; }
+article.project header.introduction.animate h1 img { opacity: 1; top: 0; }
 article.project header.introduction h2 {
   font-family: 'NeutraText', sans-serif;
   font-style: italic;
@@ -469,7 +478,10 @@ article.project section h2.default {
   font-size: 3.600em;
   font-weight: 700;
   text-align: center;
-  margin: 50px 0 100px; }
+  margin: 50px 0 100px;
+  opacity: 0;
+  transition: opacity cubic-bezier(0.000, 0.800, 0.510, 1.005) 0.6s; }
+article.project section h2.default.animate { opacity: 1; }
 article.project section h2.default > span {
   display: block;
   position: absolute;
@@ -478,7 +490,15 @@ article.project section h2.default > span {
   z-index: -1;
   font-weight: 200;
   font-size: 4.630em;
-  color: #005aa3; }
+  color: #005aa3;
+  opacity: 0;
+  top: -10px;
+  transition: 0 opacity cubic-bezier(0.000, 0.800, 0.510, 1.005) 0.3s,
+              0 top cubic-bezier(0.000, 0.800, 0.510, 1.005) 0.3s; }
+article.project section h2.default.animate > span { 
+  transition: 0.3s opacity cubic-bezier(0.000, 0.800, 0.510, 1.005) 0.3s,
+              0.3s top cubic-bezier(0.000, 0.800, 0.510, 1.005) 0.3s;
+  top: 0; opacity: 1; }
 
 article.project section h2.final-design {
   font-family: 'NeutraDisplay', sans-serif;
@@ -651,7 +671,7 @@ article.my-warner header.introduction {
 article.my-warner hr.dotted { 
   width: 100%; height: 1px;
   background: transparent url(../images/my-warner/p-dotted-dark-grey-bg.png) repeat-x; }
-article.my-warner header.introduction h1 { padding: 360px 0 350px; }
+article.my-warner header.introduction h1 { margin: 360px 0 350px; min-height: 131px; }
 article.my-warner header.introduction h2 { color: #ff7862; padding: 0 0 50px; }
 article.my-warner header.introduction ul.meta  { border-bottom: 1px solid rgba(255, 120, 98, 0.44); }
 article.my-warner header.introduction ul.meta li h3 { color: #ff7862; }
@@ -661,12 +681,11 @@ article.my-warner section.brief {
   background: #eef2f6; color: #868c9e; }
 article.my-warner section.brief img.iso {
   position: relative;
-  top: 80px; 
-  margin: 120px auto;
+  margin: 120px auto 100px;
   display: block;
   opacity: 0;
-  transition: top ease-out 0.3s, 
-              opacity ease-out 0.2s; }
+  transition: opacity ease-out 0.2s; }
+article.my-warner section.brief img.iso.animate { opacity: 1; }
 
 article.my-warner section.movies {
   background: #161b24; color: #303640;
@@ -685,7 +704,7 @@ article.my-warner section.icon {
   overflow: hidden; }
 article.my-warner section.ipad {
   background: #161b24;
-  padding: 160px 0 0; }
+  padding: 160px 0 310px; }
 
 article.my-warner section.movies p.introduction,
 article.my-warner section.profile p.introduction,
@@ -720,8 +739,18 @@ article.my-warner section.movies section.statistics { padding: 120px 0 260px; }
 article.my-warner section.movies section.quizzes img,
 article.my-warner section.movies section.statistics img { float: right; }
 
-article.my-warner section.movies h2.final-design { color: #bf2c19; margin-bottom: 150px; }
-article.my-warner section.movies h2.final-design span { color: #fff; }
+
+article.my-warner section.movies section.best-tweets img,
+article.my-warner section.movies section.quizzes img,
+article.my-warner section.movies section.facts img,
+article.my-warner section.movies section.statistics img { opacity: 0; transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s; }
+article.my-warner section.movies section.best-tweets.animate img,
+article.my-warner section.movies section.quizzes.animate img,
+article.my-warner section.movies section.facts.animate img,
+article.my-warner section.movies section.statistics.animate img { opacity: 1; }
+
+article.my-warner section.movies h2.final-design { color: #fff; margin-bottom: 150px; }
+article.my-warner section.movies h2.final-design span { color: #bf2c19; }
 
 article.my-warner section.movies section.final-design > div {
   height: 1070px;
@@ -741,10 +770,78 @@ article.my-warner section.profile .third--two { padding: 0 10px; width: auto; }
 article.my-warner section.movies section.final-design .third--three,
 article.my-warner section.profile .third--three { padding-left: 10px; width: auto; }
 
+article.my-warner section.movies section.final-design > div ul li img,
+article.my-warner section.profile ul li img {
+  -webkit-transform: rotateY(25deg);
+          transform: rotateY(25deg);
+  opacity: 0;
+  transition: -webkit-transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
+              opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
+  transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s; }
+article.my-warner section.movies section.final-design.animate > div ul li img,
+article.my-warner section.profile.animate ul li img { 
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+  opacity: 1; }
+
+article.my-warner section.movies section.final-design > div ul li:nth-child(2) img,
+article.my-warner section.movies section.final-design > div ul li:nth-child(3) img,
+article.my-warner section.movies section.final-design > div ul li:nth-child(4) img,
+article.my-warner section.movies section.final-design > div ul li:nth-child(5) img,
+article.my-warner section.movies section.final-design > div ul li:nth-child(6) img,
+article.my-warner section.profile ul li:nth-child(2) img,
+article.my-warner section.profile ul li:nth-child(3) img,
+article.my-warner section.profile ul li:nth-child(4) img,
+article.my-warner section.profile ul li:nth-child(5) img,
+article.my-warner section.profile ul li:nth-child(6) img { transition-delay: 0s; }
+
+article.my-warner section.movies section.final-design.animate > div ul li:nth-child(2) img,
+article.my-warner section.profile.animate li:nth-child(2) img { transition-delay: 0.2s; }
+article.my-warner section.movies section.final-design.animate > div ul li:nth-child(3) img,
+article.my-warner section.profile.animate ul li:nth-child(3) img { transition-delay: 0.4s; }
+article.my-warner section.movies section.final-design.animate > div ul li:nth-child(4) img,
+article.my-warner section.profile.animate ul li:nth-child(4) img { transition-delay: 0.6s; }
+article.my-warner section.movies section.final-design.animate > div ul li:nth-child(5) img,
+article.my-warner section.profile.animate ul li:nth-child(5) img { transition-delay: 0.8s; }
+article.my-warner section.movies section.final-design.animate > div ul li:nth-child(6) img,
+article.my-warner section.profile.animate ul li:nth-child(6) img { transition-delay: 1.0s; }
 article.my-warner section.bonuses img { margin-bottom: 31px; }
 article.my-warner section.bonuses section,
-article.my-warner section.icon section,
+article.my-warner section.icon section { margin: 160px 0 230px; }
 article.my-warner section.ipad section { margin: 160px 0 0; }
+
+article.my-warner section.icon section.wireframes > div:first-of-type > div.rel { width: 252px; height: 252px; }
+article.my-warner section.icon section.wireframes img { 
+  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
+  opacity: 0; }
+article.my-warner section.icon section.wireframes.animate img { opacity: 1; }
+article.my-warner section.icon section.wireframes > div:first-of-type > div.rel > img:nth-of-type(2) {
+  position: absolute;
+  margin: auto;
+  left: 0; right: 0; top: 0; bottom: 0;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s; }
+article.my-warner section.icon section.wireframes.animate > div:first-of-type > div.rel img:nth-of-type(2) { 
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
+              0.2s -webkit-transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
+  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
+              0.2s transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s; }
+article.my-warner section.icon section.wireframes > div:nth-of-type(2) > div.rel img { 
+  position: absolute;
+  top: 0; right: 0;
+  transition-delay: 0; }
+article.my-warner section.icon section.wireframes.animate > div:nth-of-type(2) > div.rel img {
+  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
+              right cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
+  transition-delay: 0.6s; }
+
+article.my-warner section.icon section.wireframes.animate > div:nth-of-type(2) > div.rel img:nth-of-type(1) { right: 0; }
+article.my-warner section.icon section.wireframes.animate > div:nth-of-type(2) > div.rel img:nth-of-type(2) { right: 139px; }
+article.my-warner section.icon section.wireframes.animate > div:nth-of-type(2) > div.rel img:nth-of-type(3) { right: 277px;}
+article.my-warner section.icon section.wireframes.animate > div:nth-of-type(2) > div.rel img:nth-of-type(4) { right: 416px;}
 
 article.my-warner section.ipad div.ipad {
   background: url(../images/my-warner/ipad.png) no-repeat;
@@ -752,11 +849,24 @@ article.my-warner section.ipad div.ipad {
       -moz-box-sizing: border-box;
    -webkit-box-sizing: border-box;
            box-sizing: border-box; }
-article.my-warner section.ipad div.ipad + img {
+article.my-warner section.ipad div.ipad img {
+  opacity: 0;
+  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s; }
+article.my-warner section.ipad.animate div.ipad img { opacity: 1; }
+article.my-warner section.ipad div.ipad + div.rel img {
   margin: 0 auto;
-  display: block; }
-article.my-warner footer.thanks { padding: 225px 0 260px; background: #13161c; }
-article.my-warner footer.thanks h2 { color: #b32426; margin-bottom: 35px; }
+  display: block;
+  position: absolute;
+  top: -100px; left: 0; right: 0;
+  opacity: 0;
+  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
+              top cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
+  transition-delay: 0s; }
+article.my-warner section.ipad.animate div.ipad + div.rel img { opacity: 1; top: 0; transition-delay: 0.2s; }
+
+
+article.my-warner footer.thanks { padding: 225px 0 260px; background: #161b24; }
+article.my-warner footer.thanks h2 { color: #bf2c19; margin-bottom: 35px; }
 article.my-warner footer.thanks a.app-store, 
 article.my-warner footer.thanks a.google-play {
   display: inline-block;
@@ -787,7 +897,7 @@ article.wdmtg header.introduction {
 article.wdmtg hr.dotted { 
   width: 100%; height: 1px;
   background: transparent url(../images/wdmtg/hr-dotted-light-grey-bg.png) repeat-x; }
-article.wdmtg header.introduction h1 { padding: 360px 0 300px; }
+article.wdmtg header.introduction h1 { margin: 360px 0 300px; min-height: 182px; }
 article.wdmtg header.introduction h2 { color: #4392da; padding: 0 0 50px; }
 article.wdmtg header.introduction ul.meta  { border-bottom: 1px solid rgba(67, 146, 218, 0.3); }
 article.wdmtg header.introduction ul.meta li h3 { color: #4392da; }
@@ -912,7 +1022,7 @@ article.game-of-thrones header.introduction {
 article.game-of-thrones hr.dotted { 
   width: 100%; height: 1px;
   background: transparent url(../images/game-of-thrones/p-dotted-dark-grey-bg.png) repeat-x; }
-article.game-of-thrones header.introduction h1 { padding: 360px 0 360px; }
+article.game-of-thrones header.introduction h1 { margin: 360px 0 360px; min-height: 119px; }
 article.game-of-thrones header.introduction h2 { color: #ff7862; padding: 0 0 50px; }
 article.game-of-thrones header.introduction ul.meta  { border-bottom: 1px solid rgba(255, 120, 98, 0.44); }
 article.game-of-thrones header.introduction ul.meta li h3 { color: #ff7862; }
@@ -1005,7 +1115,7 @@ article.kolok header.introduction {
   min-height: 1200px;
   color: #fff;
   background: linear-gradient(to right, #1078cc -80px, #50a7e5 100%); }
-article.kolok header.introduction h1 { padding: 320px 0 300px; }
+article.kolok header.introduction h1 { margin: 320px 0 300px; min-height: 224px; }
 article.kolok header.introduction h2 { color: #75c4e5; padding: 0 0 50px; }
 article.kolok header.introduction ul.meta { border-bottom: 1px solid rgba(117, 196, 229, 0.3); }
 article.kolok header.introduction ul.meta li h3 { color: #75c4e5; }
@@ -1110,7 +1220,7 @@ article.dreamcatcher header.introduction {
   color: #fff;
   background: linear-gradient(to right, rgba(26,25,36,.89) -80px,rgba(49,41,56,.89) 100%), url(../images/dreamcatcher/noise.png); }
 
-article.dreamcatcher header.introduction h1 { padding: 360px 0 370px; }
+article.dreamcatcher header.introduction h1 { margin: 360px 0 370px; min-height: 113px; }
 article.dreamcatcher header.introduction h2 { color: #433b52; padding: 0 0 50px; }
 article.dreamcatcher header.introduction ul.meta { border-bottom: 1px solid rgba(67, 59, 82, 0.3); }
 article.dreamcatcher header.introduction ul.meta li h3 { color: #433b52; }
@@ -1140,7 +1250,9 @@ article.dreamcatcher section.desktop h2.default span { color: #5b318c; }
 article.dreamcatcher section.desktop h3 { color: #5c328d; }
 article.dreamcatcher section.desktop h3 > span { color: #fff; }
 article.dreamcatcher section.brief p.introduction,
-
+article.dreamcatcher section.mobile-ready p.introduction { 
+  background: url(../images/dreamcatcher/p-dotted-light-grey-bg.png) repeat-x left 40px;
+  color: #9390ab; }
 article.dreamcatcher section.desktop p.introduction { 
   background: url(../images/dreamcatcher/p-dotted-dark-grey-bg.png) repeat-x left 40px;
   color: #474557; }
@@ -1163,7 +1275,7 @@ article.dreamcatcher section.desktop {
 
 article.dreamcatcher section.desktop section.milestones { min-height: 410px; }
 article.dreamcatcher section.desktop section.milestones img { 
-  /*opacity: 0; top: 0; float: right; position: absolute; */
+  /* opacity: 0; top: 0; float: right; position: absolute; */
   transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s,
               top cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s; }
 article.dreamcatcher section.desktop section.milestones.animate img:nth-child(1) { opacity: 1; z-index: 3; }
@@ -1220,7 +1332,7 @@ article.nike header.introduction {
 article.nike hr.dotted { 
   height: 1px; width: 100%;
   background: url(../images/nike/p-dotted-dark-grey-bg.png); }
-article.nike header.introduction h1 { padding: 360px 0 260px; }
+article.nike header.introduction h1 { margin: 360px 0 260px; min-height: 222px; }
 article.nike header.introduction h2 { color: #ff9142; padding: 0 0 50px; }
 article.nike header.introduction ul.meta { border-bottom: 1px solid rgba(255, 138, 53, 0.4);}
 article.nike header.introduction ul.meta li h3 { color: #fdc08a; }

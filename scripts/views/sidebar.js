@@ -53,8 +53,13 @@ define([
       },
 
       update: function(project){
-        helpers.removeClass(document.querySelectorAll('section#sidebar li.current')[0])
-        helpers.addClass(document.querySelectorAll('section#sidebar [data-project=' + project + ']')[0].parentNode, 'current');
+        if(project !== ''){
+          helpers.removeClass(document.querySelectorAll('section#sidebar li.current')[0])
+          helpers.addClass(document.querySelectorAll('section#sidebar [data-project=' + project + ']')[0].parentNode, 'current');
+        } else {
+          helpers.removeClass(document.querySelectorAll('section#sidebar li.current')[0], 'current');
+        }
+        
       },
 
       getInfos: function(c){

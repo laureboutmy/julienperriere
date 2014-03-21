@@ -27,7 +27,7 @@ define([
         self.load();
 
         self.bind();
-
+        J.Views['sidebar'].update('');
         return this;
       },
       destroy: function(){},

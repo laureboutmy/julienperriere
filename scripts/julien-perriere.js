@@ -104,7 +104,7 @@ define(['backbone', 'views/sidebar', 'vendor/helpers'], function(Backbone, Sideb
 							helpers.addClass(loader, project);
 							setTimeout(function(){
 								helpers.removeClass(loader, 'hidden');
-								J.Router.render(project, 'wait'); 
+								J.Router.render(project, 'wait');
 							}, 300);
 						});
 					});
@@ -126,8 +126,7 @@ define(['backbone', 'views/sidebar', 'vendor/helpers'], function(Backbone, Sideb
 							J.Router.render(project, 'wait');
 							J.Views['sidebar'].update(project);
 						}
-					})
-		    	
+					});
 
 					document.querySelectorAll('button[type="submit"]')[0].addEventListener('click', function(e){
 						e.preventDefault();
@@ -137,33 +136,34 @@ define(['backbone', 'views/sidebar', 'vendor/helpers'], function(Backbone, Sideb
 								message = form.querySelector('textarea'),
 								error = false;
 
-						if(email.value == '' || name.value == '' || message.value == '' || /\S+@\S+\.\S+/.test(email.value)){ error = true; }
-						if(error){ 
-							form.querySelector('span.message').innerHTML = "Whoops! That's a no-go.";
+						if(email.value === '' || name.value === '' || message.value === '' || /\S+@\S+\.\S+/.test(email.value)){ error = true; }
+						if(error){
+							form.querySelector('span.message').innerHTML = 'Whoops! That\'s a no-go.';
 							helpers.addClass(form.querySelector('span.message'), 'visible');
 						} else {
 							var data = {
 									name: name.value,
 									email: email.value,
-									message: message.value }
+									message: message.value
+								};
 							var request = new XMLHttpRequest();
 							request.open('POST', 'form.php', true);
 							request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
 							request.send(data);
 						}
-					})
+					});
 				},
 				
-				onResize: function(){ 
+				onResize: function(){
 					document.getElementById('main').style.width = window.innerWidth - 80 + 'px';
 					// $('#main').width($(window).width() - 80); 
-					J.Status.windowH = window.innerHeight; },
+					J.Status.windowH = window.innerHeight; 
+				},
 
-				}));
+			}));
 		},
 		
 		start: function(){ J.init(); }
-	}
-
+	};
 	return J;
 });
