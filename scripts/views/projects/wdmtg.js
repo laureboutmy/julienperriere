@@ -54,6 +54,12 @@ define([
           c: "animate"
         },
         {
+          selector: ".powerful-tool",
+          position: 6475,
+          animated: false,
+          c: "animate"
+        },
+        {
           selector: ".feeds",
           position: 7020,
           animated: false,

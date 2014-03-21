@@ -988,6 +988,27 @@ article.wdmtg section.pro-signup section.process img:nth-child(3) { opacity: 0; 
 article.wdmtg section.pro-signup section.process.animate img:nth-child(2) { z-index: 2; left: 268px; opacity: 0.6; }
 article.wdmtg section.pro-signup section.process.animate img:nth-child(3) { z-index: 1; left: 476px; opacity: 0.6; }
 
+article.wdmtg section.custom-feeds section.powerful-tool { min-height: 430px; }
+article.wdmtg section.custom-feeds section.powerful-tool img:nth-child(2) {
+  position: absolute;
+  left: 0; top: 240px;
+  opacity: 0;
+  transition: top cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
+              opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s; }
+article.wdmtg section.custom-feeds section.powerful-tool.animate img:nth-child(2) { top: 270px; opacity: 1; }
+
+article.wdmtg section.custom-feeds section.top-up { min-height: 300px; }
+article.wdmtg section.custom-feeds section.top-up img:nth-child(2), 
+article.wdmtg section.custom-feeds section.top-up img:nth-child(3) {
+  position: absolute;
+  left: 0; right: 0; top: 0;
+  margin: 0 auto;
+  opacity: 0;
+  transition: top cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
+              opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s; }
+article.wdmtg section.custom-feeds section.top-up.animate img:nth-child(2) { z-index: 3; top: 68px; opacity: 1; }
+article.wdmtg section.custom-feeds section.top-up.animate img:nth-child(3) { z-index: 2; top: 320px; opacity: 1; }
+
 article.wdmtg section.custom-feeds section.feeds img {
   position: absolute; left: 0; opacity: 0;
   transition: 0.3s left cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
@@ -1000,17 +1021,7 @@ article.wdmtg section.custom-feeds section.feeds.animate img:nth-child(2) { left
 article.wdmtg section.custom-feeds section.feeds.animate img:nth-child(3) { left: 365px; z-index: 3; }
 article.wdmtg section.custom-feeds section.feeds.animate img:nth-child(1) { left: 0px; opacity: 1; }
 article.wdmtg section.custom-feeds section.feeds.animate img:nth-child(2) { left: 183px; opacity: 1; }
-article.wdmtg section.custom-feeds section.top-up { min-height: 300px; }
-article.wdmtg section.custom-feeds section.top-up img:nth-child(2), 
-article.wdmtg section.custom-feeds section.top-up img:nth-child(3) {
-  position: absolute;
-  left: 0; right: 0; top: 0;
-  margin: 0 auto;
-  opacity: 0;
-  transition: top cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
-              opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s; }
-article.wdmtg section.custom-feeds section.top-up.animate img:nth-child(2) { z-index: 3; top: 68px; opacity: 1; }
-article.wdmtg section.custom-feeds section.top-up.animate img:nth-child(3) { z-index: 2; top: 320px; opacity: 1; }
+
 
 article.wdmtg section.custom-feeds section.final-design { padding: 250px 0 0; }
 article.wdmtg footer.thanks a {
