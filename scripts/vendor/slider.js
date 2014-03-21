@@ -8,7 +8,7 @@ define([
       var options = {
         current: 0,
         nav: el.querySelectorAll('nav li'),
-        main: el.parentNode.querySelectorAll('.slider > ul li'),
+        main: el.parentNode.querySelectorAll('.slider > div ul li'),
         length: null
       };
 

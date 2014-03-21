@@ -42,7 +42,7 @@ define([
               loaded = 0,
               progress = document.querySelectorAll('section#loader div.progress')[0];
           loading.on('always', function(){
-            setTimeout(function(){ J.Views[J.Status.currentView].trigger('loaded') }, 300);
+            setTimeout(function(){ J.Views[J.Status.currentView].trigger('loaded') }, 500);
           });
           loading.on('progress', function() {
             loaded++;
@@ -95,7 +95,7 @@ define([
               helpers.addClass(main.querySelectorAll(animation.selector)[0], animation.c);
             }
           } else if(delta > 0){
-            if(animation.position > coords && animation.animated){
+            if(animation.position > coords + ratio && animation.animated){
               animation.animated = false;
               helpers.removeClass(main.querySelectorAll(animation.selector)[0], animation.c);
             }

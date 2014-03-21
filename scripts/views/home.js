@@ -18,7 +18,7 @@ define([
         self.on('loaded', function(){
           setTimeout(self.hideLoader, 1000);
         });
-
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
       },
       render: function(){
         var self = this;
@@ -53,7 +53,7 @@ define([
               loaded = 0,
               progress = document.querySelectorAll('section#loader div.progress')[0];
           loading.on('always', function(){
-            setTimeout("J.Views['home'].trigger('loaded')", 300);
+            setTimeout("J.Views['home'].trigger('loaded')", 400);
           });
           loading.on('progress', function() {
             loaded++;

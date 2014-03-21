@@ -119,7 +119,6 @@ define([
             delta;
         window.addEventListener('scroll', function(){
           previousScroll = currentScroll;
-          console.log(window.pageYOffset);
           currentScroll = window.pageYOffset;
           delta = previousScroll - currentScroll;
           self.renderAnimations(currentScroll, delta);

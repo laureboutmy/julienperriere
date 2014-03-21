@@ -12,32 +12,56 @@ define([
       template: _.template(tplWdmtg),
       animations: [
         {
-          selector: ".iso",
-          position: 1570,
+          selector: ".brief h2.default",
+          position: 1200,
           animated: false,
           c: "animate"
         },
         {
-          selector: ".pro",
-          position: 2200,
+          selector: ".iso",
+          position: 1830,
+          animated: false,
+          c: "animate"
+        },
+        {
+          selector: ".pro-signup h2.default",
+          position: 2795,
           animated: false,
           c: "animate"
         },
         {
           selector: ".process",
-          position: 3290,
+          position: 3410,
+          animated: false,
+          c: "animate"
+        },
+        {
+          selector: ".full-control",
+          position: 3850,
+          animated: false,
+          c: "animate"
+        },
+        {
+          selector: ".visual-clues",
+          position: 4310,
+          animated: false,
+          c: "animate"
+        },
+        {
+          selector: ".custom-feeds h2.default",
+          position: 5640,
           animated: false,
           c: "animate"
         },
         {
           selector: ".feeds",
-          position: 6150,
+          position: 7020,
           animated: false,
           c: "animate"
         },
         {
           selector: ".top-up",
-          position: 6700,
+          position: 7660,
           animated: false,
           c: "animate"
         }
@@ -59,6 +83,7 @@ define([
             delta;
         slideIt(document.querySelectorAll('.slider'));
         window.addEventListener('scroll', function(){
+          console.log(window.pageYOffset);
           previousScroll = currentScroll;
           currentScroll = window.pageYOffset;
           delta = previousScroll - currentScroll;
