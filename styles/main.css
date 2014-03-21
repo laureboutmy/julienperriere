@@ -1376,7 +1376,6 @@ article.nike section.final-design p.introduction {
   color: #3b3b3b; }
 article.nike section.brief img.iso {
   position: relative;
-  top: 50px; 
   margin: 60px auto;
   display: block; }
 
@@ -1394,10 +1393,24 @@ article.nike section.final-design section.chapters img,
 article.nike section.final-design section.sports-data img,
 article.nike section.final-design section.your-diary img { float: right; }
 
+article.nike section.final-design section.chapters img,
+article.nike section.final-design section.all-about-you img,
+article.nike section.final-design section.sports-data img,
+article.nike section.final-design section.best-shoes img,
+article.nike section.final-design section.your-diary img { opacity: 0; transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s; }
+article.nike section.final-design section.all-about-you.animate img,
+article.nike section.final-design section.chapters.animate img,
+article.nike section.final-design section.sports-data.animate img,
+article.nike section.final-design section.best-shoes.animate img,
+article.nike section.final-design section.your-diary.animate img { opacity: 1; }
+
+
+
 article.nike section.final-design h2.final-design { color: #cc3a00; }
 article.nike section.final-design h2.final-design span { color: #fff; }
-article.nike section.final-design section.slider > ul {
+article.nike section.final-design section.slider > div {
   background: linear-gradient(to right, #ff7024 -80px, #ff401f 100%); }
+article.nike section.final-design section.slider > div ul { background: #000 url(../images/browser-toolbar.png) no-repeat; }
 article.nike section.final-design section.slider nav ul li{
   border-color: #cc3a00;
   background: rgba(204, 58, 0, 0.3); }

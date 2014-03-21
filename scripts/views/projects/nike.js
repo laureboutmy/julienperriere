@@ -12,9 +12,54 @@ define([
       template: _.template(tplNike),
       animations: [
         {
+          selector: ".brief h2.default",
+          position: 1200,
+          animated: false,
+          c: "animate"
+        },
+        {
           selector: ".iso",
-          class: "up"
+          position: 1830,
+          animated: false,
+          c: "animate"
+        },
+        {
+          selector: ".final-design h2.default",
+          position: 2640,
+          animated: false,
+          c: "animate"
+        },
+        {
+          selector: ".chapters",
+          position: 3375,
+          animated: false,
+          c: "animate"
+        },
+        {
+          selector: ".all-about-you",
+          position: 3810,
+          animated: false,
+          c: "animate"
+        },
+        {
+          selector: ".sports-data",
+          position: 4240,
+          animated: false,
+          c: "animate"
+        },
+        {
+          selector: ".best-shoes",
+          position: 4691,
+          animated: false,
+          c: "animate"
+        },
+        {
+          selector: ".your-diary",
+          position: 5190,
+          animated: false,
+          c: "animate"
         }
+        
       ],
       render: function(){
         var self = this;
@@ -31,7 +76,9 @@ define([
             currentScroll = previousScroll = 0,
             delta;
         slideIt(document.querySelectorAll('.slider'));
+
         window.addEventListener('scroll', function(){
+           console.log(window.pageYOffset);
           previousScroll = currentScroll;
           currentScroll = window.pageYOffset;
           delta = previousScroll - currentScroll;

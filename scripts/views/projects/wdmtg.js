@@ -89,7 +89,6 @@ define([
             delta;
         slideIt(document.querySelectorAll('.slider'));
         window.addEventListener('scroll', function(){
-          console.log(window.pageYOffset);
           previousScroll = currentScroll;
           currentScroll = window.pageYOffset;
           delta = previousScroll - currentScroll;
