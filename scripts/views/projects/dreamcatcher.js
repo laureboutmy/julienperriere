@@ -12,20 +12,50 @@ define([
       template: _.template(tplDreamcatcher),
       animations: [
         {
+          selector: ".brief h2.default",
+          position: 1200,
+          animated: false,
+          c: "animate"
+        },
+        {
           selector: ".iso",
-          position: 1300,
+          position: 1810,
+          animated: false,
+          c: "animate"
+        },
+        {
+          selector: ".desktop h2.default",
+          position: 2750,
+          animated: false,
+          c: "animate"
+        },
+        {
+          selector: ".audio-post",
+          position: 3390,
           animated: false,
           c: "animate"
         },
         {
           selector: ".milestones",
-          position: 5340,
+          position: 4060,
           animated: false,
           c: "animate"
         },
         {
           selector: ".charts",
-          position: 6040,
+          position: 4710,
+          animated: false,
+          c: "animate"
+        },
+        {
+          selector: ".mobile-ready h2.default",
+          position: 6100,
+          animated: false,
+          c: "animate"
+        },
+        {
+          selector: ".mobile-ready",
+          position: 6730,
           animated: false,
           c: "animate"
         }
@@ -49,6 +79,7 @@ define([
             delta;
         slideIt(document.querySelectorAll('.slider'));
         window.addEventListener('scroll', function(){
+          console.log(window.pageYOffset);
           previousScroll = currentScroll;
           currentScroll = window.pageYOffset;
           delta = previousScroll - currentScroll;

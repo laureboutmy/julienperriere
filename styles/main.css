@@ -791,16 +791,8 @@ article.my-warner section.profile.animate ul li img {
           transform: rotateY(0deg);
   opacity: 1; }
 
-article.my-warner section.movies section.final-design > div ul li:nth-child(2) img,
-article.my-warner section.movies section.final-design > div ul li:nth-child(3) img,
-article.my-warner section.movies section.final-design > div ul li:nth-child(4) img,
-article.my-warner section.movies section.final-design > div ul li:nth-child(5) img,
-article.my-warner section.movies section.final-design > div ul li:nth-child(6) img,
-article.my-warner section.profile ul li:nth-child(2) img,
-article.my-warner section.profile ul li:nth-child(3) img,
-article.my-warner section.profile ul li:nth-child(4) img,
-article.my-warner section.profile ul li:nth-child(5) img,
-article.my-warner section.profile ul li:nth-child(6) img { transition-delay: 0s; }
+article.my-warner section.movies section.final-design > div ul li img
+article.my-warner section.profile ul li img { transition-delay: 0s; }
 
 article.my-warner section.movies section.final-design.animate > div ul li:nth-child(2) img,
 article.my-warner section.profile.animate li:nth-child(2) img { transition-delay: 0.2s; }
@@ -959,15 +951,6 @@ article.wdmtg section.pro-signup section.full-control img { opacity: 0; transiti
 article.wdmtg section.pro-signup section.visual-clues.animate img,
 article.wdmtg section.pro-signup section.full-control.animate img { opacity: 1; }
 
-
-article.wdmtg footer.thanks { 
- background: linear-gradient(to right, #3381c1 -80px,#2d4fc2 100%); }
-article.wdmtg footer.thanks h2 { color: #fff; margin-bottom: 30px; }
-article.wdmtg footer.thanks a {
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  color: #fff; }
-article.wdmtg footer.thanks a:hover { color: #2d4fc2; border: 1px solid #2d4fc2; }
-
 article.wdmtg section.final-design { padding: 125px 0 0; }
 article.wdmtg section.final-design section.slider > div {
   background: linear-gradient(to right, #3381c1 -80px,#2d4fc2 100%); }
@@ -1024,9 +1007,16 @@ article.wdmtg section.custom-feeds section.feeds.animate img:nth-child(2) { left
 
 
 article.wdmtg section.custom-feeds section.final-design { padding: 250px 0 0; }
+
+
+article.wdmtg footer.thanks { 
+ background: linear-gradient(to right, #3381c1 -80px,#2d4fc2 100%); }
+article.wdmtg footer.thanks h2 { color: #fff; margin-bottom: 30px; }
 article.wdmtg footer.thanks a {
   border: 1px solid #4392da;
   color: #4392da; }
+article.wdmtg footer.thanks a:hover { color: #2d4fc2; border: 1px solid #2d4fc2; }
+
 /* @end of WDMTG */
 
 /**************************/
@@ -1058,14 +1048,9 @@ article.game-of-thrones section.brief p.introduction {
   background: url(../images/game-of-thrones/p-dotted-light-grey-bg.png) repeat-x left 40px;
   color: #9a9dad; }
 article.game-of-thrones section.brief img.iso {
-  position: relative;
-  top: 80px; 
-  margin: 120px auto;
-  display: block;
-  opacity: 0;
-  transition: top ease-out 0.3s, 
-              opacity ease-out 0.2s; }
-article.game-of-thrones section.brief img.iso.animate { top: 0; opacity: 1; }
+  margin: 125px auto 65px;
+  display: block; }
+article.game-of-thrones section.brief img.iso.animate { opacity: 1; }
 article.game-of-thrones section.countdown {
   background: #0e0f12; color: #40444f;
   padding: 160px 0; }
@@ -1098,7 +1083,7 @@ article.game-of-thrones section.player section.content,
 article.game-of-thrones section.player section.cards,
 article.game-of-thrones section.player section.browser { padding: 125px 0; }
 
-article.game-of-thrones section.player section.content div > img { position: absolute; width: 440px; left: 50%; margin-left: -223px; top: 0; }
+article.game-of-thrones section.player section.content div > img { position: absolute; width: 440px; left: 50%; margin-left: -223px; top: 0; z-index: 20; }
 article.game-of-thrones section.player section.content h3 { margin-top: 45px; }
 article.game-of-thrones section.player section.content p { margin-bottom: 35px; }
 article.game-of-thrones section.countdown h2.final-design,
@@ -1106,8 +1091,9 @@ article.game-of-thrones section.player h2.final-design { color: #d61702; }
 article.game-of-thrones section.countdown h2.final-design span,
 article.game-of-thrones section.player h2.final-design span { color: #fff; }
 article.game-of-thrones section.final-design { padding: 80px 0 0; }
-article.game-of-thrones section.final-design section.slider > ul {
+article.game-of-thrones section.final-design section.slider > div {
   background: linear-gradient(to right, #e32822 -80px,#ff5040 100%); }
+article.game-of-thrones section.final-design section.slider > div ul { background: #000 url(../images/browser-toolbar.png) no-repeat;}
 article.game-of-thrones section.final-design section.slider nav ul li {
   border-color: #41444f;
   background: rgba(65, 68, 79, 0.3); }
@@ -1123,6 +1109,31 @@ article.game-of-thrones section.mobile div.iphone {
 article.game-of-thrones section.mobile img.mobile-shadow { margin: 10px 0 0; }
 article.game-of-thrones section.mobile section.remote { padding: 160px 0 80px; }
 article.game-of-thrones section.mobile section.feed { padding: 80px 0; }
+
+
+article.game-of-thrones section.countdown section.hours img,
+article.game-of-thrones section.countdown section.badges img,
+article.game-of-thrones section.player section.cards img,
+article.game-of-thrones section.player section.browser img { 
+  opacity: 0;
+  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;  }
+article.game-of-thrones section.countdown section.hours.animate img,
+article.game-of-thrones section.countdown section.badges.animate img,
+article.game-of-thrones section.player section.cards.animate img,
+article.game-of-thrones section.player section.browser.animate img { opacity: 1; }
+
+article.game-of-thrones section.player section.content img {
+  opacity: 0;
+  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
+  transition-delay: 0s; }
+article.game-of-thrones section.player section.content.animate img { opacity: 1; }
+article.game-of-thrones section.player section.content div > img:first-of-type {
+  top: 30px;
+  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
+              top cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
+  transition-delay: 0s; }
+article.game-of-thrones section.player section.content.animate div > img:first-of-type { top: 0; transition-delay: 0.3s; }
+
 article.game-of-thrones footer.thanks { padding: 130px 0 230px; background: #0e0f12; }
 article.game-of-thrones footer.thanks h2 { color: #41444f; }
 /* @end Game of Thrones */
@@ -1144,7 +1155,7 @@ article.kolok header.introduction div.arrow { background: transparent url(../ima
 
 article.kolok section.brief {
   min-height: 1520px;
-  padding: 160px 0;
+  padding: 160px 0 140px;
   background: #171c21; color: #3d4754; }
 article.kolok section.design-guidelines {
   padding: 160px 0;
@@ -1178,9 +1189,7 @@ article.kolok section.design-guidelines hr.dotted {
   width: 100%; height: 1px;
   background: transparent url(../images/my-warner/p-dotted-light-grey-bg.png) repeat-x; }
 article.kolok section.brief img.iso {
-  position: relative;
-  top: 50px; 
-  margin: 60px auto;
+  margin: 115px auto 100px;
   display: block; }
 
 
@@ -1224,6 +1233,63 @@ article.kolok section.mobile div.iphone {
      -webkit-box-sizing: border-box;
              box-sizing: border-box; }
 
+
+
+article.kolok section.design-guidelines section.the-k-icon > div:nth-of-type(2) > div.rel { float: left; margin-left: 80px; width: 252px; height: 252px; }
+article.kolok section.design-guidelines section.the-k-icon img { 
+  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
+  opacity: 0; }
+article.kolok section.design-guidelines section.the-k-icon.animate img { opacity: 1; }
+article.kolok section.design-guidelines section.the-k-icon > div:nth-of-type(2) > div.rel > img:nth-of-type(2) {
+  position: absolute;
+  margin: auto;
+  left: 0; right: 0; top: 0; bottom: 0;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s; }
+article.kolok section.design-guidelines section.the-k-icon.animate > div:nth-of-type(2) > div.rel img:nth-of-type(2) { 
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
+              0.2s -webkit-transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
+  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
+              0.2s transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s; }
+article.kolok section.design-guidelines section.the-k-icon > div:nth-of-type(2) > img {
+  position: absolute;
+  top: 0; left: 80px;
+  opacity: 0;
+  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
+              left cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
+  transition-delay: 0s; }
+article.kolok section.design-guidelines section.the-k-icon.animate > div:nth-of-type(2) > img {
+  opacity: 1;
+  left: 372px; 
+  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
+              left cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
+  transition-delay: 0.6s, 0.9s;}
+article.kolok section.design-guidelines section.color-palette img { 
+  opacity: 0;
+  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
+  transition-delay: 0; }
+article.kolok section.design-guidelines section.color-palette.animate img { opacity: 1; }
+article.kolok section.design-guidelines section.color-palette.animate img:nth-of-type(2) { transition-delay: 0.2s; } 
+article.kolok section.design-guidelines section.color-palette.animate img:nth-of-type(3) { transition-delay: 0.4s; } 
+article.kolok section.design-guidelines section.color-palette.animate img:nth-of-type(4) { transition-delay: 0.6s; } 
+article.kolok section.design-guidelines section.typography img { margin-left: 80px; }
+
+article.kolok section.design-guidelines section.typography img,
+article.kolok section.datavisualizations section.share-expenses img,
+article.kolok section.datavisualizations section.who-owes-who img,
+article.kolok section.datavisualizations section.bank-account img,
+article.kolok section.datavisualizations section.total-expenses img { 
+  opacity: 0;
+  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;  }
+article.kolok section.design-guidelines section.typography.animate img,
+article.kolok section.datavisualizations section.share-expenses.animate img,
+article.kolok section.datavisualizations section.who-owes-who.animate img,
+article.kolok section.datavisualizations section.bank-account.animate img,
+article.kolok section.datavisualizations section.total-expenses.animate img  { opacity: 1; }
+
 article.kolok footer.thanks {
   background: #f0f8ff;
   padding: 110px 0 240px; }
@@ -1249,17 +1315,11 @@ article.dreamcatcher header.introduction div.arrow { background: transparent url
 
 article.dreamcatcher section.brief {
   min-height: 1480px;
+  padding: 160px 0 140px;
   background: #f3f2f7; color: #938fab; }
 article.dreamcatcher section.brief img.iso {
-  position: relative;
-  top: 80px; 
-  margin: 60px auto;
-  display: block;
-  opacity: 0;
-  transition: top cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s, 
-              opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s; }
-article.dreamcatcher section.brief img.iso.animate { top: 0; opacity: 1; }
-article.dreamcatcher section.brief img.iso.animate { top: 0; }
+  margin: 115px auto 90px;
+  display: block; }
 
 
 article.dreamcatcher section.brief h2.default,
@@ -1294,25 +1354,6 @@ article.dreamcatcher section.desktop {
   position: relative; z-index: 400;
   padding: 160px 0 0; }
 
-article.dreamcatcher section.desktop section.milestones { min-height: 410px; }
-article.dreamcatcher section.desktop section.milestones img { 
-  /* opacity: 0; top: 0; float: right; position: absolute; */
-  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s,
-              top cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s; }
-article.dreamcatcher section.desktop section.milestones.animate img:nth-child(1) { opacity: 1; z-index: 3; }
-article.dreamcatcher section.desktop section.milestones.animate img:nth-child(2) { top: 140px; opacity: 1; z-index: 2; }
-article.dreamcatcher section.desktop section.milestones.animate img:nth-child(3) { top: 280px; opacity: 1; z-index: 1; }
-
-article.dreamcatcher section.desktop section.charts img {/* opacity: 0;*/ }
-article.dreamcatcher section.desktop section.charts.animate img { opacity: 1; }
-article.dreamcatcher section.desktop section.charts img:nth-child(1) { 
-  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s; }
-article.dreamcatcher section.desktop section.charts img:nth-child(2) { 
-  transition: 0.2s opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s; }
-article.dreamcatcher section.desktop section.charts img:nth-child(3) { 
-  transition: 0.4s opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s; }
-article.dreamcatcher section.desktop section.charts img:nth-child(4) { 
-  transition: 0.6s opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s; }
 
 article.dreamcatcher section.mobile-ready {
   position: relative; z-index: 300;
@@ -1322,8 +1363,9 @@ article.dreamcatcher section.desktop h2.final-design { color: #5b318c; }
 article.dreamcatcher section.desktop h2.final-design span { color: #fff; }
 article.dreamcatcher section.final-design.end section.slider { padding: 30px 0 0; }
 article.dreamcatcher section.desktop section.final-design { padding: 80px 0 0; }
-article.dreamcatcher section.desktop section.final-design section.slider > ul {
+article.dreamcatcher section.desktop section.final-design section.slider > div {
   background: linear-gradient(to right, #211f2b -80px, #312938 100%); }
+article.dreamcatcher section.desktop section.final-design section.slider > div ul { background: #23222b url(../images/browser-toolbar.png) no-repeat; }
 article.dreamcatcher section.desktop section.final-design section.slider nav ul li {
   border-color: #474557;
   background: rgba(71, 69, 87, 0.3); }
@@ -1333,6 +1375,82 @@ article.dreamcatcher section.mobile-ready ul li { margin-bottom: 80px; }
 article.dreamcatcher section.mobile-ready .third--one { padding-right: 10px; width: auto; }
 article.dreamcatcher section.mobile-ready .third--two { padding: 0 10px; width: auto; }
 article.dreamcatcher section.mobile-ready .third--three { padding-left: 10px; width: auto; }
+
+
+article.dreamcatcher section.desktop section.audio-post img  { opacity: 0; transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s; }
+article.dreamcatcher section.desktop section.audio-post.animate img { opacity: 1; }
+
+article.dreamcatcher section.desktop section.milestones { min-height: 410px; }
+article.dreamcatcher section.desktop section.milestones img:nth-of-type(1) { 
+  opacity: 0; 
+  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s; }
+article.dreamcatcher section.desktop section.milestones img:nth-of-type(2),
+article.dreamcatcher section.desktop section.milestones img:nth-of-type(3) { 
+  position: absolute; 
+  opacity: 0;
+  top: 0; left: 0;
+  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s,
+              top cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s; } 
+article.dreamcatcher section.desktop section.milestones.animate img { opacity: 1; }
+article.dreamcatcher section.desktop section.milestones.animate img:nth-of-type(1) { z-index: 3; }
+article.dreamcatcher section.desktop section.milestones.animate img:nth-of-type(2) { top: 135px; z-index: 2; }
+article.dreamcatcher section.desktop section.milestones.animate img:nth-of-type(3) { top: 270px; z-index: 1; }
+article.dreamcatcher section.desktop section.charts img { 
+  opacity: 0;
+  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
+  transition-delay: 0s;
+  animation-delay: 0s; }
+article.dreamcatcher section.desktop section.charts.animate img {
+  opacity: 1;
+  -webkit-animation: swing 1.2s ease-in-out;
+     -moz-animation: swing 1.2s ease-in-out;
+       -o-animation: swing 1.2s ease-in-out;
+      -ms-animation: swing 1.2s ease-in-out;
+          animation: swing 1.2s ease-in-out;
+} 
+article.dreamcatcher section.desktop section.charts.animate img:nth-of-type(2) { transition-delay: 0.6s; -webkit-animation-delay: 0.6s;}
+
+@-moz-keyframes swing {
+  20% { -moz-transform: rotate(-15deg); }
+  40% { -moz-transform: rotate(10deg); }
+  60% { -moz-transform: rotate(-5deg); }
+  80% { -moz-transform: rotate(4deg); }
+  100% { -moz-transform: rotate(0); }
+}
+@-webkit-keyframes swing {
+  20% { -webkit-transform: rotate(-15deg); }
+  40% { -webkit-transform: rotate(10deg); }
+  60% { -webkit-transform: rotate(-5deg); }
+  80% { -webkit-transform: rotate(4deg); }
+  100% { -webkit-transform: rotate(0); }
+}
+
+
+article.dreamcatcher section.mobile-ready ul li img {
+  -webkit-transform: rotateY(25deg);
+          transform: rotateY(25deg);
+  opacity: 0;
+  transition: -webkit-transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
+              opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
+  transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s; }
+article.dreamcatcher section.mobile-ready.animate ul li img { 
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+  opacity: 1;
+  transition-delay: 0s; }
+
+
+article.dreamcatcher section.mobile-ready.animate ul li:nth-child(2) img { transition-delay: 0.2s; }
+article.dreamcatcher section.mobile-ready.animate ul li:nth-child(3) img { transition-delay: 0.4s; }
+article.dreamcatcher section.mobile-ready.animate ul li:nth-child(4) img { transition-delay: 0.6s; }
+article.dreamcatcher section.mobile-ready.animate ul li:nth-child(5) img { transition-delay: 0.8s; }
+article.dreamcatcher section.mobile-ready.animate ul li:nth-child(6) img { transition-delay: 1.0s; }
+article.dreamcatcher section.mobile-ready.animate ul li:nth-child(7) img { transition-delay: 1.2s; }
+article.dreamcatcher section.mobile-ready.animate ul li:nth-child(8) img { transition-delay: 1.4s; }
+article.dreamcatcher section.mobile-ready.animate ul li:nth-child(9) img { transition-delay: 1.6s; }
+
+
+
 
 article.dreamcatcher footer.thanks { 
   background: #f3f2f7; 

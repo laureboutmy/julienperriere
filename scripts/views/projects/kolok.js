@@ -13,8 +13,76 @@ define([
 
       animations: [
         {
+          selector: ".brief h2.default",
+          position: 1200,
+          animated: false,
+          c: "animate"
+        },
+        {
           selector: ".iso",
-          class: "up"
+          position: 1800,
+          animated: false,
+          c: "animate"
+        },
+        {
+          selector: ".design-guidelines h2.default",
+          position: 2785,
+          animated: false,
+          c: "animate"
+        },
+        {
+          selector: ".the-k-icon",
+          position: 3430,
+          animated: false,
+          c: "animate"
+        },
+        {
+          selector: ".color-palette",
+          position: 3950,
+          animated: false,
+          c: "animate"
+        },
+        {
+          selector: ".typography",
+          position: 4390,
+          animated: false,
+          c: "animate"
+        },
+        {
+          selector: ".datavisualizations  h2.default",
+          position: 4830,
+          animated: false,
+          c: "animate"
+        },
+        {
+          selector: ".share-expenses",
+          position: 5500,
+          animated: false,
+          c: "animate"
+        },
+        {
+          selector: ".who-owes-who",
+          position: 6180,
+          animated: false,
+          c: "animate"
+        },
+        {
+          selector: ".bank-account",
+          position: 6860,
+          animated: false,
+          c: "animate"
+        },
+        {
+          selector: ".total-expenses",
+          position: 7425,
+          animated: false,
+          c: "animate"
+        },
+        {
+          selector: ".final-design  h2.default",
+          position: 7960,
+          animated: false,
+          c: "animate"
         }
       ],
 
@@ -35,6 +103,7 @@ define([
             currentScroll = previousScroll = 0,
             delta;
         window.addEventListener('scroll', function(){
+          console.log(window.pageYOffset);
           previousScroll = currentScroll;
           currentScroll = window.pageYOffset;
           delta = previousScroll - currentScroll;

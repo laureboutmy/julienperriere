@@ -110,7 +110,7 @@ define(['backbone', 'views/sidebar', 'vendor/helpers'], function(Backbone, Sideb
 					});
 
 					main.addEventListener('click', function(e){
-						e.preventDefault();
+						
 						var el = e.target, project;
 						if(el !== this && el.tagName.toLowerCase() === 'a'){
 							project = el.getAttribute('data-project');
@@ -121,6 +121,7 @@ define(['backbone', 'views/sidebar', 'vendor/helpers'], function(Backbone, Sideb
 						}
 
 						if(project){
+							e.preventDefault();
 							if(J.Status.infos){ helpers.removeClass(wrapper, 'open'); }
 							J.Views[J.Status.currentView].renderChangeFromBottom(project);
 							J.Router.render(project, 'wait');

@@ -12,8 +12,62 @@ define([
       template: _.template(tplGameOfThrones),
       animations: [
         {
+          selector: ".brief h2.default",
+          position: 1200,
+          animated: false,
+          c: "animate"
+        },
+        {
           selector: ".iso",
-          position: 1570,
+          position: 1820,
+          animated: false,
+          c: "animate"
+        },
+        {
+          selector: ".countdown h2.default",
+          position: 2740,
+          animated: false,
+          c: "animate"
+        },
+        {
+          selector: ".hours",
+          position: 3350,
+          animated: false,
+          c: "animate"
+        },
+        {
+          selector: ".badges",
+          position: 3820,
+          animated: false,
+          c: "animate"
+        },
+        {
+          selector: ".player h2.default",
+          position: 5240,
+          animated: false,
+          c: "animate"
+        },
+        {
+          selector: ".content",
+          position: 5925,
+          animated: false,
+          c: "animate"
+        },
+        {
+          selector: ".cards",
+          position: 6500,
+          animated: false,
+          c: "animate"
+        },
+        {
+          selector: ".browser",
+          position: 7040,
+          animated: false,
+          c: "animate"
+        },
+        {
+          selector: ".mobile h2.default",
+          position: 8390,
           animated: false,
           c: "animate"
         }
@@ -36,6 +90,7 @@ define([
             delta;
         slideIt(document.querySelectorAll('.slider'));
         window.addEventListener('scroll', function(){
+          console.log(window.pageYOffset);
           previousScroll = currentScroll;
           currentScroll = window.pageYOffset;
           delta = previousScroll - currentScroll;
