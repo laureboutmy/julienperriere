@@ -70,6 +70,18 @@ define([
           position: 8390,
           animated: false,
           c: "animate"
+        },
+        {
+          selector: ".remote",
+          position: 9130,
+          animated: false,
+          c: "animate"
+        },
+        {
+          selector: ".feed",
+          position: 10650,
+          animated: false,
+          c: "animate"
         }
       ],
 

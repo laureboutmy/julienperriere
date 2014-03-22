@@ -83,6 +83,30 @@ define([
           position: 7960,
           animated: false,
           c: "animate"
+        },
+        {
+          selector: ".home-screen",
+          position: 8490,
+          animated: false,
+          c: "animate"
+        },
+        {
+          selector: ".expenses-details",
+          position: 10100,
+          animated: false,
+          c: "animate"
+        },
+        {
+          selector: ".services-location",
+          position: 11700,
+          animated: false,
+          c: "animate"
+        },
+        {
+          selector: ".welcome-process",
+          position: 13300,
+          animated: false,
+          c: "animate"
         }
       ],
 

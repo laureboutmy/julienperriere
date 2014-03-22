@@ -17,6 +17,7 @@ define([
         self.render();
         self.on('loaded', function(){
           setTimeout(self.hideLoader, 1000);
+          setTimeout(function(){ self.initAnimations() }, 1000);
         });
         document.body.scrollTop = document.documentElement.scrollTop = 0;
       },
@@ -34,7 +35,10 @@ define([
       launchLoader: function(){
         helpers.addClass(document.getElementById('loader'), 'hidden');
       },
-
+      initAnimations: function(){
+        var main = document.getElementById('main');
+        helpers.addClass(main.querySelector('article.home'), 'animate');
+      },
       load: function(){
         var self = this,
             wrapper = document.getElementById('wrapper'),
