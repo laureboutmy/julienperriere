@@ -38,10 +38,9 @@
 	font-weight: 300;
 }
 @font-face {
-	font-family: 'NeutraText';
+	font-family: 'NeutraText SmallCaps';
 	src: url(../fonts/NeutraText-BookSC.otf);
 	font-weight: normal;
-	font-variant: small-caps;	
 }
 @font-face {
 	font-family: 'NeutraText';
@@ -64,10 +63,9 @@
 }
 
 @font-face {
-	font-family: 'NeutraText';
+	font-family: 'NeutraText SmallCaps';
 	src: url(../fonts/NeutraText-LightSCItalic.otf);
 	font-weight: 300;
-	font-variant: small-caps;
 	font-style: italic;
 }
 
