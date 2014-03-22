@@ -809,6 +809,37 @@ article.my-warner section.bonuses section,
 article.my-warner section.icon section { margin: 160px 0 230px; }
 article.my-warner section.ipad section { margin: 160px 0 0; }
 
+
+article.my-warner section.bonuses section img { 
+  opacity: 0;
+  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
+  transition-delay: 0;  }
+article.my-warner section.bonuses section.animate div:first-of-type img:nth-of-type(1),
+article.my-warner section.bonuses section.animate-more div:nth-of-type(5) img:nth-of-type(1) { opacity: 1; }
+
+article.my-warner section.bonuses section div:nth-of-type(2) img:nth-of-type(1),
+article.my-warner section.bonuses section div:nth-of-type(2) img:nth-of-type(2),
+article.my-warner section.bonuses section div:nth-of-type(4) img:nth-of-type(1),
+article.my-warner section.bonuses section div:nth-of-type(4) img:nth-of-type(2) {
+  -webkit-transform: rotateY(25deg);
+          transform: rotateY(25deg);
+  opacity: 0;
+  transition: -webkit-transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
+              opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
+  transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
+  }
+article.my-warner section.bonuses section.animate div:nth-of-type(2) img:nth-of-type(1),
+article.my-warner section.bonuses section.animate div:nth-of-type(2) img:nth-of-type(2),
+article.my-warner section.bonuses section.animate-more div:nth-of-type(4) img:nth-of-type(1),
+article.my-warner section.bonuses section.animate-more div:nth-of-type(4) img:nth-of-type(2) { 
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+  opacity: 1; }
+
+article.my-warner section.bonuses section.animate div:nth-of-type(2) img:nth-of-type(1),
+article.my-warner section.bonuses section.animate-more div:nth-of-type(4) img:nth-of-type(1) { transition-delay: 0.2s; }
+article.my-warner section.bonuses section.animate div:nth-of-type(2) img:nth-of-type(2),
+article.my-warner section.bonuses section.animate-more div:nth-of-type(4) img:nth-of-type(2) { transition-delay: 0.4s;}
 article.my-warner section.icon section.wireframes > div:first-of-type > div.rel { width: 252px; height: 252px; }
 article.my-warner section.icon section.wireframes img { 
   transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;

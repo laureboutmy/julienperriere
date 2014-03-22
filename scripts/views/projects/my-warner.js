@@ -65,6 +65,18 @@ define([
           c: "animate"
         },
         {
+          selector: ".bonuses section",
+          position: 7810,
+          animated: false,
+          c: "animate"
+        },
+        {
+          selector: ".bonuses section",
+          position: 9095,
+          animated: false,
+          c: "animate-more"
+        },
+        {
           selector: ".profile h2.default",
           position: 10370,
           animated: false,
@@ -118,6 +130,7 @@ define([
             currentScroll = previousScroll = 0,
             delta;
         window.addEventListener('scroll', function(){
+          console.log(window.pageYOffset);
           previousScroll = currentScroll;
           currentScroll = window.pageYOffset;
           delta = previousScroll - currentScroll;
