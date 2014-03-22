@@ -12,7 +12,8 @@ body {
   font-size: 0.938em;
   background: #000;
   color: #808080;
-  -webkit-user-select: none; }
+  -webkit-user-select: none;
+  -webkit-font-smoothing: antialiased; }
 a, p, h1, h2, h3 { -webkit-user-select: all; }
 a, a:link, a:visited, a:active { transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s; text-decoration: none; }
 hr { border: 0; margin: 20px auto; }
@@ -42,7 +43,7 @@ div#wrapper section#sidebar {
   overflow-x: hidden;
   width: 80px; height: 100%;
   background: black; color: #fff;
-  box-shadow: 1px 0 1px rgba(255, 255, 255, 0.1);
+  box-shadow: 1px 0 0px rgba(255, 255, 255, 0.05);
   transition: width cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
               left cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s; }
 div#wrapper.unwound section#sidebar { width: 310px; }
@@ -61,17 +62,20 @@ div#wrapper section#sidebar header h1 {
   font-variant: small-caps;
   font-size: 1.533em;
   margin-top: 7px;
-  color: #fff;
+  color: transparent;
   font-weight: normal;
+  transition: color cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
   -webkit-font-smoothing: subpixel-antialiased; }
 div#wrapper section#sidebar header h2 {
   font-family: 'NeutraText', sans-serif;
   margin-top: 5px;
   font-size: 1.200em;
   font-style: italic;
-  color: #666666;
+  color: transparent;
+  transition: color cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
   -webkit-font-smoothing: antialiased; }
-
+div#wrapper.unwound section#sidebar header h1 { color: #fff; }
+div#wrapper.unwound section#sidebar header h2 { color: #666; }
 
 div#wrapper section#sidebar nav#nav { position: absolute; width: 310px; height: 265px; margin: auto; top: 0; bottom: 0; left: 0; right: 0; }
 div#wrapper section#sidebar nav#nav ul li a { 
@@ -213,12 +217,12 @@ div#wrapper section#infos p {
   font-size: 1.067em;
   line-height: 1.750em;
   text-align: justify;
-  font-weight: 300;
+  font-weight: 400;
   margin: 0 60px; }
 div#wrapper section#infos article hr.dotted {
   height: 1px; margin: 50px 60px;
   background: url(../images/hr-dotted-grey-bg.png); }
-div#wrapper section#infos p.contact { font-style: italic; margin: 50px 60px 20px; text-align: left;}
+div#wrapper section#infos p.contact { font-style: italic; margin: 50px 60px 20px; text-align: left; }
 div#wrapper section#infos p.contact + a,
 div#wrapper section#infos form button[type="submit"] { 
   padding: 8px 20px 5px 20px;
@@ -388,13 +392,14 @@ article.home img.for-load { display: none; }
 article.home p.developer {
   font-size: 1.333em;
   color: #8b94a6;
+  font-family: 'NeutraText', sans-serif;
   text-align: center;
   margin: 130px 0 115px; }
 article.home p.developer a { color: #f2361d; font-weight: 600; }
 article.home p.developer a:hover { color: #f6465e; }
 article.home nav { margin: 170px 0 0; }
 article.home nav ul li {
-  width: 100%; height: 320px;
+  width: 100%; height: 440px;
   background: #f8f8fa;
   margin: 4px 0;
   position: relative; }
@@ -481,7 +486,7 @@ article.project header.introduction h2 {
   font-family: 'NeutraText', sans-serif;
   font-style: italic;
   font-size: 1.200em;
-  line-height: 1.556em
+  line-height: 1.556em;
   position: relative;
   top: 40px;
   opacity: 0;
@@ -557,7 +562,7 @@ article.project section h3 span {
   font-size: 1.385em; }
 article.project section h3.mended span { letter-spacing: -0.01em; }
 
-article.project section hr.dotted + p { line-height: 1.667em; font-weight: 300; }
+article.project section hr.dotted + p { line-height: 1.667em; font-weight: 400; }
 article.project section.brief img.iso {
   opacity: 0;
   transition: opacity ease-out 0.2s; }
@@ -571,7 +576,7 @@ article.project section.brief p.half.left { padding-right: 20px; }
 article.project section.brief p.half.right { padding-left: 20px; }
 article.project footer.thanks { 
   padding: 170px 0 230px;
-  text-align: center;  }
+  text-align: center; }
 article.project footer.thanks h2 {
   font-family: 'NeutraDisplay', sans-serif;
   font-size: 3.067em;
@@ -678,17 +683,21 @@ nav#next-project h1 {
   font-size: 0.933em;
   letter-spacing: 0.04em;
   display: block;
-  font-weight: 600; }
+  font-weight: 600;
+  -webkit-font-smoothing: antialiased; }
 nav#next-project h1 span {
   display: block;
-  background-position: center -195px;
+  background-position: center -190px;
   width: 250px; height: 50px;
-  margin: 25px auto 0;
+  margin: 20px auto 0;
 }
+nav#next-project.my-warner { background: linear-gradient(to right, #e32822 -80px,#ff5040 100%); }
+nav#next-project.my-warner h1 { color: #ff7862; }
+nav#next-project.my-warner h1 span { background-image: url(../images/my-warner/my-warner-sprite.png); }
 
 nav#next-project.wdmtg { background: linear-gradient(to right, #3381c1 -80px,#2d4fc2 100%); }
 nav#next-project.wdmtg h1 { color: #4392da; }
-nav#next-project.wdmtg h1 span { background-image: url(../images/wdmtg/wdtmg-sprite.png); }
+nav#next-project.wdmtg h1 span { background-image: url(../images/wdmtg/wdmtg-sprite.png); }
 nav#next-project.game-of-thrones { background: linear-gradient(to right, #e32822 -80px,#ff5040 100%); }
 nav#next-project.game-of-thrones h1 { color: #ff7862; }
 nav#next-project.game-of-thrones h1 span { background-image: url(../images/game-of-thrones/game-of-thrones-sprite.png); }
@@ -793,8 +802,8 @@ article.my-warner section.movies section.quizzes.animate img,
 article.my-warner section.movies section.facts.animate img,
 article.my-warner section.movies section.statistics.animate img { opacity: 1; }
 
-article.my-warner section.movies h2.final-design { color: #fff; margin-bottom: 150px; }
-article.my-warner section.movies h2.final-design span { color: #bf2c19; }
+article.my-warner section.movies h2.final-design { color: #bf2c19; margin-bottom: 150px; }
+article.my-warner section.movies h2.final-design span { color: #fff; }
 
 article.my-warner section.movies section.final-design > div {
   height: 1070px;
@@ -932,7 +941,8 @@ article.my-warner section.ipad div.ipad + div.rel img {
 article.my-warner section.ipad.animate div.ipad + div.rel img { opacity: 1; top: 0; transition-delay: 0.2s; }
 
 
-article.my-warner footer.thanks { padding: 225px 0 260px; background: #161b24; }
+article.my-warner footer.thanks { padding: 225px 0 260px; background: #161b24; 
+  box-shadow: 0px 20px 30px rgba(0,0,0,.4), inset 0px -5px 0px rgba(0,0,0,.2); }
 article.my-warner footer.thanks h2 { color: #bf2c19; margin-bottom: 35px; }
 article.my-warner footer.thanks a.app-store, 
 article.my-warner footer.thanks a.google-play {
@@ -1078,7 +1088,8 @@ article.wdmtg section.custom-feeds section.final-design { padding: 250px 0 0; }
 
 
 article.wdmtg footer.thanks { 
- background: linear-gradient(to right, #3381c1 -80px,#2d4fc2 100%); }
+  box-shadow: 0px 20px 30px rgba(0,0,0,.4), inset 0px -5px 0px rgba(0,0,0,.2); 
+  background: linear-gradient(to right, #3381c1 -80px,#2d4fc2 100%); }
 article.wdmtg footer.thanks h2 { color: #fff; margin-bottom: 30px; }
 article.wdmtg footer.thanks a {
   border: 1px solid #4392da;
@@ -1230,7 +1241,9 @@ article.game-of-thrones section.mobile section.feed.animate > div:nth-of-type(1)
 article.game-of-thrones section.mobile section.remote.animate > div:nth-of-type(2) img:nth-of-type(2),
 article.game-of-thrones section.mobile section.feed.animate > div:nth-of-type(1) img:nth-of-type(2) { transition-delay: 0.4s; }
 
-article.game-of-thrones footer.thanks { padding: 130px 0 230px; background: #0e0f12; }
+article.game-of-thrones footer.thanks { 
+  box-shadow: 0px 20px 30px rgba(0,0,0,.4), inset 0px -5px 0px rgba(0,0,0,.2); 
+  padding: 130px 0 230px; background: #0e0f12; }
 article.game-of-thrones footer.thanks h2 { color: #41444f; }
 /* @end Game of Thrones */
 
@@ -1315,7 +1328,7 @@ article.kolok section.final-design section.welcome-process { padding: 120px 0; }
 article.kolok section.final-design div.iphone {
   width: 633px; height: 1360px;
   padding: 196px 53px;
-  background: transparent url(../images/game-of-thrones/iphone.png) no-repeat top left;
+  background: transparent url(../images/kolok/iphone.png) no-repeat top left;
         -moz-box-sizing: border-box;
      -webkit-box-sizing: border-box;
              box-sizing: border-box; }
@@ -1428,6 +1441,8 @@ article.kolok section.final-design section.welcome-process.animate > div:nth-of-
 
 
 article.kolok footer.thanks {
+
+  box-shadow: 0px 20px 30px rgba(0,0,0,.4), inset 0px -5px 0px rgba(0,0,0,.2); 
   background: #f0f8ff;
   padding: 110px 0 240px; }
 article.kolok footer.thanks h2 { color: #0086e5; }
@@ -1532,54 +1547,29 @@ article.dreamcatcher section.desktop section.milestones.animate img { opacity: 1
 article.dreamcatcher section.desktop section.milestones.animate img:nth-of-type(1) { z-index: 3; }
 article.dreamcatcher section.desktop section.milestones.animate img:nth-of-type(2) { top: 135px; z-index: 2; }
 article.dreamcatcher section.desktop section.milestones.animate img:nth-of-type(3) { top: 270px; z-index: 1; }
-article.dreamcatcher section.desktop section.charts img { 
-  opacity: 0;
-  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
-  transition-delay: 0s;
-  animation-delay: 0s; }
-article.dreamcatcher section.desktop section.charts.animate img {
-  opacity: 1;
-  -webkit-animation: swing 1.2s ease-in-out;
-     -moz-animation: swing 1.2s ease-in-out;
-       -o-animation: swing 1.2s ease-in-out;
-      -ms-animation: swing 1.2s ease-in-out;
-          animation: swing 1.2s ease-in-out;
-} 
-article.dreamcatcher section.desktop section.charts.animate img:nth-of-type(2) { transition-delay: 0.6s; -webkit-animation-delay: 0.6s;}
 
-@-moz-keyframes swing {
-  20% { -moz-transform: rotate(-15deg); }
-  40% { -moz-transform: rotate(10deg); }
-  60% { -moz-transform: rotate(-5deg); }
-  80% { -moz-transform: rotate(4deg); }
-  100% { -moz-transform: rotate(0); }
-}
-@-webkit-keyframes swing {
-  20% { -webkit-transform: rotate(-15deg); }
-  40% { -webkit-transform: rotate(10deg); }
-  60% { -webkit-transform: rotate(-5deg); }
-  80% { -webkit-transform: rotate(4deg); }
-  100% { -webkit-transform: rotate(0); }
-}
-
-
-article.dreamcatcher section.mobile-ready ul li img {
+article.dreamcatcher section.mobile-ready ul li img,
+article.dreamcatcher section.desktop section.charts img {
   -webkit-transform: rotateY(25deg);
           transform: rotateY(25deg);
   opacity: 0;
   transition: -webkit-transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
               opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
   transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s; }
-article.dreamcatcher section.mobile-ready.animate ul li img { 
+article.dreamcatcher section.mobile-ready.animate ul li img,
+article.dreamcatcher section.desktop section.charts.animate img { 
   -webkit-transform: rotateY(0deg);
           transform: rotateY(0deg);
   opacity: 1;
   transition-delay: 0s; }
 
 
-article.dreamcatcher section.mobile-ready.animate ul li:nth-child(2) img { transition-delay: 0.2s; }
-article.dreamcatcher section.mobile-ready.animate ul li:nth-child(3) img { transition-delay: 0.4s; }
-article.dreamcatcher section.mobile-ready.animate ul li:nth-child(4) img { transition-delay: 0.6s; }
+article.dreamcatcher section.mobile-ready.animate ul li:nth-child(2) img,
+article.dreamcatcher section.desktop section.charts.animate img:nth-of-type(2) { transition-delay: 0.2s; }
+article.dreamcatcher section.mobile-ready.animate ul li:nth-child(3) img,
+article.dreamcatcher section.desktop section.charts.animate img:nth-of-type(3) { transition-delay: 0.4s; }
+article.dreamcatcher section.mobile-ready.animate ul li:nth-child(4) img,
+article.dreamcatcher section.desktop section.charts.animate img:nth-of-type(4) { transition-delay: 0.6s; }
 article.dreamcatcher section.mobile-ready.animate ul li:nth-child(5) img { transition-delay: 0.8s; }
 article.dreamcatcher section.mobile-ready.animate ul li:nth-child(6) img { transition-delay: 1.0s; }
 article.dreamcatcher section.mobile-ready.animate ul li:nth-child(7) img { transition-delay: 1.2s; }
@@ -1590,6 +1580,8 @@ article.dreamcatcher section.mobile-ready.animate ul li:nth-child(9) img { trans
 
 
 article.dreamcatcher footer.thanks { 
+
+  box-shadow: 0px 20px 30px rgba(0,0,0,.4), inset 0px -5px 0px rgba(0,0,0,.2); 
   background: #f3f2f7; 
   padding: 120px 0 230px; }
 article.dreamcatcher footer.thanks h2 { color: #a268e6; }
@@ -1600,7 +1592,7 @@ article.dreamcatcher footer.thanks h2 { color: #a268e6; }
 /* @group Nike     */
 /* blue [#f9650f]; */
 /*******************/
-div#wrapper section#main article.nike { margin-bottom: 0; }
+div#wrapper section#main article.nike { }
 article.nike header.introduction { 
   min-height: 1200px;
   color: #fff;
@@ -1618,8 +1610,8 @@ article.nike section.brief {
   padding: 160px 0;
   background: #f5f5f5; color: #7f7f7f; }
 article.nike section.brief h2.default { color: #ff5500; }
-article.nike section.final-design h2.default { color: #cc3a00; }
-article.nike section.final-design h2.default span { color: #fff; }
+article.nike section.final-design h2.default { color: #fff; }
+article.nike section.final-design h2.default span { color: #cc3a00; }
 article.nike section.brief h2.default span { color: #4c4c4c; }
 article.nike section.final-design h3 { color: #cc3a00; }
 article.nike section.final-design h3 > span { color: #fff; }
@@ -1664,7 +1656,7 @@ article.nike section.final-design section.your-diary.animate img { opacity: 1; }
 article.nike section.final-design h2.final-design { color: #cc3a00; }
 article.nike section.final-design h2.final-design span { color: #fff; }
 article.nike section.final-design section.slider > div {
-  background: linear-gradient(to right, #ff7024 -80px, #ff401f 100%); }
+  background: linear-gradient(to right, #ff621a -80px, #ff381a 100%); }
 article.nike section.final-design section.slider > div ul { background: #000 url(../images/browser-toolbar.png) no-repeat; }
 article.nike section.final-design section.slider nav ul li{
   border-color: #cc3a00;
@@ -1672,6 +1664,8 @@ article.nike section.final-design section.slider nav ul li{
 article.nike section.final-design.end section.slider { padding: 20px 0 0; }
 article.nike section.final-design.end section.slider > ul { box-shadow: none; }
 article.nike footer.thanks { 
+
+  box-shadow: 0px 20px 30px rgba(0,0,0,.4), inset 0px -5px 0px rgba(0,0,0,.2); 
   padding: 250px 0;
   background: linear-gradient(to right, #ff7024 -80px, #ff401f 100%);  }
 article.nike footer.thanks h2 { color: #fe8a34; }

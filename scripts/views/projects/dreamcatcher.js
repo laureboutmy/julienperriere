@@ -49,13 +49,13 @@ define([
         },
         {
           selector: ".mobile-ready h2.default",
-          position: 6100,
+          position: 6345,
           animated: false,
           c: "animate"
         },
         {
           selector: ".mobile-ready",
-          position: 6730,
+          position: 7000,
           animated: false,
           c: "animate"
         }
