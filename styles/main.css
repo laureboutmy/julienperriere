@@ -664,11 +664,21 @@ div#wrapper section#main nav#next-project {
   position: fixed; z-index: 1;
   bottom: 0; left: 80px;
   width: 100%; height: 440px;
+  background: #f8f8fa;
   transition: left cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
               height cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s; }
 div#wrapper.unwound section#main nav#next-project { left: 310px; }
 div#wrapper.open section#main nav#next-project { left: 580px; }
 div#wrapper section#main nav#next-project.active { height: 100%; }
+nav#next-project div {
+  width: 100%; height: 100%;
+  opacity: 0;
+  position: absolute; top: 0; left: 0;
+  transition: opacity .8s cubic-bezier(0.000, 0.630, 0.000, 0.995); }
+nav#next-project:hover div,
+nav#next-project.active div {
+  opacity: 1;
+  transition: opacity .4s cubic-bezier(0.000, 0.475, 0.000, 0.995); } 
 nav#next-project a { position: relative; display: block; width: 100%; height: 100%; opacity: 1;
   transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s; }
 
@@ -677,6 +687,7 @@ nav#next-project h1 {
   position: absolute;
   margin: auto;
   height: 90px;
+  color: #d8dce5;
   text-align: center;
   left: 0; right: 80px; top: 0; bottom: 0;
   font-family: 'NeutraDisplay', sans-serif;
@@ -685,33 +696,47 @@ nav#next-project h1 {
   letter-spacing: 0.04em;
   display: block;
   font-weight: 600;
+  transition: color cubic-bezier(0.545, -0.005, 1.000, 0.260) 0s;
   -webkit-font-smoothing: antialiased; }
+nav#next-project:hover h1 { transition: color cubic-bezier(0.000, 0.980, 0.000, 0.990) 0.5s; }
 nav#next-project h1 span {
   display: block;
-  background-position: center -190px;
-  width: 250px; height: 50px;
-  margin: 20px auto 0;
-}
-nav#next-project.my-warner { background: linear-gradient(to right, #e32822 -80px,#ff5040 100%); }
-nav#next-project.my-warner h1 { color: #ff7862; }
-nav#next-project.my-warner h1 span { background-image: url(../images/my-warner/my-warner-sprite.png); }
+  position: absolute;
+  margin: auto;
+  left: 0; top: 0; bottom: 0; right: 0;
+  height: 140px;
+  background-position: center 0; background-repeat: no-repeat;
+  transition: background cubic-bezier(0.545, -0.005, 1.000, 0.260) 0s; }
+nav#next-project:hover h1 span {
+  background-position: center -140px;
+  transition: background cubic-bezier(0.000, 0.980, 0.000, 0.990) 0.5s; }
 
-nav#next-project.wdmtg { background: linear-gradient(to right, #3381c1 -80px,#2d4fc2 100%); }
-nav#next-project.wdmtg h1 { color: #4392da; }
+nav#next-project.my-warner:hover h1 { color: #ff7862; }
+nav#next-project.my-warner h1 span { background-image: url(../images/my-warner/my-warner-sprite.png); }
+nav#next-project.my-warner div { background: linear-gradient(to right, #e32822 0%,#ff5040 100%); }
+
+nav#next-project.wdmtg:hover h1 { color: #4392da; }
 nav#next-project.wdmtg h1 span { background-image: url(../images/wdmtg/wdmtg-sprite.png); }
-nav#next-project.game-of-thrones { background: linear-gradient(to right, #e32822 -80px,#ff5040 100%); }
-nav#next-project.game-of-thrones h1 { color: #ff7862; }
+nav#next-project.wdmtg div { background: linear-gradient(to right, #3381c1 -80px,#2d4fc2 100%); }
+
+
+nav#next-project.game-of-thrones:hover h1 { color: #ff7862; }
 nav#next-project.game-of-thrones h1 span { background-image: url(../images/game-of-thrones/game-of-thrones-sprite.png); }
-nav#next-project.kolok { background: linear-gradient(to right, #1078cc -80px, #50a7e5 100%); }
-nav#next-project.kolok h1 { color: #75c4e5; }
+nav#next-project.game-of-thrones div { background: linear-gradient(to right, #e32822 0%,#ff5040 100%); }
+
+nav#next-project.kolok:hover h1 { color: #75c4e5; }
 nav#next-project.kolok h1 span { background-image: url(../images/kolok/kolok-sprite.png); }
-nav#next-project.dreamcatcher {
-    background: linear-gradient(to right, rgba(26,25,36,.89) -80px,rgba(49,41,56,.89) 100%), url(../images/dreamcatcher/noise.png); }
-nav#next-project.dreamcatcher h1 { color: #433b52; }
+nav#next-project.kolok div { background: linear-gradient(to right, #1078cc -80px, #50a7e5 100%); }
+
+nav#next-project.dreamcatcher:hover h1 { color: #433b52; }
 nav#next-project.dreamcatcher h1 span { background-image: url(../images/dreamcatcher/dreamcatcher-sprite.png); }
-nav#next-project.nike { background: linear-gradient(to right, #ff621a -80px, #ff381a 100%); }
-nav#next-project.nike h1 { color: #fe8a34; }
+nav#next-project.dreamcatcher div { background: linear-gradient(to right, rgba(26,25,36,.89) -80px,rgba(49,41,56,.89) 100%), url(../images/dreamcatcher/noise.png);; }
+
+nav#next-project.nike:hover h1 { color: #fe8a34; }
 nav#next-project.nike h1 span { background-image: url(../images/nike/nike-sprite.png); }
+nav#next-project.nike div { background: linear-gradient(to right, #ff621a -80px, #ff381a 100%); }
+
+
 /* @end of Next-project */
 
 /************************/

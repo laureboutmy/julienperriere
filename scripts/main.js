@@ -22,12 +22,12 @@ require.config({
         }
     },
     paths: {
-        backbone: '../components/backbone/backbone',
-        backbonenative: '../components/backbone.native/backbone.native',
-        underscore: '../components/underscore/underscore',
-        eventEmitter: '../components/eventEmitter/EventEmitter',
+        backbone: '../components/backbone/backbone-min',
+        backbonenative: '../components/backbone.native/backbone.native.min',
+        underscore: '../components/underscore/underscore-min',
+        eventEmitter: '../components/eventEmitter/EventEmitter.min',
         eventie: '../components/eventie/eventie',
-        imagesloaded: '../components/imagesloaded/imagesloaded',
+        imagesloaded: '../components/imagesloaded/imagesloaded.min',
         text: '../components/requirejs-text/text',
         requirejs: '../components/requirejs/require',
     }
