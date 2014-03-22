@@ -127,7 +127,6 @@ define([
             currentScroll = previousScroll = 0,
             delta;
         window.addEventListener('scroll', function(){
-          console.log(window.pageYOffset);
           previousScroll = currentScroll;
           currentScroll = window.pageYOffset;
           delta = previousScroll - currentScroll;

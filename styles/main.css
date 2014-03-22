@@ -48,7 +48,7 @@ div#wrapper section#sidebar {
               left cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s; }
 div#wrapper.unwound section#sidebar { width: 310px; }
 div#wrapper.unwound.open section#sidebar { width: 80px; }
-div#wrapper.open section#sidebar { left: 490px; }
+div#wrapper.open section#sidebar { left: 490px; border-left: 1px solid #0f0f0f; }
 div#wrapper.hidden section#sidebar,
 div#wrapper.hidden.unwound section#sidebar { left: -80px; width: 80px; }
 
@@ -183,8 +183,8 @@ section#loader h1 div.progress svg {
 div#wrapper section#infos {
   position: fixed; z-index: -100;
   left: 0; top: 0;
-  width: 490px; height: 100%;
-  box-sizing: border-box;
+  width: 488px; height: 100%;
+  padding-right: 20px; margin-right: -20px;
   overflow-y: hidden;
   opacity: 1;
   border-right: 1px solid #0f0f0f;
@@ -193,7 +193,7 @@ div#wrapper.open section#infos { z-index: 0; overflow-y: scroll; }
 div#wrapper.hidden section#infos { opacity: 0; }
 div#wrapper section#infos article, 
 div#wrapper section#infos form { 
-  width: 100%; height: 0;
+  width: 490px; height: 0;
   overflow: hidden; 
   opacity: 0; 
   position: absolute; 
@@ -222,6 +222,7 @@ div#wrapper section#infos p {
 div#wrapper section#infos article hr.dotted {
   height: 1px; margin: 50px 60px;
   background: url(../images/hr-dotted-grey-bg.png); }
+div#wrapper section#infos p.contact + a + hr.dotted { margin: 60px 60px 50px;}
 div#wrapper section#infos p.contact { font-style: italic; margin: 50px 60px 20px; text-align: left; }
 div#wrapper section#infos p.contact + a,
 div#wrapper section#infos form button[type="submit"] { 
@@ -250,7 +251,9 @@ div#wrapper section#infos form textarea {
   margin: 0 60px 12px 60px;
   padding: 10px 15px;
   border-radius: 4px; border: 0;
-  box-sizing: border-box;
+        -moz-box-sizing: border-box;
+     -webkit-box-sizing: border-box;
+             box-sizing: border-box;
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 600; 
   font-size: 0.933em;
@@ -394,6 +397,7 @@ article.home p.developer {
   color: #8b94a6;
   font-family: 'NeutraText', sans-serif;
   text-align: center;
+  font-variant: normal;
   margin: 130px 0 115px; }
 article.home p.developer a { color: #f2361d; font-weight: 600; }
 article.home p.developer a:hover { color: #f6465e; }
@@ -826,14 +830,19 @@ article.my-warner section.profile .third--three { padding-left: 10px; width: aut
 article.my-warner section.movies section.final-design > div ul li img,
 article.my-warner section.profile ul li img {
   -webkit-transform: rotateY(25deg);
+     -moz-transform: rotateY(25deg);
           transform: rotateY(25deg);
   opacity: 0;
   transition: -webkit-transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
               opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
-  transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s; }
+  transition: -moz-transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
+              opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
+  transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
+              opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;; }
 article.my-warner section.movies section.final-design.animate > div ul li img,
 article.my-warner section.profile.animate ul li img { 
   -webkit-transform: rotateY(0deg);
+     -moz-transform: rotateY(0deg);
           transform: rotateY(0deg);
   opacity: 1; }
 
@@ -1354,13 +1363,17 @@ article.kolok section.design-guidelines section.the-k-icon > div:nth-of-type(2) 
   margin: auto;
   left: 0; right: 0; top: 0; bottom: 0;
   -webkit-transform: scale(0);
+     -moz-transform: scale(0);
           transform: scale(0);
   transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s; }
 article.kolok section.design-guidelines section.the-k-icon.animate > div:nth-of-type(2) > div.rel img:nth-of-type(2) { 
   -webkit-transform: scale(1);
+     -moz-transform: scale(1);
           transform: scale(1);
   transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
               0.2s -webkit-transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
+  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
+              0.2s -moz-transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
   transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
               0.2s transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s; }
 article.kolok section.design-guidelines section.the-k-icon > div:nth-of-type(2) > img {
@@ -1416,16 +1429,21 @@ article.kolok section.final-design section.expenses-details > div:nth-of-type(1)
 article.kolok section.final-design section.services-location > div:nth-of-type(2) img,
 article.kolok section.final-design section.welcome-process > div:nth-of-type(1) img {
   -webkit-transform: rotateY(25deg);
+     -moz-transform: rotateY(25deg);
           transform: rotateY(25deg);
   opacity: 0;
   transition: -webkit-transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
               opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
-  transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s; }
+  transition: -moz-transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
+              opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
+  transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
+              opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s; }
 article.kolok section.final-design section.home-screen.animate > div:nth-of-type(2) img,
 article.kolok section.final-design section.expenses-details.animate > div:nth-of-type(1) img,
 article.kolok section.final-design section.services-location.animate > div:nth-of-type(2) img,
 article.kolok section.final-design section.welcome-process.animate > div:nth-of-type(1) img { 
   -webkit-transform: rotateY(0deg);
+     -moz-transform: rotateY(0deg);
           transform: rotateY(0deg);
   opacity: 1; }
 
@@ -1551,14 +1569,19 @@ article.dreamcatcher section.desktop section.milestones.animate img:nth-of-type(
 article.dreamcatcher section.mobile-ready ul li img,
 article.dreamcatcher section.desktop section.charts img {
   -webkit-transform: rotateY(25deg);
+     -moz-transform: rotateY(25deg);
           transform: rotateY(25deg);
   opacity: 0;
   transition: -webkit-transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
               opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
-  transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s; }
+  transition: -moz-transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
+              opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
+  transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
+              opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s; }
 article.dreamcatcher section.mobile-ready.animate ul li img,
 article.dreamcatcher section.desktop section.charts.animate img { 
   -webkit-transform: rotateY(0deg);
+     -moz-transform: rotateY(0deg);
           transform: rotateY(0deg);
   opacity: 1;
   transition-delay: 0s; }
