@@ -44,8 +44,8 @@ div#wrapper section#sidebar {
   width: 80px; height: 100%;
   background: black; color: #fff;
   box-shadow: 1px 0 0px rgba(255, 255, 255, 0.05);
-  transition: width cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
-              left cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s; }
+  transition: width cubic-bezier(0.005, 0.600, 0.395, 0.995) 0.3s,
+              left cubic-bezier(0.005, 0.600, 0.395, 0.995) 0.3s; }
 div#wrapper.unwound section#sidebar { width: 310px; }
 div#wrapper.unwound.open section#sidebar { width: 80px; }
 div#wrapper.open section#sidebar { left: 490px; border-left: 1px solid #0f0f0f; }
@@ -58,21 +58,19 @@ div#wrapper section#sidebar header {
   padding: 30px 0; }
 div#wrapper section#sidebar header div { width: 80px; text-align: center; float: left; }
 div#wrapper section#sidebar header h1 {
-  font-family: 'NeutraText SmallCaps', sans-serif;
-  font-size: 1.533em;
-  margin-top: 7px;
-  color: transparent;
-  font-weight: normal;
-  transition: color cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
-  -webkit-font-smoothing: subpixel-antialiased; }
+	font-family: 'NeutraDisplay', sans-serif;
+	font-size: 1.200em;
+	font-weight: 700;
+	margin-top: 8px;
+	color: transparent;
+	transition: color cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s; }
 div#wrapper section#sidebar header h2 {
-  font-family: 'NeutraText', sans-serif;
-  margin-top: 5px;
-  font-size: 1.200em;
-  font-style: italic;
-  color: transparent;
-  transition: color cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
-  -webkit-font-smoothing: antialiased; }
+	font-family: 'NeutraText', sans-serif;
+	margin-top: 4px;
+	font-size: 1.133em;
+	font-style: italic;
+	color: transparent;
+	transition: color cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s; }
 div#wrapper.unwound section#sidebar header h1 { color: #fff; }
 div#wrapper.unwound section#sidebar header h2 { color: #666; }
 
@@ -84,8 +82,7 @@ div#wrapper section#sidebar nav#nav ul li a {
   font-weight: 700;
   font-family: 'NeutraText', sans-serif;
   color: transparent;
-  -webkit-font-smoothing: antialiased;
-  transition: color cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s; }
+  transition: color cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s; }
 div#wrapper.unwound section#sidebar nav#nav ul li a { color: #333333; }
 div#wrapper section#sidebar nav#nav ul li a:hover { color: #fff; }
 div#wrapper section#sidebar nav#nav ul li.current a { color: transparent; }
@@ -137,8 +134,8 @@ section#loader {
   width: 100%; height: 100%;
   opacity: 1; 
   background: #000;
-  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
-              background cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s; }
+  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s,
+              background cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s; }
 
 section#loader.hidden {
   z-index: -100;
@@ -159,8 +156,11 @@ section#loader h1 {
   overflow: hidden;
   width: 55px; height: 120px;
   opacity: 0; 
-  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 1s; }
-section#loader.visible h1 { opacity: 1; } 
+  -webkit-transform: translateY(30px);
+     -moz-transform: translateY(30px);
+     			transform: translateY(30px);
+  transition: all cubic-bezier(0.215, 0.61, 0.355, 1) .8s; }
+section#loader.visible h1 { opacity: 1; -webkit-transform: translateY(0px); -moz-transform: translateY(0px); transform: translateY(0px); } 
 section#loader h1 div.progress {
   position: absolute;
   bottom: 0; left: 0;
@@ -237,8 +237,7 @@ div#wrapper section#infos form button[type="submit"] {
   font-size: 0.867em;
   overflow: hidden;
   transition: border-color cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
-              color cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
-  -webkit-font-smoothing: antialiased;  }
+              color cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s; }
 div#wrapper section#infos p.contact + a:hover,
 div#wrapper section#infos form button[type="submit"]:hover { cursor: pointer; border-color: rgba(255, 255, 255, 1); color: rgba(255, 255, 255, 1); }
 div#wrapper section#infos span.message { font-size: 0.867em; font-weight: 600; color: #fff; font-style: italic; opacity: 0; transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;; }
@@ -255,8 +254,7 @@ div#wrapper section#infos form textarea {
              box-sizing: border-box;
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 600; 
-  font-size: 0.933em;
-  -webkit-font-smoothing: antialiased; }
+  font-size: 0.933em; }
 div#wrapper section#infos form input[type="text"] { margin-top: 40px; }
 div#wrapper section#infos form button[type="submit"] { margin-bottom: 100px; margin-right: 20px }
 div#wrapper section#infos form textarea { height: 260px; resize: none; }
@@ -297,7 +295,7 @@ i.behance { width: 28px; height: 17px; background: url(../images/infos/behance.s
 div#wrapper section#main {
   position: relative;
   top: 0; left: 80px;
-  transition: left cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
+  transition: left cubic-bezier(0.005, 0.600, 0.395, 0.995) 0.3s;
   background: #000;
    }
 div#wrapper.unwound section#main { left: 310px; }
@@ -346,10 +344,12 @@ article.home h1 > span {
   margin: 0 auto;
   top: 320px; left: 0; right: 0; bottom: 0;
   opacity: 0;
-  transition: top cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
-              opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s; 
-  transition-delay: 0.9s;}
-article.home.animate h1 > span { top: 370px; opacity: 1; }
+  -webkit-transform: rotateX(20deg);
+     -moz-transform: rotateX(20deg);
+          transform: rotateX(20deg);
+  transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.7s;
+  transition-delay: 0.8s;}
+article.home.animate h1 > span { top: 370px; opacity: 1; -webkit-transform: rotateX(0); -moz-transform: rotateX(0); transform: rotateX(0); }
 article.home h1 span span { 
   color: #f2361d;
   font-weight: 700; }
@@ -362,11 +362,13 @@ article.home h1 div {
   color: #fff;
   line-height: 0.773em;
   opacity: 0;
+  -webkit-transform: rotateX(20deg);
+     -moz-transform: rotateX(20deg);
+          transform: rotateX(20deg);
   background: url(../images/home/240-shadow-bg.png) no-repeat 0 273px;
-  transition: top cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
-              opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
+  transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.7s;
   transition-delay: 0.7s; }
-article.home.animate h1 div { top: 0; opacity: 1; }
+article.home.animate h1 div { top: 0; opacity: 1; -webkit-transform: rotateX(0); -moz-transform: rotateX(0); transform: rotateX(0); }
 article.home h2 {
   font-family: 'NeutraDisplay', sans-serif;
   font-weight: 600;
@@ -386,7 +388,6 @@ article.home p.introduction {
   font-style: italic;
   font-weight: 300;
   text-align: center;
-  -webkit-font-smoothing: subpixel-antialiased; 
   color: #8b94a6;
   background: url(../images/home/p-dotted-grey-bg.png) repeat-x left 40px;}
 article.home img.for-load { display: none; }
@@ -397,13 +398,13 @@ article.home p.developer {
   text-align: center;
   font-variant: normal;
   margin: 130px 0 115px; }
-article.home p.developer a { color: #f2361d; font-weight: 600; }
-article.home p.developer a:hover { color: #f6465e; }
+article.home p.developer a { color: #f2361d; font-weight: 600; transition: color cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s; }
+article.home p.developer a:hover { color: #8b94a6; }
 article.home nav { margin: 170px 0 0; }
 article.home nav ul li {
   width: 100%; height: 440px;
   background: #f8f8fa;
-  margin: 4px 0;
+  margin: 2px 0;
   position: relative; }
 article.home nav ul li div { 
   width: 100%; height: 100%;
@@ -412,7 +413,7 @@ article.home nav ul li div {
   transition: opacity .8s cubic-bezier(0.000, 0.630, 0.000, 0.995); }
 article.home nav ul li:hover div { 
   opacity: 1;
-  transition: opacity .4s cubic-bezier(0.000, 0.475, 0.000, 0.995); }
+  transition: opacity .6s cubic-bezier(0.005, 0.685, 0.595, 0.980); }
 article.home nav ul li a {
   display: block;
   width: 100%; height: 100%;
@@ -459,8 +460,8 @@ article.project header.introduction ul.meta  {
   position: relative; top: -40px; 
   opacity: 0;
   padding: 35px 0;
-  transition: 0.6s opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
-              0.6s top cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s; }
+  transition: 0.6s opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s,
+              0.6s top cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s; }
 article.project header.introduction.animate ul.meta {
   opacity: 1; top: 0; }
 article.project header.introduction ul.meta { overflow: hidden; }
@@ -473,17 +474,18 @@ article.project header.introduction ul.meta li {
   font-weight: 600;
   font-style: normal;
   text-transform: uppercase;
-  color: #fff;
-  -webkit-font-smoothing: antialiased; }
+  color: #fff; }
 article.project header.introduction ul.meta li h3 { display: inline-block; }
 article.project header.introduction h1 { position: relative; }
 article.project header.introduction h1 img {
   position: absolute;
-  top: 20px; left: 0; right: 0; margin: 0 auto;
+  top: -40px; left: 0; right: 0; margin: 0 auto;
   opacity: 0;
-  transition: 0.3s opacity cubic-bezier(0.215, 0.61, 0.355, 1) 1.0s,
-              0.3s top cubic-bezier(0.215, 0.61, 0.355, 1) 1.0s; }
-article.project header.introduction.animate h1 img { opacity: 1; top: 0; }
+  -webkit-transform: rotateX(10deg);
+     -moz-transform: rotateX(10deg);
+          transform: rotateX(10deg);
+  transition: 0.8s all cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s; }
+article.project header.introduction.animate h1 img { opacity: 1; top: 0; -webkit-transform: rotateX(0deg); -moz-transform: rotateX(0deg); transform: rotateX(0deg); }
 article.project header.introduction h2 {
   font-family: 'NeutraText', sans-serif;
   font-style: italic;
@@ -546,8 +548,7 @@ article.project section p.introduction {
   line-height: 1.333em;
   font-style: italic;
   font-weight: 300;
-  text-align: center;
-  -webkit-font-smoothing: subpixel-antialiased; }
+  text-align: center; }
 article.project section h3 {
   margin-bottom: 10px;
   font-family: 'NeutraText', sans-serif;
@@ -696,8 +697,7 @@ nav#next-project h1 {
   letter-spacing: 0.04em;
   display: block;
   font-weight: 600;
-  transition: color cubic-bezier(0.545, -0.005, 1.000, 0.260) 0s;
-  -webkit-font-smoothing: antialiased; }
+  transition: color cubic-bezier(0.545, -0.005, 1.000, 0.260) 0s; }
 nav#next-project:hover h1 { transition: color cubic-bezier(0.000, 0.980, 0.000, 0.990) 0.5s; }
 nav#next-project h1 span {
   display: block;

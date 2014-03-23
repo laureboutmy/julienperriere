@@ -70,9 +70,9 @@ define([
         var wrapper = document.getElementById('wrapper'),
             loader = document.getElementById('loader');
         helpers.removeClass(wrapper, 'hidden');
-        setTimeout(function(){ helpers.removeClass(loader, 'visible') }, 200);
-        setTimeout(function(){ helpers.addClass(loader, 'hidden') }, 300);
-        setTimeout("loader.querySelectorAll('h1 div.progress')[0].style.height = 0;", 500);
+        setTimeout(function(){ helpers.removeClass(loader, 'visible') }, 300);
+        setTimeout(function(){ helpers.addClass(loader, 'hidden') }, 600);
+        setTimeout("loader.querySelectorAll('h1 div.progress')[0].style.height = 0;", 900);
       },
 
       bind: function(){
