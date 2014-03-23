@@ -38,7 +38,7 @@ define([
           if(i < infos.length) {
             infos[i].addEventListener('click', function(e){
               e.stopPropagation();
-              _this.getInfos(this.getAttribute('class')); 
+              J.Views['infos'].switchInfos(this.getAttribute('class')); 
               helpers.addClass(wrapper, 'open'); 
             });
           }
@@ -60,12 +60,6 @@ define([
           helpers.removeClass(document.querySelectorAll('section#sidebar li.current')[0], 'current');
         }
         
-      },
-
-      getInfos: function(c){
-        var infos = document.getElementById('infos');
-        helpers.removeClass(infos);
-        helpers.addClass(infos, c);
       }
     });
 
