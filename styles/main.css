@@ -141,13 +141,13 @@ section#loader.hidden {
   z-index: -100;
   opacity: 0; }
 
-section#loader.home { background: linear-gradient(to bottom, #ced3db 0%,#fff 100%); }
-section#loader.my-warner { background: linear-gradient(to right, #e32822 0%,#ff5040 100%); }
-section#loader.wdmtg { background: linear-gradient(to right, #3381c1 0%,#2d4fc2 100%); }
-section#loader.game-of-thrones { background: linear-gradient(to right, #e32822 0%,#ff5040 100%); }
-section#loader.kolok { background: linear-gradient(to right, #1078cc 0%, #50a7e5 100%); }
-section#loader.nike { background: linear-gradient(to right, #ff621a 0%, #ff381a 100%);  } 
-section#loader.dreamcatcher { background: linear-gradient(to right, rgba(26,25,36,.89) 0%,rgba(49,41,56,.89) 100%), url(../images/dreamcatcher/noise.png);}
+section#loader.home { background: linear-gradient(to bottom, rgba(206,211,219,.9) 0%,#fff 100%), url(../images/home/noise.png); }
+section#loader.my-warner { background: linear-gradient(to right, rgba(227,40,34,.95) 0%, rgba(255,80,64,.95) 100%), url(../images/my-warner/noise.png); }
+section#loader.wdmtg { background: linear-gradient(to right, rgba(51,129,193,.92) 0%,rgba(45,79,194,.92) 100%), url(../images/wdmtg/noise.png); }
+section#loader.game-of-thrones { background: linear-gradient(to right, rgba(227,40,34,.95) 0%, rgba(255,80,64,.95) 100%), url(../images/game-of-thrones/noise.png); }
+section#loader.kolok { background: linear-gradient(to right, rgba(16,120,204,.92) 0%, rgba(80,167,229,.92) 100%), url(../images/kolok/noise.png); }
+section#loader.nike { background: linear-gradient(to right, rgba(255,98,26,.94) 0%, rgba(255,56,26,.94) 100%), url(../images/nike/noise.png); } 
+section#loader.dreamcatcher { background: linear-gradient(to right, rgba(26,25,36,.88) 0%,rgba(49,41,56,.88) 100%), url(../images/dreamcatcher/noise.png); }
 
 section#loader h1 {
   position: absolute;
@@ -325,7 +325,8 @@ div#wrapper.open section#main { left: 570px; }
 /***************/
 div#wrapper section#main article.home {
   overflow: hidden;
-  background: #fff linear-gradient(to bottom, #ced3db 0, #fff 1000px);
+  background-color: #fff;
+  background: linear-gradient(to bottom, rgba(206,211,219,.9) 0, #fff 1000px), url(../images/home/noise.png);
   transition: top cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s; }
 article.home h1 {
   margin: 250px auto 60px;
@@ -430,17 +431,17 @@ article.home nav ul li:hover a span {
   background-position: center -140px;
   transition: background cubic-bezier(0.000, 0.980, 0.000, 0.990) 0.5s; }
 article.home nav ul li.my-warner a span { background-image: url(../images/my-warner/my-warner-sprite.png); }
-article.home nav ul li.my-warner div { background: linear-gradient(to right, #e32822 0%,#ff5040 100%); }
+article.home nav ul li.my-warner div { background: linear-gradient(to right, rgba(227,40,34,.95) 0%, rgba(255,80,64,.95) 100%), url(../images/my-warner/noise.png); }
 article.home nav ul li.wdmtg a span { background-image: url(../images/wdmtg/wdmtg-sprite.png); }
-article.home nav ul li.wdmtg div { background: linear-gradient(to right, #3381c1 0%,#2d4fc2 100%); }
+article.home nav ul li.wdmtg div { background: linear-gradient(to right, rgba(51,129,193,.92) 0%,rgba(45,79,194,.92) 100%), url(../images/wdmtg/noise.png); }
 article.home nav ul li.game-of-thrones a span { background-image: url(../images/game-of-thrones/game-of-thrones-sprite.png); }
-article.home nav ul li.game-of-thrones div { background: linear-gradient(to right, #e32822 0%,#ff5040 100%); }
+article.home nav ul li.game-of-thrones div { background: linear-gradient(to right, rgba(227,40,34,.95) 0%, rgba(255,80,64,.95) 100%), url(../images/game-of-thrones/noise.png); }
 article.home nav ul li.kolok a span { background-image: url(../images/kolok/kolok-sprite.png); }
-article.home nav ul li.kolok div { background: linear-gradient(to right, #1078cc 0%, #50a7e5 100%); }
+article.home nav ul li.kolok div { background: linear-gradient(to right, rgba(16,120,204,.92) 0%, rgba(80,167,229,.92) 100%), url(../images/kolok/noise.png); }
 article.home nav ul li.dreamcatcher a span { background-image: url(../images/dreamcatcher/dreamcatcher-sprite.png); }
-article.home nav ul li.dreamcatcher div { background: linear-gradient(to right, rgba(26,25,36,.89) 0%,rgba(49,41,56,.89) 100%); }
+article.home nav ul li.dreamcatcher div { background: linear-gradient(to right, rgba(26,25,36,.88) 0%,rgba(49,41,56,.88) 100%), url(../images/dreamcatcher/noise.png); }
 article.home nav ul li.nike a span { background-image: url(../images/nike/nike-sprite.png); }
-article.home nav ul li.nike div { background: linear-gradient(to right, #ff621a 0%, #ff381a 100%); }
+article.home nav ul li.nike div { background: linear-gradient(to right, rgba(255,98,26,.94) 0%, rgba(255,56,26,.94) 100%), url(../images/nike/noise.png); }
 
 /* @end of Home */
 /*******************/
@@ -713,7 +714,7 @@ nav#next-project:hover h1 span {
 
 nav#next-project.my-warner:hover h1 { color: #ff7862; }
 nav#next-project.my-warner h1 span { background-image: url(../images/my-warner/my-warner-sprite.png); }
-nav#next-project.my-warner div { background: linear-gradient(to right, #e32822 0%,#ff5040 100%); }
+nav#next-project.my-warner div { background: linear-gradient(to right, rgba(227,40,34,.95) 0%, rgba(255,80,64,.95) 100%), url(../images/my-warner/noise.png); }
 
 nav#next-project.wdmtg:hover h1 { color: #4392da; }
 nav#next-project.wdmtg h1 span { background-image: url(../images/wdmtg/wdmtg-sprite.png); }
@@ -722,19 +723,19 @@ nav#next-project.wdmtg div { background: linear-gradient(to right, #3381c1 -80px
 
 nav#next-project.game-of-thrones:hover h1 { color: #ff7862; }
 nav#next-project.game-of-thrones h1 span { background-image: url(../images/game-of-thrones/game-of-thrones-sprite.png); }
-nav#next-project.game-of-thrones div { background: linear-gradient(to right, #e32822 0%,#ff5040 100%); }
+nav#next-project.game-of-thrones div { background: linear-gradient(to right, rgba(227,40,34,.95) 0%, rgba(255,80,64,.95) 100%), url(../images/game-of-thrones/noise.png); }
 
 nav#next-project.kolok:hover h1 { color: #75c4e5; }
 nav#next-project.kolok h1 span { background-image: url(../images/kolok/kolok-sprite.png); }
-nav#next-project.kolok div { background: linear-gradient(to right, #1078cc -80px, #50a7e5 100%); }
+nav#next-project.kolok div { background: linear-gradient(to right, rgba(16,120,204,.92) -80px, rgba(80,167,229,.92) 100%), url(../images/kolok/noise.png); }
 
 nav#next-project.dreamcatcher:hover h1 { color: #433b52; }
 nav#next-project.dreamcatcher h1 span { background-image: url(../images/dreamcatcher/dreamcatcher-sprite.png); }
-nav#next-project.dreamcatcher div { background: linear-gradient(to right, rgba(26,25,36,.89) -80px,rgba(49,41,56,.89) 100%), url(../images/dreamcatcher/noise.png);; }
+nav#next-project.dreamcatcher div { background: linear-gradient(to right, rgba(26,25,36,.88) -80px,rgba(49,41,56,.88) 100%), url(../images/dreamcatcher/noise.png); }
 
 nav#next-project.nike:hover h1 { color: #fe8a34; }
 nav#next-project.nike h1 span { background-image: url(../images/nike/nike-sprite.png); }
-nav#next-project.nike div { background: linear-gradient(to right, #ff621a -80px, #ff381a 100%); }
+nav#next-project.nike div { background: linear-gradient(to right, rgba(255,98,26,.94) -80px, rgba(255,56,26,.94) 100%), url(../images/nike/noise.png); }
 
 
 /* @end of Next-project */
@@ -749,7 +750,7 @@ article.my-warner header.introduction {
   position: relative; z-index: 400;
   min-height: 1200px;
   color: #fff; 
-  background: linear-gradient(to right, #e32822 -80px,#ff5040 100%); }
+  background: linear-gradient(to right, rgba(227,40,34,.95) -80px, rgba(255,80,64,.95) 100%), url(../images/my-warner/noise.png); }
 article.my-warner hr.dotted { 
   width: 100%; height: 1px;
   background: transparent url(../images/my-warner/p-dotted-dark-grey-bg.png) repeat-x; }
@@ -834,7 +835,7 @@ article.my-warner section.movies h2.final-design span { color: #fff; }
 article.my-warner section.movies section.final-design > div {
   height: 1070px;
   position: relative;
-  background: linear-gradient(to right, #e32822 -80px,#ff5040 100%); } 
+  background: linear-gradient(to right, rgba(227,40,34,.95) -80px, rgba(255,80,64,.95) 100%), url(../images/my-warner/noise.png); } 
 article.my-warner section.movies section.final-design > div ul { 
   position: absolute;
   top: 0; left: 0; bottom: 0; right: 0;
@@ -1010,7 +1011,7 @@ article.wdmtg header.introduction {
   position: relative; z-index: 400;
   min-height: 1200px;
   color: #fff; 
-  background: linear-gradient(to right, #3381c1 -80px,#2d4fc2 100%); }
+background: linear-gradient(to right, rgba(51,129,193,.92) -80px,rgba(45,79,194,.92) 100%), url(../images/wdmtg/noise.png); }
 article.wdmtg hr.dotted { 
   width: 100%; height: 1px;
   background: transparent url(../images/wdmtg/hr-dotted-light-grey-bg.png) repeat-x; }
@@ -1071,7 +1072,7 @@ article.wdmtg section.pro-signup section.full-control.animate img { opacity: 1; 
 
 article.wdmtg section.final-design { padding: 125px 0 0; }
 article.wdmtg section.final-design section.slider > div {
-  background: linear-gradient(to right, #3381c1 -80px,#2d4fc2 100%); }
+  background: linear-gradient(to right, rgba(51,129,193,.92) -80px,rgba(45,79,194,.92) 100%), url(../images/wdmtg/noise.png); }
 article.wdmtg section.final-design section.slider > div ul { background: #f2f2f2 url(../images/browser-toolbar.png) no-repeat; }
 article.wdmtg section.final-design section.slider nav ul li{
   border-color: #f06448;
@@ -1129,7 +1130,7 @@ article.wdmtg section.custom-feeds section.final-design { padding: 250px 0 0; }
 
 article.wdmtg footer.thanks { 
   box-shadow: 0px 20px 30px rgba(0,0,0,.4), inset 0px -5px 0px rgba(0,0,0,.2); 
-  background: linear-gradient(to right, #3381c1 -80px,#2d4fc2 100%); }
+  background: linear-gradient(to right, rgba(51,129,193,.92) -80px,rgba(45,79,194,.92) 100%), url(../images/wdmtg/noise.png);}
 article.wdmtg footer.thanks h2 { color: #fff; margin-bottom: 30px; }
 article.wdmtg footer.thanks a {
   border: 1px solid #4392da;
@@ -1148,7 +1149,7 @@ article.game-of-thrones header.introduction {
   position: relative; z-index: 400;
   min-height: 1200px;
   color: #fff; 
-  background: linear-gradient(to right, #e32822 -80px,#ff5040 100%); }
+  background: linear-gradient(to right, rgba(227,40,34,.95) -80px, rgba(255,80,64,.95) 100%), url(../images/game-of-thrones/noise.png); }
 article.game-of-thrones hr.dotted { 
   width: 100%; height: 1px;
   background: transparent url(../images/game-of-thrones/p-dotted-dark-grey-bg.png) repeat-x; }
@@ -1211,7 +1212,7 @@ article.game-of-thrones section.countdown h2.final-design span,
 article.game-of-thrones section.player h2.final-design span { color: #fff; }
 article.game-of-thrones section.final-design { padding: 80px 0 0; }
 article.game-of-thrones section.final-design section.slider > div {
-  background: linear-gradient(to right, #e32822 -80px,#ff5040 100%); }
+  background: linear-gradient(to right, rgba(227,40,34,.95) -80px, rgba(255,80,64,.95) 100%), url(../images/game-of-thrones/noise.png); }
 article.game-of-thrones section.final-design section.slider > div ul { background: #000 url(../images/browser-toolbar.png) no-repeat;}
 article.game-of-thrones section.final-design section.slider nav ul li {
   border-color: #41444f;
@@ -1295,7 +1296,7 @@ article.kolok header.introduction {
   position: relative; z-index: 500;
   min-height: 1200px;
   color: #fff;
-  background: linear-gradient(to right, #1078cc -80px, #50a7e5 100%); }
+  background: linear-gradient(to right, rgba(16,120,204,.92) -80px, rgba(80,167,229,.92) 100%), url(../images/kolok/noise.png); }
 article.kolok header.introduction h1 { margin: 320px 0 300px; min-height: 224px; }
 article.kolok header.introduction h2 { color: #75c4e5; padding: 0 0 50px; }
 article.kolok header.introduction ul.meta { border-bottom: 1px solid rgba(117, 196, 229, 0.3); }
@@ -1506,7 +1507,7 @@ article.dreamcatcher header.introduction {
   position: relative; z-index: 600;
   min-height: 1200px;
   color: #fff;
-  background: linear-gradient(to right, rgba(26,25,36,.89) -80px,rgba(49,41,56,.89) 100%), url(../images/dreamcatcher/noise.png); }
+  background: linear-gradient(to right, rgba(26,25,36,.88) -80px,rgba(49,41,56,.88) 100%), url(../images/dreamcatcher/noise.png); }
 
 article.dreamcatcher header.introduction h1 { margin: 360px 0 370px; min-height: 113px; }
 article.dreamcatcher header.introduction h2 { color: #433b52; padding: 0 0 50px; }
@@ -1565,7 +1566,7 @@ article.dreamcatcher section.desktop h2.final-design span { color: #fff; }
 article.dreamcatcher section.final-design.end section.slider { padding: 30px 0 0; }
 article.dreamcatcher section.desktop section.final-design { padding: 80px 0 0; }
 article.dreamcatcher section.desktop section.final-design section.slider > div {
-  background: linear-gradient(to right, #211f2b -80px, #312938 100%); }
+  background: linear-gradient(to right, rgba(33,31,43,.87) -80px, rgba(49,41,56,.87) 100%), url(../images/dreamcatcher/noise2.png); }
 article.dreamcatcher section.desktop section.final-design section.slider > div ul { background: #23222b url(../images/browser-toolbar.png) no-repeat; }
 article.dreamcatcher section.desktop section.final-design section.slider nav ul li {
   border-color: #474557;
@@ -1650,7 +1651,7 @@ div#wrapper section#main article.nike { }
 article.nike header.introduction { 
   min-height: 1200px;
   color: #fff;
-  background: linear-gradient(to right, #ff621a -80px, #ff381a 100%);  }
+  background: linear-gradient(to right, rgba(255,98,26,.94) -80px, rgba(255,56,26,.94) 100%), url(../images/nike/noise.png);  }
 article.nike hr.dotted { 
   height: 1px; width: 100%;
   background: url(../images/nike/p-dotted-dark-grey-bg.png); }
@@ -1710,7 +1711,7 @@ article.nike section.final-design section.your-diary.animate img { opacity: 1; }
 article.nike section.final-design h2.final-design { color: #cc3a00; }
 article.nike section.final-design h2.final-design span { color: #fff; }
 article.nike section.final-design section.slider > div {
-  background: linear-gradient(to right, #ff621a -80px, #ff381a 100%); }
+  background: linear-gradient(to right, rgba(255,98,26,.94) -80px, rgba(255,56,26,.94) 100%), url(../images/nike/noise.png); }
 article.nike section.final-design section.slider > div ul { background: #000 url(../images/browser-toolbar.png) no-repeat; }
 article.nike section.final-design section.slider nav ul li{
   border-color: #cc3a00;
@@ -1721,7 +1722,7 @@ article.nike footer.thanks {
 
   box-shadow: 0px 20px 30px rgba(0,0,0,.4), inset 0px -5px 0px rgba(0,0,0,.2); 
   padding: 250px 0;
-  background: linear-gradient(to right, #ff7024 -80px, #ff401f 100%);  }
+  background: linear-gradient(to right, rgba(255,98,26,.94) -80px, rgba(255,56,26,.94) 100%), url(../images/nike/noise.png); }
 article.nike footer.thanks h2 { color: #fe8a34; }
 /* @end of Nike */
 
