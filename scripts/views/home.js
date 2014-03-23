@@ -71,7 +71,7 @@ define([
             loader = document.getElementById('loader');
         helpers.removeClass(wrapper, 'hidden');
         setTimeout(function(){ helpers.removeClass(loader, 'visible') }, 300);
-        setTimeout(function(){ helpers.addClass(loader, 'hidden') }, 600);
+        setTimeout(function(){ helpers.addClass(loader, 'hidden') }, 800);
         setTimeout("loader.querySelectorAll('h1 div.progress')[0].style.height = 0;", 900);
       },
 

@@ -16,7 +16,7 @@ body {
   -webkit-font-smoothing: antialiased; }
 a, p, h1, h2, h3 { -webkit-user-select: all; }
 a, a:link, a:visited, a:active { transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s; text-decoration: none; }
-hr { border: 0; margin: 20px auto; }
+hr { border: 0; margin: 20px auto 10px; }
 .no-txt, i { text-align: left; text-indent: -9999px; overflow: hidden; }
 .centered { margin: 0 auto; overflow: hidden; }
 i { display: inline-block; }
@@ -348,7 +348,7 @@ article.home h1 > span {
      -moz-transform: rotateX(20deg);
           transform: rotateX(20deg);
   transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.7s;
-  transition-delay: 0.8s;}
+  transition-delay: 0.9s;}
 article.home.animate h1 > span { top: 370px; opacity: 1; -webkit-transform: rotateX(0); -moz-transform: rotateX(0); transform: rotateX(0); }
 article.home h1 span span { 
   color: #f2361d;
@@ -367,7 +367,7 @@ article.home h1 div {
           transform: rotateX(20deg);
   background: url(../images/home/240-shadow-bg.png) no-repeat 0 273px;
   transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.7s;
-  transition-delay: 0.7s; }
+  transition-delay: 0.8s; }
 article.home.animate h1 div { top: 0; opacity: 1; -webkit-transform: rotateX(0); -moz-transform: rotateX(0); transform: rotateX(0); }
 article.home h2 {
   font-family: 'NeutraDisplay', sans-serif;
@@ -515,7 +515,7 @@ article.project section h2.default {
   text-align: center;
   margin: 50px 0 100px;
   opacity: 0;
-  transition: opacity cubic-bezier(0.000, 0.800, 0.510, 1.005) 0.6s; }
+  transition: opacity ease-out 0.6s; }
 article.project section h2.default.animate { opacity: 1; }
 article.project section h2.default > span {
   display: block;
@@ -531,8 +531,8 @@ article.project section h2.default > span {
   transition: 0 opacity cubic-bezier(0.000, 0.800, 0.510, 1.005) 0.3s,
               0 top cubic-bezier(0.000, 0.800, 0.510, 1.005) 0.3s; }
 article.project section h2.default.animate > span { 
-  transition: 0.3s opacity cubic-bezier(0.000, 0.800, 0.510, 1.005) 0.3s,
-              0.3s top cubic-bezier(0.000, 0.800, 0.510, 1.005) 0.3s;
+  transition: 0.4s opacity cubic-bezier(0.000, 0.800, 0.510, 1.005) 0.3s,
+              0.4s top cubic-bezier(0.000, 0.800, 0.510, 1.005) 0.3s;
   top: 0; opacity: 1; }
 
 article.project section h2.final-design {
@@ -557,7 +557,7 @@ article.project section h3 {
   text-transform: uppercase; }
 article.project section h3 span {
   display: block;
-  margin-top: 8px;
+  margin-top: 5px;
   font-family: 'NeutraDisplay', sans-serif;
   font-style: normal;
   font-weight: 700;
