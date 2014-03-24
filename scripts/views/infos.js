@@ -6,7 +6,7 @@ define([
     'vendor/helpers'
 ], function (Backbone, tplInfos, helpers) {
     'use strict';
-    var sidebarView = Backbone.View.extend({
+    var infosView = Backbone.View.extend({
       template: _.template(tplInfos),
       
       el: '#infos',
@@ -25,9 +25,9 @@ define([
         document.getElementById('hire').addEventListener('click', function(e){
           e.preventDefault();
           self.switchInfos('contact');
-        }
+        })
 
-        document.querySelectorAll('button[type="submit"]')[0].addEventListener('click', function(e){
+        document.querySelector('button[type="submit"]').addEventListener('click', function(e){
           e.preventDefault();
           var form = this.parentNode,
               name = form.querySelector('input[name="name"]'),
@@ -60,5 +60,5 @@ define([
       }
     });
 
-    return sidebarView;
+    return infosView;
 });
