@@ -11,6 +11,4 @@ components/backbone.native/LICENSE
 
 components/backbone.native/.gitmodules
 
-*.js
-
 *.json
