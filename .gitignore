@@ -6,3 +6,9 @@ components/backbone.native/LICENSE
 components/backbone.native/.gitmodules
 
 *.json
+
+/.DS_Store
+
+/scripts/views/.DS_Store
+
+/scripts/.DS_Store
