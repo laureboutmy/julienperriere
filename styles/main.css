@@ -15,7 +15,7 @@ body {
   -webkit-user-select: none;
   -webkit-font-smoothing: antialiased; }
 a, p, h1, h2, h3 { -webkit-user-select: all; }
-a, a:link, a:visited, a:active { transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s; text-decoration: none; }
+a, a:link, a:visited, a:active { transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1); text-decoration: none; }
 hr { border: 0; margin: 20px auto 10px; }
 .no-txt, i { text-align: left; text-indent: -9999px; overflow: hidden; }
 .centered { margin: 0 auto; overflow: hidden; }
@@ -43,8 +43,8 @@ div#wrapper section#sidebar {
   overflow-x: hidden;
   width: 80px; height: 100%;
   background: #050505; color: #fff;
-  transition: width cubic-bezier(0.005, 0.600, 0.395, 0.995) 0.3s,
-              left cubic-bezier(0.005, 0.600, 0.395, 0.995) 0.3s; }
+  transition: width 0.3s cubic-bezier(0.005, 0.600, 0.395, 0.995),
+              left 0.3s cubic-bezier(0.005, 0.600, 0.395, 0.995); }
 div#wrapper.unwound section#sidebar { width: 310px; }
 div#wrapper.unwound.open section#sidebar { width: 80px; }
 div#wrapper.open section#sidebar { left: 490px; border-left: 1px solid #0f0f0f; }
@@ -62,14 +62,14 @@ div#wrapper section#sidebar header h1 {
 	font-weight: 700;
 	margin-top: 8px;
 	color: transparent;
-	transition: color cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s; }
+	transition: color 0.6s cubic-bezier(0.215, 0.61, 0.355, 1); }
 div#wrapper section#sidebar header h2 {
 	font-family: 'NeutraText', sans-serif;
 	margin-top: 4px;
 	font-size: 1.133em;
 	font-style: italic;
 	color: transparent;
-	transition: color cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s; }
+	transition: color 0.6s cubic-bezier(0.215, 0.61, 0.355, 1); }
 div#wrapper.unwound section#sidebar header h1 { color: #fff; }
 div#wrapper.unwound section#sidebar header h2 { color: #666; }
 
@@ -133,8 +133,8 @@ section#loader {
   width: 100%; height: 100%;
   opacity: 1; 
   background: transparent;
-  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s,
-              background cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s; }
+  transition: opacity 0.5s cubic-bezier(0.215, 0.61, 0.355, 1),
+              background 0.5s cubic-bezier(0.215, 0.61, 0.355, 1); }
 
 section#loader.hidden {
   z-index: -100;
@@ -158,14 +158,14 @@ section#loader h1 {
   -webkit-transform: translateY(30px);
      -moz-transform: translateY(30px);
      			transform: translateY(30px);
-  transition: all cubic-bezier(0.215, 0.61, 0.355, 1) .8s; }
+  transition: all .8s cubic-bezier(0.215, 0.61, 0.355, 1); }
 section#loader.visible h1 { opacity: 1; -webkit-transform: translateY(0px); -moz-transform: translateY(0px); transform: translateY(0px); } 
 section#loader h1 div.progress {
   position: absolute;
   bottom: 0; left: 0;
   overflow: hidden;
   width: 100%; height: 0%;
-  transition: height cubic-bezier(0.215, 0.61, 0.355, 1) 2s; }
+  transition: height 2s cubic-bezier(0.215, 0.61, 0.355, 1); }
 section#loader h1 div.progress.completed { height: 100%; }
 section#loader h1 div.progress svg {
   position: absolute;
@@ -197,7 +197,7 @@ div#wrapper section#infos form {
   position: absolute; 
   background: #000; 
   color: #4c4c4c; 
-  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s; }
+  transition: opacity 0.3s cubic-bezier(0.215, 0.61, 0.355, 1); }
 div#wrapper section#infos.about article,
 div#wrapper section#infos.contact form { opacity: 1; height: auto; }
 div#wrapper section#infos.contact form { min-height: 100%;  }
@@ -235,8 +235,8 @@ div#wrapper section#infos form button[type="submit"] {
   font-weight: 700; 
   font-size: 0.867em;
   overflow: hidden;
-  transition: border-color cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
-              color cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s; }
+  transition: border-color 0.3s cubic-bezier(0.215, 0.61, 0.355, 1),
+              color 0.3s cubic-bezier(0.215, 0.61, 0.355, 1); }
 div#wrapper section#infos p.contact + a:hover,
 div#wrapper section#infos form button[type="submit"]:hover { cursor: pointer; border-color: rgba(255, 255, 255, 1); color: rgba(255, 255, 255, 1); }
 div#wrapper section#infos span.message { font-size: 0.867em; font-weight: 600; color: #fff; font-style: italic; opacity: 0; transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;; }
@@ -294,7 +294,7 @@ i.behance { width: 28px; height: 17px; background: url(../images/infos/behance.s
 div#wrapper section#main {
   position: relative;
   top: 0; left: 80px;
-  transition: left cubic-bezier(0.005, 0.600, 0.395, 0.995) 0.3s;
+  transition: left 0.3s cubic-bezier(0.005, 0.600, 0.395, 0.995);
   background: #000;
    }
 div#wrapper.unwound section#main { left: 310px; }
@@ -326,7 +326,7 @@ div#wrapper section#main article.home {
   overflow: hidden;
   background-color: #fff;
   background: linear-gradient(to bottom, rgba(206,211,219,.9) 0, #fff 1000px), url(../images/home/noise.png);
-  transition: top cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s; }
+  transition: top 0.5s cubic-bezier(0.215, 0.61, 0.355, 1); }
 article.home h1 {
   margin: 250px auto 60px;
   text-align: center;
@@ -347,7 +347,7 @@ article.home h1 > span {
   -webkit-transform: rotateX(20deg);
      -moz-transform: rotateX(20deg);
           transform: rotateX(20deg);
-  transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.7s;
+  transition: all 0.7s cubic-bezier(0.215, 0.61, 0.355, 1);
   transition-delay: 0.9s;}
 article.home.animate h1 > span { top: 370px; opacity: 1; -webkit-transform: rotateX(0); -moz-transform: rotateX(0); transform: rotateX(0); }
 article.home h1 span span { 
@@ -366,7 +366,7 @@ article.home h1 div {
      -moz-transform: rotateX(20deg);
           transform: rotateX(20deg);
   background: url(../images/home/240-shadow-bg.png) no-repeat 0 273px;
-  transition: all cubic-bezier(0.215, 0.61, 0.355, 1) 0.7s;
+  transition: all 0.7s cubic-bezier(0.215, 0.61, 0.355, 1);
   transition-delay: 0.8s; }
 article.home.animate h1 div { top: 0; opacity: 1; -webkit-transform: rotateX(0); -moz-transform: rotateX(0); transform: rotateX(0); }
 article.home h2 {
@@ -379,7 +379,7 @@ article.home h2 {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   opacity: 0;
-  transition: 0.6s opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s; }
+  transition: opacity 0.3s cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s; }
 article.home.animate h2 { opacity: 1; }
 article.home p.introduction {
   font-family: 'NeutraText SmallCaps', sans-serif;
@@ -429,10 +429,10 @@ article.home nav ul li a span {
   left: 0; top: 0; bottom: 0; right: 0;
   height: 140px;
   background-position: center 0; background-repeat: no-repeat;
-  transition: background cubic-bezier(0.545, -0.005, 1.000, 0.260) 0s; }
+  transition: background 0s cubic-bezier(0.545, -0.005, 1.000, 0.260); }
 article.home nav ul li:hover a span {
   background-position: center -140px;
-  transition: background cubic-bezier(0.000, 0.980, 0.000, 0.990) 0.5s; }
+  transition: background 0.5s cubic-bezier(0.000, 0.980, 0.000, 0.990); }
 article.home nav ul li.my-warner a span { background-image: url(../images/my-warner/my-warner-sprite.png); }
 article.home nav ul li.my-warner div { background: linear-gradient(to right, rgba(227,40,34,.95) 0%, rgba(255,80,64,.95) 100%), url(../images/my-warner/noise.png); }
 article.home nav ul li.wdmtg a span { background-image: url(../images/wdmtg/wdmtg-sprite.png); }
@@ -464,8 +464,8 @@ article.project header.introduction ul.meta  {
   position: relative; top: -40px; 
   opacity: 0;
   padding: 35px 0;
-  transition: 0.6s opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s,
-              0.6s top cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s; }
+  transition: opacity 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s,
+              top 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s; }
 article.project header.introduction.animate ul.meta {
   opacity: 1; top: 0; }
 article.project header.introduction ul.meta { overflow: hidden; }
@@ -488,7 +488,7 @@ article.project header.introduction h1 img {
   -webkit-transform: rotateX(10deg);
      -moz-transform: rotateX(10deg);
           transform: rotateX(10deg);
-  transition: 0.8s all cubic-bezier(0.215, 0.61, 0.355, 1) 0.5s; }
+  transition: all 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.8s ; }
 article.project header.introduction.animate h1 img { opacity: 1; top: 0; -webkit-transform: rotateX(0deg); -moz-transform: rotateX(0deg); transform: rotateX(0deg); }
 article.project header.introduction h2 {
   font-family: 'NeutraText', sans-serif;
@@ -498,7 +498,7 @@ article.project header.introduction h2 {
   position: relative;
   top: 40px;
   opacity: 0;
-  transition: 0.6s opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s; }
+  transition: opacity 0.3s cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s; }
 article.project header.introduction.animate h2 {
   opacity: 1; top: 0; }
 article.project header.introduction div.arrow {
@@ -532,11 +532,11 @@ article.project section h2.default > span {
   color: #005aa3;
   opacity: 0;
   top: -10px;
-  transition: 0 opacity cubic-bezier(0.000, 0.800, 0.510, 1.005) 0.3s,
-              0 top cubic-bezier(0.000, 0.800, 0.510, 1.005) 0.3s; }
+  transition: opacity 0.3s cubic-bezier(0.000, 0.800, 0.510, 1.005) 0,
+              top 0.3s cubic-bezier(0.000, 0.800, 0.510, 1.005) 0; }
 article.project section h2.default.animate > span { 
-  transition: 0.4s opacity cubic-bezier(0.000, 0.800, 0.510, 1.005) 0.3s,
-              0.4s top cubic-bezier(0.000, 0.800, 0.510, 1.005) 0.3s;
+  transition: opacity 0.3s cubic-bezier(0.000, 0.800, 0.510, 1.005) 0.4s,
+              top 0.3s cubic-bezier(0.000, 0.800, 0.510, 1.005) 0.4s;
   top: 0; opacity: 1; }
 
 article.project section h2.final-design {
@@ -643,14 +643,14 @@ article.project section.slider > div ul li {
   top: 29px; bottom: 0; left: 0; right: 0;
   height: 700px;
   opacity: 0;
-  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s; }
+  transition: opacity 0.3s cubic-bezier(0.215, 0.61, 0.355, 1); }
 article.project section.slider > div ul li.active { opacity: 1; }
 article.project section.slider > div ul li img.full { width: 100%; height: auto; }
 article.project section.slider > div ul li img.zoom { 
   position: absolute; opacity: 0;
-  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
-              top cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
-              bottom cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s; }
+  transition: opacity 0.3s cubic-bezier(0.215, 0.61, 0.355, 1),
+              top 0.3s cubic-bezier(0.215, 0.61, 0.355, 1),
+              bottom 0.3s cubic-bezier(0.215, 0.61, 0.355, 1); }
 article.project section.slider > div ul li.active img.zoom { opacity: 1; }
 article.project section.slider > div ul li img.zoom.left { left: 15px;}
 article.project section.slider > div ul li img.zoom.right { right: 0px;}
@@ -670,8 +670,8 @@ div#wrapper section#main nav#next-project {
   bottom: 0; left: 80px;
   width: 100%; height: 440px;
   background: #f8f8fa;
-  transition: left cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
-              height cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s; }
+  transition: left 0.3s cubic-bezier(0.215, 0.61, 0.355, 1),
+              height 0.3s cubic-bezier(0.215, 0.61, 0.355, 1); }
 div#wrapper.unwound section#main nav#next-project { left: 310px; }
 div#wrapper.open section#main nav#next-project { left: 580px; }
 div#wrapper section#main nav#next-project.active { height: 100%; }
@@ -685,7 +685,7 @@ nav#next-project.active div {
   opacity: 1;
   transition: opacity .4s cubic-bezier(0.000, 0.475, 0.000, 0.995); } 
 nav#next-project a { position: relative; display: block; width: 100%; height: 100%; opacity: 1;
-  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s; }
+  transition: opacity 0.3s cubic-bezier(0.215, 0.61, 0.355, 1); }
 
 nav#next-project.active a { opacity: 0; }
 nav#next-project h1 {
@@ -701,8 +701,8 @@ nav#next-project h1 {
   letter-spacing: 0.04em;
   display: block;
   font-weight: 600;
-  transition: color cubic-bezier(0.545, -0.005, 1.000, 0.260) 0s; }
-nav#next-project:hover h1 { transition: color cubic-bezier(0.000, 0.980, 0.000, 0.990) 0.5s; }
+  transition: color  0s cubic-bezier(0.545, -0.005, 1.000, 0.260); }
+nav#next-project:hover h1 { transition: color  0.5s cubic-bezier(0.000, 0.980, 0.000, 0.990); }
 nav#next-project h1 span {
   display: block;
   position: absolute;
@@ -710,10 +710,10 @@ nav#next-project h1 span {
   left: 0; top: 0; bottom: 0; right: 0;
   height: 140px;
   background-position: center 0; background-repeat: no-repeat;
-  transition: background cubic-bezier(0.545, -0.005, 1.000, 0.260) 0s; }
+  transition: background 0s cubic-bezier(0.545, -0.005, 1.000, 0.260); }
 nav#next-project:hover h1 span {
   background-position: center -140px;
-  transition: background cubic-bezier(0.000, 0.980, 0.000, 0.990) 0.5s; }
+  transition: background 0.5s cubic-bezier(0.000, 0.980, 0.000, 0.990); }
 
 nav#next-project.my-warner:hover h1 { color: #ff7862; }
 nav#next-project.my-warner h1 span { background-image: url(../images/my-warner/my-warner-sprite.png); }
@@ -826,7 +826,7 @@ article.my-warner section.movies section.statistics img { float: right; }
 article.my-warner section.movies section.best-tweets img,
 article.my-warner section.movies section.quizzes img,
 article.my-warner section.movies section.facts img,
-article.my-warner section.movies section.statistics img { opacity: 0; transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s; }
+article.my-warner section.movies section.statistics img { opacity: 0; transition: opacity 0.3s cubic-bezier(0.215, 0.61, 0.355, 1); }
 article.my-warner section.movies section.best-tweets.animate img,
 article.my-warner section.movies section.quizzes.animate img,
 article.my-warner section.movies section.facts.animate img,
@@ -859,12 +859,7 @@ article.my-warner section.profile ul li img {
      -moz-transform: rotateY(25deg);
           transform: rotateY(25deg);
   opacity: 0;
-  transition: -webkit-transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
-              opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
-  transition: -moz-transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
-              opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
-  transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
-              opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;; }
+  transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1); }
 article.my-warner section.movies section.final-design.animate > div ul li img,
 article.my-warner section.profile.animate ul li img { 
   -webkit-transform: rotateY(0deg);
@@ -893,7 +888,7 @@ article.my-warner section.ipad section { margin: 160px 0 0; }
 
 article.my-warner section.bonuses section img { 
   opacity: 0;
-  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
+  transition: opacity 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
   transition-delay: 0;  }
 article.my-warner section.bonuses section.animate div:first-of-type img:nth-of-type(1),
 article.my-warner section.bonuses section.animate-more div:nth-of-type(5) img:nth-of-type(1) { opacity: 1; }
@@ -906,12 +901,12 @@ article.my-warner section.bonuses section div:nth-of-type(4) img:nth-of-type(2) 
      -moz-transform: rotateY(25deg);
           transform: rotateY(25deg);
   opacity: 0;
-  transition: -webkit-transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
-              opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
-  transition: -moz-transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
-              opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
-  transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
-              opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
+  transition: -webkit-transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1),
+              opacity 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: -moz-transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1),
+              opacity 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1),
+              opacity 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
   }
 article.my-warner section.bonuses section.animate div:nth-of-type(2) img:nth-of-type(1),
 article.my-warner section.bonuses section.animate div:nth-of-type(2) img:nth-of-type(2),
@@ -928,7 +923,7 @@ article.my-warner section.bonuses section.animate div:nth-of-type(2) img:nth-of-
 article.my-warner section.bonuses section.animate-more div:nth-of-type(4) img:nth-of-type(2) { transition-delay: 0.4s;}
 article.my-warner section.icon section.wireframes > div:first-of-type > div.rel { width: 252px; height: 252px; }
 article.my-warner section.icon section.wireframes img { 
-  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
+  transition: opacity 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
   opacity: 0; }
 article.my-warner section.icon section.wireframes.animate img { opacity: 1; }
 article.my-warner section.icon section.wireframes > div:first-of-type > div.rel > img:nth-of-type(2) {
@@ -938,24 +933,24 @@ article.my-warner section.icon section.wireframes > div:first-of-type > div.rel 
   -webkit-transform: scale(0);
      -moz-transform: scale(0);
           transform: scale(0);
-  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s; }
+  transition: opacity 0.3s cubic-bezier(0.215, 0.61, 0.355, 1); }
 article.my-warner section.icon section.wireframes.animate > div:first-of-type > div.rel img:nth-of-type(2) { 
   -webkit-transform: scale(1);
      -moz-transform: scale(1);
           transform: scale(1);
-  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
-              0.2s -webkit-transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
-  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
-              0.2s -moz-transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
-  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
-              0.2s transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s; }
+  transition: opacity 0.3s cubic-bezier(0.215, 0.61, 0.355, 1),
+              -webkit-transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
+  transition: opacity 0.3s cubic-bezier(0.215, 0.61, 0.355, 1),
+              -moz-transform 0.3s  cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s ;
+  transition: opacity 0.3s cubic-bezier(0.215, 0.61, 0.355, 1),
+              transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s; }
 article.my-warner section.icon section.wireframes > div:nth-of-type(2) > div.rel img { 
   position: absolute;
   top: 0; right: 0;
   transition-delay: 0; }
 article.my-warner section.icon section.wireframes.animate > div:nth-of-type(2) > div.rel img {
-  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
-              right cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
+  transition: opacity 0.3s cubic-bezier(0.215, 0.61, 0.355, 1),
+              right 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
   transition-delay: 0.6s; }
 
 article.my-warner section.icon section.wireframes.animate > div:nth-of-type(2) > div.rel img:nth-of-type(1) { right: 0; }
@@ -979,8 +974,8 @@ article.my-warner section.ipad div.ipad + div.rel img {
   position: absolute;
   top: -100px; left: 0; right: 0;
   opacity: 0;
-  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
-              top cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
+  transition: opacity 0.3s cubic-bezier(0.215, 0.61, 0.355, 1),
+              top 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
   transition-delay: 0s; }
 article.my-warner section.ipad.animate div.ipad + div.rel img { opacity: 1; top: 0; transition-delay: 0.2s; }
 
@@ -1069,7 +1064,7 @@ article.wdmtg section.custom-feeds section.top-up { padding: 220px 0 125px; }
 article.wdmtg section.pro-signup section.visual-clues img { float: right; }
 
 article.wdmtg section.pro-signup section.visual-clues img,
-article.wdmtg section.pro-signup section.full-control img { opacity: 0; transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s; }
+article.wdmtg section.pro-signup section.full-control img { opacity: 0; transition: opacity 0.3s cubic-bezier(0.215, 0.61, 0.355, 1); }
 article.wdmtg section.pro-signup section.visual-clues.animate img,
 article.wdmtg section.pro-signup section.full-control.animate img { opacity: 1; }
 
@@ -1085,8 +1080,8 @@ article.wdmtg section.final-design.end section.slider > div { height: 750px; }
 
 article.wdmtg section.pro-signup section.process img { 
   position: absolute; left: 60px; 
-  transition: left cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
-              opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s; }
+  transition: left 0.3s cubic-bezier(0.215, 0.61, 0.355, 1),
+              opacity 0.2s cubic-bezier(0.215, 0.61, 0.355, 1); }
 article.wdmtg section.pro-signup section.process img:nth-child(1) { z-index: 3; left: 60px; }
 article.wdmtg section.pro-signup section.process img:nth-child(2),
 article.wdmtg section.pro-signup section.process img:nth-child(3) { opacity: 0; }
@@ -1098,8 +1093,8 @@ article.wdmtg section.custom-feeds section.powerful-tool img:nth-child(2) {
   position: absolute;
   left: 0; top: 240px;
   opacity: 0;
-  transition: top cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
-              opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s; }
+  transition: top 0.3s cubic-bezier(0.215, 0.61, 0.355, 1),
+              opacity 0.2s cubic-bezier(0.215, 0.61, 0.355, 1); }
 article.wdmtg section.custom-feeds section.powerful-tool.animate img:nth-child(2) { top: 270px; opacity: 1; }
 
 article.wdmtg section.custom-feeds section.top-up { min-height: 300px; }
@@ -1109,18 +1104,18 @@ article.wdmtg section.custom-feeds section.top-up img:nth-child(3) {
   left: 0; right: 0; top: 0;
   margin: 0 auto;
   opacity: 0;
-  transition: top cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
-              opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s; }
+  transition: top 0.3s cubic-bezier(0.215, 0.61, 0.355, 1),
+              opacity 0.2s cubic-bezier(0.215, 0.61, 0.355, 1); }
 article.wdmtg section.custom-feeds section.top-up.animate img:nth-child(2) { z-index: 3; top: 68px; opacity: 1; }
 article.wdmtg section.custom-feeds section.top-up.animate img:nth-child(3) { z-index: 2; top: 320px; opacity: 1; }
 
 article.wdmtg section.custom-feeds section.feeds img {
   position: absolute; left: 0; opacity: 0;
-  transition: 0.3s left cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
-              0.3s opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0s; }
+  transition: left 0.3s cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
+              opacity 0s cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s; }
 article.wdmtg section.custom-feeds section.feeds img:nth-child(3){
-  transition: 0.3s left cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
-              opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s; }
+  transition: left 0.3s cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
+              opacity 0.2s cubic-bezier(0.215, 0.61, 0.355, 1); }
 article.wdmtg section.custom-feeds section.feeds.animate img { opacity: 1; }
 article.wdmtg section.custom-feeds section.feeds.animate img:nth-child(2) { left: 183px; }
 article.wdmtg section.custom-feeds section.feeds.animate img:nth-child(3) { left: 365px; z-index: 3; }
@@ -1239,7 +1234,7 @@ article.game-of-thrones section.countdown section.badges img,
 article.game-of-thrones section.player section.cards img,
 article.game-of-thrones section.player section.browser img { 
   opacity: 0;
-  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;  }
+  transition: opacity 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);  }
 article.game-of-thrones section.countdown section.hours.animate img,
 article.game-of-thrones section.countdown section.badges.animate img,
 article.game-of-thrones section.player section.cards.animate img,
@@ -1247,13 +1242,13 @@ article.game-of-thrones section.player section.browser.animate img { opacity: 1;
 
 article.game-of-thrones section.player section.content img {
   opacity: 0;
-  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
+  transition: opacity 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
   transition-delay: 0s; }
 article.game-of-thrones section.player section.content.animate img { opacity: 1; }
 article.game-of-thrones section.player section.content div > img:first-of-type {
   top: 30px;
-  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
-              top cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
+  transition: opacity 0.3s cubic-bezier(0.215, 0.61, 0.355, 1),
+              top 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
   transition-delay: 0s; }
 article.game-of-thrones section.player section.content.animate div > img:first-of-type { top: 0; transition-delay: 0.3s; }
 
@@ -1261,7 +1256,7 @@ article.game-of-thrones section.player section.content.animate div > img:first-o
 article.game-of-thrones section.mobile section.remote img,
 article.game-of-thrones section.mobile section.feed img { 
   opacity: 0;
-  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
+  transition: opacity 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
   transition-delay: 0;  }
 article.game-of-thrones section.mobile section.remote.animate img,
 article.game-of-thrones section.mobile section.feed.animate img { opacity: 1; }
@@ -1271,9 +1266,9 @@ article.game-of-thrones section.mobile section.feed > div:nth-of-type(1) img {
   -webkit-transform: rotateY(25deg);
           transform: rotateY(25deg);
   opacity: 0;
-  transition: -webkit-transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
-              opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
-  transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s; }
+  transition: -webkit-transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1),
+              opacity 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1); }
 article.game-of-thrones section.mobile section.remote.animate > div:nth-of-type(2) img,
 article.game-of-thrones section.mobile section.feed.animate > div:nth-of-type(1) img { 
   -webkit-transform: rotateY(0deg);
@@ -1400,33 +1395,33 @@ article.kolok section.design-guidelines section.the-k-icon > div:nth-of-type(2) 
   -webkit-transform: scale(0);
      -moz-transform: scale(0);
           transform: scale(0);
-  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s; }
+  transition: opacity 0.3s cubic-bezier(0.215, 0.61, 0.355, 1); }
 article.kolok section.design-guidelines section.the-k-icon.animate > div:nth-of-type(2) > div.rel img:nth-of-type(2) { 
   -webkit-transform: scale(1);
      -moz-transform: scale(1);
           transform: scale(1);
-  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
-              0.2s -webkit-transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
-  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
-              0.2s -moz-transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
-  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
-              0.2s transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s; }
+  transition: opacity 0.3s cubic-bezier(0.215, 0.61, 0.355, 1),
+              -webkit-transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
+  transition: opacity 0.3s cubic-bezier(0.215, 0.61, 0.355, 1),
+              -moz-transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s;
+  transition: opacity 0.3s cubic-bezier(0.215, 0.61, 0.355, 1),
+              transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s; }
 article.kolok section.design-guidelines section.the-k-icon > div:nth-of-type(2) > img {
   position: absolute;
   top: 0; left: 80px;
   opacity: 0;
-  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
-              left cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
+  transition: opacity 0.3s cubic-bezier(0.215, 0.61, 0.355, 1),
+              left 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
   transition-delay: 0s; }
 article.kolok section.design-guidelines section.the-k-icon.animate > div:nth-of-type(2) > img {
   opacity: 1;
   left: 372px; 
-  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
-              left cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
+  transition: opacity 0.3s cubic-bezier(0.215, 0.61, 0.355, 1),
+              left 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
   transition-delay: 0.6s, 0.9s;}
 article.kolok section.design-guidelines section.color-palette img { 
   opacity: 0;
-  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
+  transition: opacity 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
   transition-delay: 0; }
 article.kolok section.design-guidelines section.color-palette.animate img { opacity: 1; }
 article.kolok section.design-guidelines section.color-palette.animate img:nth-of-type(2) { transition-delay: 0.2s; } 
@@ -1440,7 +1435,7 @@ article.kolok section.datavisualizations section.who-owes-who img,
 article.kolok section.datavisualizations section.bank-account img,
 article.kolok section.datavisualizations section.total-expenses img { 
   opacity: 0;
-  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;  }
+  transition: opacity 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);  }
 article.kolok section.design-guidelines section.typography.animate img,
 article.kolok section.datavisualizations section.share-expenses.animate img,
 article.kolok section.datavisualizations section.who-owes-who.animate img,
@@ -1452,7 +1447,7 @@ article.kolok section.final-design section.expenses-details img,
 article.kolok section.final-design section.services-location img,
 article.kolok section.final-design section.welcome-process img { 
   opacity: 0;
-  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
+  transition: opacity 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
   transition-delay: 0;  }
 article.kolok section.final-design section.home-screen.animate img,
 article.kolok section.final-design section.expenses-details.animate img,
@@ -1467,12 +1462,12 @@ article.kolok section.final-design section.welcome-process > div:nth-of-type(1) 
      -moz-transform: rotateY(25deg);
           transform: rotateY(25deg);
   opacity: 0;
-  transition: -webkit-transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
-              opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
-  transition: -moz-transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
-              opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
-  transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
-              opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s; }
+  transition: -webkit-transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1),
+              opacity 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: -moz-transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1),
+              opacity 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1),
+              opacity 0.3s cubic-bezier(0.215, 0.61, 0.355, 1); }
 article.kolok section.final-design section.home-screen.animate > div:nth-of-type(2) img,
 article.kolok section.final-design section.expenses-details.animate > div:nth-of-type(1) img,
 article.kolok section.final-design section.services-location.animate > div:nth-of-type(2) img,
@@ -1582,20 +1577,20 @@ article.dreamcatcher section.mobile-ready .third--two { padding: 0 10px; width: 
 article.dreamcatcher section.mobile-ready .third--three { padding-left: 10px; width: auto; }
 
 
-article.dreamcatcher section.desktop section.audio-post img  { opacity: 0; transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s; }
+article.dreamcatcher section.desktop section.audio-post img  { opacity: 0; transition: opacity 0.3s cubic-bezier(0.215, 0.61, 0.355, 1); }
 article.dreamcatcher section.desktop section.audio-post.animate img { opacity: 1; }
 
 article.dreamcatcher section.desktop section.milestones { min-height: 410px; }
 article.dreamcatcher section.desktop section.milestones img:nth-of-type(1) { 
   opacity: 0; 
-  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s; }
+  transition: opacity 0.2s cubic-bezier(0.215, 0.61, 0.355, 1); }
 article.dreamcatcher section.desktop section.milestones img:nth-of-type(2),
 article.dreamcatcher section.desktop section.milestones img:nth-of-type(3) { 
   position: absolute; 
   opacity: 0;
   top: 0; left: 0;
-  transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s,
-              top cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s; } 
+  transition: opacity 0.2s cubic-bezier(0.215, 0.61, 0.355, 1),
+              top 0.3s cubic-bezier(0.215, 0.61, 0.355, 1); } 
 article.dreamcatcher section.desktop section.milestones.animate img { opacity: 1; }
 article.dreamcatcher section.desktop section.milestones.animate img:nth-of-type(1) { z-index: 3; }
 article.dreamcatcher section.desktop section.milestones.animate img:nth-of-type(2) { top: 135px; z-index: 2; }
@@ -1607,12 +1602,12 @@ article.dreamcatcher section.desktop section.charts img {
      -moz-transform: rotateY(25deg);
           transform: rotateY(25deg);
   opacity: 0;
-  transition: -webkit-transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
-              opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
-  transition: -moz-transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
-              opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;
-  transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
-              opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s; }
+  transition: -webkit-transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1),
+              opacity 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: -moz-transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1),
+              opacity 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1),
+              opacity 0.3s cubic-bezier(0.215, 0.61, 0.355, 1); }
 article.dreamcatcher section.mobile-ready.animate ul li img,
 article.dreamcatcher section.desktop section.charts.animate img { 
   -webkit-transform: rotateY(0deg);
@@ -1702,7 +1697,7 @@ article.nike section.final-design section.chapters img,
 article.nike section.final-design section.all-about-you img,
 article.nike section.final-design section.sports-data img,
 article.nike section.final-design section.best-shoes img,
-article.nike section.final-design section.your-diary img { opacity: 0; transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s; }
+article.nike section.final-design section.your-diary img { opacity: 0; transition: opacity 0.3s cubic-bezier(0.215, 0.61, 0.355, 1); }
 article.nike section.final-design section.all-about-you.animate img,
 article.nike section.final-design section.chapters.animate img,
 article.nike section.final-design section.sports-data.animate img,
