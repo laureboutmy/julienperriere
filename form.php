@@ -5,20 +5,19 @@
 		$name = $_POST['name'];
 		$email = $_POST['email'];
 		$message = $_POST['message'];
-		$to = 'laureboutmy@gmail.com';
-		$subject = 'Hi there!';
+		$to = 'hello@julienperriere.com';
+		$subject = 'Message from ' . $name . ' (' . $email . ')';
 		$content= '
 		<html>
 	    <head>
 				<title>' . $subject . '</title>
 	    </head>
 	    <body>
-	     	<strong>From: </strong>' . $name . ' <' . $email .'>
-	      <br /><br /><strong>Message: </strong>' . $message . '
+	     	' . $message . '
 	    </body>
 	  </html>';
 		$mailheader = 'MIME-Version: 1.0' . "\r\n";
-	  $mailheader .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+	  $mailheader .= 'Content-type: text/html; charset=utf-8' . "\r\n";
 	  $mailheader .= 'From:' . $email . "\r\n";
 
 		mail($to, $subject, $content, $mailheader) or die('Error!');

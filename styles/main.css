@@ -239,7 +239,7 @@ div#wrapper section#infos form button[type="submit"] {
               color 0.3s cubic-bezier(0.215, 0.61, 0.355, 1); }
 div#wrapper section#infos p.contact + a:hover,
 div#wrapper section#infos form button[type="submit"]:hover { cursor: pointer; border-color: rgba(255, 255, 255, 1); color: rgba(255, 255, 255, 1); }
-div#wrapper section#infos span.message { font-size: 0.867em; font-weight: 600; color: #fff; font-style: italic; opacity: 0; transition: opacity cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s;; }
+div#wrapper section#infos span.message { font-size: 0.867em; font-weight: 600; color: #fff; font-style: italic; opacity: 0; transition: opacity 0.3s cubic-bezier(0.215, 0.61, 0.355, 1); }
 div#wrapper section#infos span.message.visible { opacity: 1; }
 div#wrapper section#infos form input[type="text"],
 div#wrapper section#infos form input[type="email"],
@@ -855,19 +855,21 @@ article.my-warner section.profile .third--three { padding-left: 10px; width: aut
 
 article.my-warner section.movies section.final-design > div ul li img,
 article.my-warner section.profile ul li img {
+  opacity: 0;
   -webkit-transform: rotateY(25deg);
      -moz-transform: rotateY(25deg);
+      -ms-transform: rotateY(25deg);
           transform: rotateY(25deg);
-  opacity: 0;
   transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1); }
 article.my-warner section.movies section.final-design.animate > div ul li img,
 article.my-warner section.profile.animate ul li img { 
-  -webkit-transform: rotateY(0deg);
-     -moz-transform: rotateY(0deg);
-          transform: rotateY(0deg);
-  opacity: 1; }
+  opacity: 1;
+  -webkit-transform: rotateY(0);
+     -moz-transform: rotateY(0);
+      -ms-transform: rotateY(0);
+          transform: rotateY(0); }
 
-article.my-warner section.movies section.final-design > div ul li img
+article.my-warner section.movies section.final-design > div ul li img,
 article.my-warner section.profile ul li img { transition-delay: 0s; }
 
 article.my-warner section.movies section.final-design.animate > div ul li:nth-child(2) img,
