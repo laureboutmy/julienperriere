@@ -1131,7 +1131,7 @@ article.wdmtg section.custom-feeds section.final-design { padding: 250px 0 0; }
 article.wdmtg footer.thanks { 
   box-shadow: inset 0 -1px 0 rgba(0,0,0,.1); 
   background: linear-gradient(to right, rgba(51,129,193,.92) 80px,rgba(45,79,194,.92) 100%), url(../images/wdmtg/noise.png);}
-article.wdmtg footer.thanks h2 { color: #fff; margin-bottom: 30px; }
+article.wdmtg footer.thanks h2 { color: #4392da; margin-bottom: 30px; }
 article.wdmtg footer.thanks a {
   border: 1px solid #4392da;
   color: #4392da; }
