@@ -14,7 +14,7 @@ body {
   color: #808080;
   -webkit-user-select: none;
   -webkit-font-smoothing: antialiased; }
-a, p, h1, h2, h3 { -webkit-user-select: all; }
+p, h1, h2, h3 { -webkit-user-select: text; }
 a, a:link, a:visited, a:active { transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1); text-decoration: none; }
 hr { border: 0; margin: 20px auto 10px; }
 .no-txt, i { text-align: left; text-indent: -9999px; overflow: hidden; }
@@ -47,7 +47,7 @@ div#wrapper section#sidebar {
               left 0.3s cubic-bezier(0.005, 0.600, 0.395, 0.995); }
 div#wrapper.unwound section#sidebar { width: 310px; }
 div#wrapper.unwound.open section#sidebar { width: 80px; }
-div#wrapper.open section#sidebar { left: 490px; border-left: 1px solid #0f0f0f; }
+div#wrapper.open section#sidebar { left: 490px; border-left: 1px solid #1a1a1a; }
 div#wrapper.hidden section#sidebar,
 div#wrapper.hidden.unwound section#sidebar { left: -80px; width: 80px; }
 
@@ -106,7 +106,7 @@ div#wrapper section#sidebar nav#nav-infos ul li {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 0.933em;
-  border-top: 1px solid #141414;
+  border-top: 1px solid #1a1a1a;
   height: 20px;
   font-family: 'NeutraText', sans-serif;
   transition: color 0.3s cubic-bezier(0.215, 0.61, 0.355, 1); }
@@ -215,7 +215,7 @@ div#wrapper section#infos p {
   font-size: 1.067em;
   line-height: 1.750em;
   text-align: justify;
-  font-weight: 400;
+  font-weight: 600;
   margin: 0 60px; }
 div#wrapper section#infos article hr.dotted {
   height: 1px; margin: 50px 60px;
@@ -246,8 +246,8 @@ div#wrapper section#infos form input[type="email"],
 div#wrapper section#infos form textarea { 
   width: 370px; height: 40px;
   margin: 0 60px 12px 60px;
-  padding: 10px 15px;
-  border-radius: 4px; border: 0;
+  padding: 10px;
+  border-radius: 2px; border: 0;
         -moz-box-sizing: border-box;
      -webkit-box-sizing: border-box;
              box-sizing: border-box;
@@ -268,17 +268,17 @@ div#wrapper section#infos nav {
   overflow: hidden;
   width: 100%;
   background: #000;
-  border-top: 1px solid #141414; }
+  border-top: 1px solid #1a1a1a; }
 div#wrapper section#infos form nav { position: absolute; left: 0; bottom: 0; }
 div#wrapper section#infos nav ul li {
   float: left; 
-  border-right: 1px solid #141414; }
+  border-right: 1px solid #1a1a1a; }
 div#wrapper section#infos nav ul li a {
   width: 162px;
   text-align: center;
   padding: 20px 0 16px;
   display: block; }
-div#wrapper section#infos nav ul li a:hover { opacity: 0.25; }
+div#wrapper section#infos nav ul li a:hover { opacity: 0.15; }
 div#wrapper section#infos nav ul li:last-child { border-right: 0;}
 i.twitter { width: 25px; height: 20px; background: url(../images/infos/twitter.svg) no-repeat; }
 i.dribbble { width: 22px; height: 22px; background: url(../images/infos/dribbble.svg) no-repeat; }
@@ -412,7 +412,7 @@ article.home nav ul li:nth-child(odd) { margin-right: 8px; }
 article.home nav ul li div { 
   width: 100%; height: 100%;
   opacity: 0;
-  border-radius: 4px;
+  border-radius: 3px;
   position: absolute; top: 0; left: 0;
   transition: opacity .8s cubic-bezier(0.000, 0.630, 0.000, 0.995); }
 article.home nav ul li:hover div { 
@@ -524,7 +524,7 @@ article.project section h2.default.animate { opacity: 1; }
 article.project section h2.default > span {
   display: block;
   position: absolute;
-  margin: -120px auto auto;
+  margin: -110px auto auto;
   top: 0; right: 0; bottom: 0; left: 0;
   z-index: -1;
   font-weight: 200;
@@ -636,7 +636,7 @@ article.project section.slider > div ul {
   padding-top: 29px;
   border-radius: 5px;
   background: transparent url(../images/browser-toolbar.png) no-repeat; 
-  box-shadow: 0 0 40px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 40px 2px rgba(0, 0, 0, 0.3);
   cursor: pointer; }
 article.project section.slider > div ul li { 
   position: absolute;
@@ -698,7 +698,7 @@ nav#next-project h1 {
   font-family: 'NeutraDisplay', sans-serif;
   text-transform: uppercase;
   font-size: 0.933em;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.143em;
   display: block;
   font-weight: 600;
   transition: color  0s cubic-bezier(0.545, -0.005, 1.000, 0.260); }
@@ -721,7 +721,7 @@ nav#next-project.my-warner div { background: linear-gradient(to right, rgba(227,
 
 nav#next-project.wdmtg:hover h1 { color: #4392da; }
 nav#next-project.wdmtg h1 span { background-image: url(../images/wdmtg/wdmtg-sprite.png); }
-nav#next-project.wdmtg div { background: linear-gradient(to right, #3381c1 -80px,#2d4fc2 100%); }
+nav#next-project.wdmtg div { background: linear-gradient(to right, rgba(51,129,193,.92) 0%,rgba(45,79,194,.92) 100%), url(../images/wdmtg/noise.png); }
 
 
 nav#next-project.game-of-thrones:hover h1 { color: #ff7862; }
@@ -983,7 +983,7 @@ article.my-warner section.ipad.animate div.ipad + div.rel img { opacity: 1; top:
 
 
 article.my-warner footer.thanks { padding: 225px 0 260px; background: #161b24; 
-  box-shadow: 0px 20px 30px rgba(0,0,0,.4), inset 0px -5px 0px rgba(0,0,0,.2); }
+  box-shadow: inset 0 -1px 0 rgba(0,0,0,.5); }
 article.my-warner footer.thanks h2 { color: #bf2c19; margin-bottom: 35px; }
 article.my-warner footer.thanks a.app-store, 
 article.my-warner footer.thanks a.google-play {
@@ -1011,9 +1011,9 @@ article.wdmtg header.introduction {
   position: relative; z-index: 400;
   min-height: 1200px;
   color: #fff; 
-background: linear-gradient(to right, rgba(51,129,193,.92) -80px,rgba(45,79,194,.92) 100%), url(../images/wdmtg/noise.png); }
+  background: linear-gradient(to right, rgba(51,129,193,.92) -80px,rgba(45,79,194,.92) 100%), url(../images/wdmtg/noise.png); }
 article.wdmtg hr.dotted { 
-  width: 100%; height: 1px;
+à  width: 100%; height: 1px;
   background: transparent url(../images/wdmtg/hr-dotted-light-grey-bg.png) repeat-x; }
 article.wdmtg header.introduction h1 { margin: 360px 0 300px; min-height: 182px; }
 article.wdmtg header.introduction h2 { color: #4392da; padding: 0 0 50px; }
@@ -1022,13 +1022,13 @@ article.wdmtg header.introduction ul.meta li h3 { color: #4392da; }
 article.wdmtg section.brief {
   min-height: 1520px;
   position: relative; z-index: 300;
-  background: #171717; color: #4d4d4d; }
+  background: #111; color: #4d4d4d; }
 article.wdmtg header.introduction div.arrow { background: transparent url(../images/wdmtg/arrow.png) no-repeat; }
 article.wdmtg section.brief h2.default { color: #fff; }
-article.wdmtg section.brief h2.default span { color: #005aa3; }
+article.wdmtg section.brief h2.default span { color: #0d71c3; }
 article.wdmtg section.brief p.introduction { 
   background: url(../images/wdmtg/p-dotted-dark-blue-bg.png) repeat-x left 40px;
-  color: #005aa3; }
+  color: #0d71c3; }
 article.wdmtg section.brief img.iso {
   position: relative;
   margin: 120px auto;
@@ -1072,7 +1072,7 @@ article.wdmtg section.pro-signup section.full-control.animate img { opacity: 1; 
 
 article.wdmtg section.final-design { padding: 125px 0 0; }
 article.wdmtg section.final-design section.slider > div {
-  background: linear-gradient(to right, rgba(51,129,193,.92) -80px,rgba(45,79,194,.92) 100%), url(../images/wdmtg/noise.png); }
+  background: linear-gradient(to right, rgba(51,129,193,.92) 80px,rgba(45,79,194,.92) 100%), url(../images/wdmtg/noise.png); }
 article.wdmtg section.final-design section.slider > div ul { background: #f2f2f2 url(../images/browser-toolbar.png) no-repeat; }
 article.wdmtg section.final-design section.slider nav ul li{
   border-color: #f06448;
@@ -1129,8 +1129,8 @@ article.wdmtg section.custom-feeds section.final-design { padding: 250px 0 0; }
 
 
 article.wdmtg footer.thanks { 
-  box-shadow: 0px 20px 30px rgba(0,0,0,.4), inset 0px -5px 0px rgba(0,0,0,.2); 
-  background: linear-gradient(to right, rgba(51,129,193,.92) -80px,rgba(45,79,194,.92) 100%), url(../images/wdmtg/noise.png);}
+  box-shadow: inset 0 -1px 0 rgba(0,0,0,.1); 
+  background: linear-gradient(to right, rgba(51,129,193,.92) 80px,rgba(45,79,194,.92) 100%), url(../images/wdmtg/noise.png);}
 article.wdmtg footer.thanks h2 { color: #fff; margin-bottom: 30px; }
 article.wdmtg footer.thanks a {
   border: 1px solid #4392da;
@@ -1283,7 +1283,7 @@ article.game-of-thrones section.mobile section.remote.animate > div:nth-of-type(
 article.game-of-thrones section.mobile section.feed.animate > div:nth-of-type(1) img:nth-of-type(2) { transition-delay: 0.4s; }
 
 article.game-of-thrones footer.thanks { 
-  box-shadow: 0px 20px 30px rgba(0,0,0,.4), inset 0px -5px 0px rgba(0,0,0,.2); 
+  box-shadow: inset 0 -1px 0 rgba(0,0,0,.5); 
   padding: 130px 0 230px; background: #0e0f12; }
 article.game-of-thrones footer.thanks h2 { color: #41444f; }
 /* @end Game of Thrones */
@@ -1491,8 +1491,7 @@ article.kolok section.final-design section.welcome-process.animate > div:nth-of-
 
 
 article.kolok footer.thanks {
-
-  box-shadow: 0px 20px 30px rgba(0,0,0,.4), inset 0px -5px 0px rgba(0,0,0,.2); 
+  box-shadow: inset 0 -1px 0 rgba(0,0,0,.07); 
   background: #f0f8ff;
   padding: 110px 0 240px; }
 article.kolok footer.thanks h2 { color: #0086e5; }
@@ -1635,8 +1634,7 @@ article.dreamcatcher section.mobile-ready.animate ul li:nth-child(9) img { trans
 
 
 article.dreamcatcher footer.thanks { 
-
-  box-shadow: 0px 20px 30px rgba(0,0,0,.4), inset 0px -5px 0px rgba(0,0,0,.2); 
+  box-shadow: inset 0 -1px 0 rgba(0,0,0,.07); 
   background: #f3f2f7; 
   padding: 120px 0 230px; }
 article.dreamcatcher footer.thanks h2 { color: #a268e6; }
@@ -1719,8 +1717,7 @@ article.nike section.final-design section.slider nav ul li{
 article.nike section.final-design.end section.slider { padding: 20px 0 0; }
 article.nike section.final-design.end section.slider > ul { box-shadow: none; }
 article.nike footer.thanks { 
-
-  box-shadow: 0px 20px 30px rgba(0,0,0,.4), inset 0px -5px 0px rgba(0,0,0,.2); 
+  box-shadow: inset 0 -1px 0 rgba(0,0,0,.2); 
   padding: 250px 0;
   background: linear-gradient(to right, rgba(255,98,26,.94) -80px, rgba(255,56,26,.94) 100%), url(../images/nike/noise.png); }
 article.nike footer.thanks h2 { color: #fe8a34; }

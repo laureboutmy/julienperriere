@@ -19,7 +19,7 @@ define(['backbone', 'views/sidebar', 'views/infos', 'vendor/helpers'], function(
 					'nike': 'project'
 				},
 				initialize: function(){
-					Backbone.history.start({pushState: true, root: '/julienperriere/'});
+					Backbone.history.start({pushState: true});
 					var self = this,
 							notFound = true;
 					for(var i = Backbone.history.handlers.length - 1; i >= 0; i--){
