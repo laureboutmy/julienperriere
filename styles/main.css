@@ -32,6 +32,16 @@ em { font-style: italic; }
 div#wrapper {
   width: 100%; height: 100%;
   overflow-x: hidden; }
+div#mobile { 
+  background: #fff;
+  color: #333;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0; left: 0;
+  display: none;
+  opacity: 0;
+  z-index: -100; }
 /* @end of Wrappers */
 
 /******************/
@@ -1726,4 +1736,18 @@ article.nike footer.thanks h2 { color: #fe8a34; }
 
 /* @end of Projects */
 /* @end of Main */
+
+
+@media screen and (max-width: 640px){
+  div#mobile {
+    display: block;
+    z-index: 999999;
+    opacity: 1;
+    transition: opacity 0.3s ease-out;
+  }
+  div#mobile svg {
+    position: absolute;
+    margin: auto;
+    bottom: 0; left: 0; top: 0; right: 0; }
+}
 /* @end of Master */
