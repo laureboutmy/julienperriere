@@ -2,10 +2,11 @@
 
 define([
     'backbone', 
+    'julien-perriere',
     'views/project',
     'text!templates/wdmtg.html',
     'vendor/slider'
-], function (Backbone, ProjectView, tplWdmtg, slideIt) {
+], function (Backbone, J, ProjectView, tplWdmtg, slideIt) {
     // 'use strict';
 
     var WdmtgView = ProjectView.extend({

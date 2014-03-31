@@ -2,16 +2,17 @@
 
 define([
     'backbone', 
+    'julien-perriere',
     'imagesloaded',
     'vendor/helpers'
-], function (Backbone, imagesLoaded, helpers) {
+], function (Backbone, J, imagesLoaded, helpers) {
     // 'use strict';
     var projectView = Backbone.View.extend({
       el: '#main',
       animations: {},
       initialize: function(){
         var self = this;
-        console.log('project View', self);
+        // console.log('project View', self);
         self.render();
         self.on('loaded', function(){
           setTimeout(self.hideLoader, 1000);
@@ -73,7 +74,12 @@ define([
           helpers.removeClass(loader, 'hidden'); }, 300);
       },
 
-      destroy: function(){ window.removeEventListener('scroll', function(){}); },
+      destroy: function(){ window.removeEventListener('scroll', function(){
+        previousScroll = currentScroll;
+        currentScroll = window.pageYOffset;
+        delta = previousScroll - currentScroll;
+        self.renderAnimations(currentScroll, delta);
+      }); },
 
 
       initAnimations: function(){
@@ -102,6 +108,8 @@ define([
           }
         })
       }
+
+      
     });
 
     return projectView;

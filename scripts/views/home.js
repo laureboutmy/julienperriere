@@ -4,8 +4,9 @@ define([
     'backbone', 
     'imagesloaded',
     'text!templates/home.html',
-    'vendor/helpers'
-], function (Backbone, imagesLoaded, tplHome, helpers) {
+    'vendor/helpers',
+    'julien-perriere'
+], function (Backbone, imagesLoaded, tplHome, helpers, J) {
     'use strict';
     var homeView = Backbone.View.extend({
       el: '#main',
@@ -13,7 +14,7 @@ define([
       animations: {},
       initialize: function(){
         var self = this;
-        console.log('home View', self);
+        // console.log('home View', self);
         self.render();
         self.on('loaded', function(){
           setTimeout(self.hideLoader, 1000);
@@ -49,7 +50,7 @@ define([
         helpers.removeClass(loader);
 
         helpers.addClass(loader, 'home'); 
-
+        document.body.scrollTop = document.documentElement.scrollTop = 0;
         setTimeout(function(){ helpers.addClass(wrapper, 'hidden') }, 100);
         setTimeout(function(){ helpers.addClass(loader, 'visible') }, 200);
         setTimeout(function(){ 
@@ -57,7 +58,7 @@ define([
               loaded = 0,
               progress = document.querySelectorAll('section#loader div.progress')[0];
           loading.on('always', function(){
-            setTimeout("J.Views['home'].trigger('loaded')", 400);
+            setTimeout(function(){J.Views['home'].trigger('loaded')}, 400);
           });
           loading.on('progress', function() {
             loaded++;

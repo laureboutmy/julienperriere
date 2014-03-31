@@ -2,9 +2,10 @@
 
 define([
     'backbone', 
+    'julien-perriere',
     'text!templates/infos.html',
     'vendor/helpers'
-], function (Backbone, tplInfos, helpers) {
+], function (Backbone, J, tplInfos, helpers) {
     'use strict';
     var infosView = Backbone.View.extend({
       template: _.template(tplInfos),
@@ -29,13 +30,11 @@ define([
 
         document.querySelector('button[type="submit"]').addEventListener('click', function(e){
           e.preventDefault();
-          console.log('submit');
           var form = this.parentNode,
               name = form.querySelector('input[name="name"]').value,
               email = form.querySelector('input[name="email"]').value,
               message = form.querySelector('textarea').value,
               error = false;
-          console.log(name, email, message);
           if(email == '' || name == '' || message == '' || !/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)){ error = true; }
           if(error){
 
@@ -46,7 +45,6 @@ define([
             data.append('name', name);
             data.append('email', email);
             data.append('message', message);
-            console.log(data); 
             var request = new XMLHttpRequest();
             request.open('POST', 'form.php', true);
             request.onreadystatechange = function(){

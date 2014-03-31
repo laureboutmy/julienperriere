@@ -2,10 +2,11 @@
 
 define([
     'backbone', 
+    'julien-perriere',
     'views/project',
     'text!templates/dreamcatcher.html',
     'vendor/slider'
-], function (Backbone, ProjectView, tplDreamcatcher, slideIt) {
+], function (Backbone, J, ProjectView, tplDreamcatcher, slideIt) {
     'use strict';
 
     var DreamcatcherView = ProjectView.extend({
@@ -77,6 +78,7 @@ define([
             previousScroll,
             currentScroll = previousScroll = 0,
             delta;
+
         slideIt(document.querySelectorAll('.slider'));
         window.addEventListener('scroll', function(){
           previousScroll = currentScroll;

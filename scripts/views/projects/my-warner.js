@@ -1,11 +1,12 @@
 /*global define*/
 
 define([
-    'backbone', 
+    'backbone',
+    'julien-perriere', 
     'imagesloaded',
     'views/project',
     'text!templates/my-warner.html',
-], function (Backbone, imagesLoaded, ProjectView, tplMyWarner) {
+], function (Backbone, J, imagesLoaded, ProjectView, tplMyWarner) {
     // 'use strict';
     var MyWarnerView = ProjectView.extend({
       template: _.template(tplMyWarner),

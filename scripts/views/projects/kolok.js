@@ -2,10 +2,11 @@
 
 define([
     'backbone', 
+    'julien-perriere',
     'imagesloaded',
     'views/project',
     'text!templates/kolok.html'
-], function (Backbone, imagesLoaded, ProjectView, tplKolok) {
+], function (Backbone, J, imagesLoaded, ProjectView, tplKolok) {
     // 'use strict';
     var KolokView = ProjectView.extend({
 

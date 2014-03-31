@@ -1,6 +1,6 @@
 define(['backbone', 'views/sidebar', 'views/infos', 'vendor/helpers'], function(Backbone, Sidebar, Infos, helpers){
 	// 'use strict';
-	
+	var J = {};
 	J = {
 		Views: {},
 		Models: {},

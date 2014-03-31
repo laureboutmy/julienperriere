@@ -2,11 +2,12 @@
 
 define([
     'backbone', 
+    'julien-perriere',
     'imagesloaded',
     'views/project',
     'text!templates/game-of-thrones.html',
     'vendor/slider'
-], function (Backbone, imagesLoaded, ProjectView, tplGameOfThrones, slideIt) {
+], function (Backbone, J, imagesLoaded, ProjectView, tplGameOfThrones, slideIt) {
     'use strict';
     var GameOfThronesView = ProjectView.extend({
       template: _.template(tplGameOfThrones),

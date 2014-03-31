@@ -2,10 +2,11 @@
 
 define([
     'backbone', 
+    'julien-perriere',
     'views/project',
     'text!templates/nike.html',
     'vendor/slider'
-], function (Backbone, ProjectView, tplNike, slideIt) {
+], function (Backbone, J, ProjectView, tplNike, slideIt) {
     // 'use strict';
 
     var NikeView = ProjectView.extend({

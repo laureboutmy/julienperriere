@@ -2,9 +2,10 @@
 
 define([
     'backbone', 
+    'julien-perriere',
     'text!templates/sidebar.html',
     'vendor/helpers'
-], function (Backbone, tplSidebar, helpers) {
+], function (Backbone, J, tplSidebar, helpers) {
     'use strict';
     var sidebarView = Backbone.View.extend({
       template: _.template(tplSidebar),
@@ -16,13 +17,14 @@ define([
       },
 
       render: function(){
+        var self = this;
         this.el.innerHTML = this.template();
-        this.bind();
+        self.bind();
         return this;
       },
 
       bind: function(){
-        var _this = this;
+        var self = this;
 
         var sidebar = document.getElementById('sidebar'),
             wrapper = document.getElementById('wrapper'),
@@ -32,13 +34,12 @@ define([
         sidebar.addEventListener('mouseover', function(){ helpers.addClass(wrapper, 'unwound'); });
         sidebar.addEventListener('mouseout', function(){ helpers.removeClass(wrapper, 'unwound'); });
         main.addEventListener('click', function(){ helpers.removeClass(wrapper, 'open'); });
-
         // Click on sidebar links
         for(i in infos){
           if(i < infos.length) {
             infos[i].addEventListener('click', function(e){
               e.stopPropagation();
-              J.Views['infos'].switchInfos(this.getAttribute('class')); 
+              self.switchInfos(this.getAttribute('class')); 
               helpers.addClass(wrapper, 'open'); 
             });
           }
@@ -51,7 +52,11 @@ define([
           }
         })
       },
-
+      switchInfos: function(c){
+        var infos = document.getElementById('infos');
+        helpers.removeClass(infos);
+        helpers.addClass(infos, c);
+      },
       update: function(project){
         if(project !== ''){
           helpers.removeClass(document.querySelectorAll('section#sidebar li.current')[0])
