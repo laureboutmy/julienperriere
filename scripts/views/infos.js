@@ -23,10 +23,10 @@ define([
 
       bind: function(){
         var self = this;
-        document.getElementById('hire').addEventListener('click', function(e){
-          e.preventDefault();
-          self.switchInfos('contact');
-        })
+        // document.getElementById('hire').addEventListener('click', function(e){
+        //   e.preventDefault();
+        //   self.switchInfos('contact');
+        // })
 
         document.querySelector('button[type="submit"]').addEventListener('click', function(e){
           e.preventDefault();
